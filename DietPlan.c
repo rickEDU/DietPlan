@@ -33,8 +33,8 @@ void resulmo(void) {
   printf("///                                                                         ///\n");
   printf("///   Projeto com o intúito de diminuir as taxas de obesidade no Brasil,    ///\n");
   printf("///  por meio da melhoria da alimentação dos brasileiros com a ajuda de     ///\n");
-  printf("///  nutricionistas auxiliados pelo o programa, facilitando ao acesso a     ///\n");
-  printf("///  educação alimentar a população mais carente.                           ///\n");
+  printf("///  nutricionistas auxiliados por um programa de computador, facilitando   ///\n");
+  printf("///  o acesso a educação alimentar a população mais carente.                ///\n");
   printf("///                                                                         ///\n");
   printf("///////////////////////////////////////////////////////////////////////////////\n");
   printf("\n");
