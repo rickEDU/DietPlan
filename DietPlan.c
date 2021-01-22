@@ -31,7 +31,7 @@ void resulmo(void) {
   printf("///                                                                         ///\n");
   printf("///     = = = = = DietPlan: Sistema de Planejamento de dietas = = = = =     ///\n");
   printf("///                                                                         ///\n");
-  printf("///   Progeto com o intúito de diminuir as taxas de obesidade no Brasil,    ///\n");
+  printf("///   Projeto com o intúito de diminuir as taxas de obesidade no Brasil,    ///\n");
   printf("///  por meio da melhoria da alimentação dos brasileiros com a ajuda de     ///\n");
   printf("///  nutricionistas auxiliados pelo o programa, facilitando ao acesso a     ///\n");
   printf("///  educação alimentar a população mais carente.                           ///\n");
