@@ -19,7 +19,7 @@ int main(void) {
 
 void resulmo(void) {
   printf("\n");
-  printf("///////////////////////////////////////////////////////////////////////////////\n");
+  printf("*******************************************************************************\n");
   printf("///                                                                         ///\n");
   printf("///                         Ministério da Saúde                             ///\n");
   printf("///                 Centro de Saúde Pública e bem estar                     ///\n");
@@ -27,7 +27,7 @@ void resulmo(void) {
   printf("///           Projeto DietPlan: Sistema de Planejamento de dietas           ///\n");
   printf("///                Developed by  @rickEDU - Jan, 2021                       ///\n");
   printf("///                                                                         ///\n");
-  printf("///////////////////////////////////////////////////////////////////////////////\n");
+  printf("*******************************************************************************\n");
   printf("///                                                                         ///\n");
   printf("///     = = = = = DietPlan: Sistema de Planejamento de dietas = = = = =     ///\n");
   printf("///                                                                         ///\n");
@@ -36,6 +36,6 @@ void resulmo(void) {
   printf("///  nutricionistas auxiliados por um programa de computador, facilitando   ///\n");
   printf("///  o acesso a educação alimentar a população mais carente.                ///\n");
   printf("///                                                                         ///\n");
-  printf("///////////////////////////////////////////////////////////////////////////////\n");
+  printf("*******************************************************************************\n");
   printf("\n");
 }
