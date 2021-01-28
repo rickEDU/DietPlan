@@ -7,13 +7,16 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #include <stdio.h>
+#include <stdlib.h>
 
 void resulmo(void);
+void menuPrincipal(void);
+
 
 int main(void) {
   resulmo();
+  menuPrincipal();
   return 0;
-
 }
 
 
@@ -38,4 +41,30 @@ void resulmo(void) {
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
+  printf(">>> Tecle <ENTER> para continuar...\n");
+  getchar();
+}
+
+
+
+void menuPrincipal(void){
+  system("clear");
+    printf("\n");
+    printf("*******************************************************************************\n");
+    printf("///                                                                         ///\n");
+    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
+    printf("///                                                                         ///\n");
+    printf("*******************************************************************************\n");
+    printf("///                            **************                               ///\n");
+    printf("///                  = = = = = Menu principal = = = = =                     ///\n");
+    printf("///                            **************                               ///\n");
+    printf("///                            1- Cadastro                                  ///\n");
+    printf("///                            2- Login                                     ///\n");
+    printf("///                                                                         ///\n");
+    printf("*******************************************************************************\n");
+    printf("\n");
+    printf(">>> Tecle <ENTER> para continuar...\n");
+    getchar();
 }
