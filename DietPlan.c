@@ -11,11 +11,16 @@
 
 void resulmo(void);
 void menuPrincipal(void);
-
+void nutricionista(void);
+void coordenador(void);
+void paciente(void);
 
 int main(void) {
   resulmo();
   menuPrincipal();
+  nutricionista();
+  coordenador();
+  paciente();
   return 0;
 }
 
@@ -57,9 +62,9 @@ void menuPrincipal(void){
     printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
     printf("///                                                                         ///\n");
     printf("*******************************************************************************\n");
-    printf("///                            %%%%%%%%%%%%%%                               ///\n");
+    printf("///                            ##############                               ///\n");
     printf("///                  = = = = = Menu principal = = = = =                     ///\n");
-    printf("///                            %%%%%%%%%%%%%%                               ///\n");
+    printf("///                            ##############                               ///\n");
     printf("///                                                                         ///\n");
     printf("///    *  Das opções abaixo digite o número do menu que deseja acessar  *   ///\n");
     printf("///                                                                         ///\n");
@@ -73,7 +78,7 @@ void menuPrincipal(void){
     getchar();
 }
 
-void menuPrincipal(void){
+void nutricionista(void){
   system("clear");
     printf("\n");
     printf("*******************************************************************************\n");
@@ -83,9 +88,9 @@ void menuPrincipal(void){
     printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
     printf("///                                                                         ///\n");
     printf("*******************************************************************************\n");
-    printf("///                            %%%%%%%%%%%%%%%%%%                           ///\n");
+    printf("///                            ##################                           ///\n");
     printf("///                  = = = = = Menu Nutricionista = = = = =                 ///\n");
-    printf("///                            %%%%%%%%%%%%%%%%%%                           ///\n");
+    printf("///                            ##################                           ///\n");
     printf("///                                                                         ///\n");
     printf("///    *  Das opções abaixo digite o número do menu que deseja acessar  *   ///\n");
     printf("///                                                                         ///\n");
@@ -100,7 +105,7 @@ void menuPrincipal(void){
     getchar();
 }
 
-void menuPrincipal(void){
+void coordenador(void){
   system("clear");
     printf("\n");
     printf("*******************************************************************************\n");
@@ -110,9 +115,9 @@ void menuPrincipal(void){
     printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
     printf("///                                                                         ///\n");
     printf("*******************************************************************************\n");
-    printf("///                            %%%%%%%%%%%%%%%%                             ///\n");
+    printf("///                            ################                             ///\n");
     printf("///                  = = = = = Menu Coordenador = = = = =                   ///\n");
-    printf("///                            %%%%%%%%%%%%%%%%                             ///\n");
+    printf("///                            ################                             ///\n");
     printf("///                                                                         ///\n");
     printf("///    *  Das opções abaixo digite o número do menu que deseja acessar  *   ///\n");
     printf("///                                                                         ///\n");
@@ -120,6 +125,32 @@ void menuPrincipal(void){
     printf("///                           2- Pesquisar Paciente.                        ///\n");
     printf("///                           3- Atualizar Dados.                           ///\n");
     printf("///                           4- Excluir Paciente.                          ///\n");
+    printf("///                                                                         ///\n");
+    printf("*******************************************************************************\n");
+    printf("\n");
+    printf(">>> Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
+void paciente(void){
+  system("clear");
+    printf("\n");
+    printf("*******************************************************************************\n");
+    printf("///                                                                         ///\n");
+    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
+    printf("///                                                                         ///\n");
+    printf("*******************************************************************************\n");
+    printf("///                              #############                              ///\n");
+    printf("///                    = = = = = Menu Paciente = = = = =                    ///\n");
+    printf("///                              #############                              ///\n");
+    printf("///                                                                         ///\n");
+    printf("///    *  Das opções abaixo digite o número do menu que deseja acessar  *   ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                           1- Consultar Dieta.                           ///\n");
+    printf("///                           2- Atualizar Dados.                           ///\n");
+    printf("///                           3- Excluir Conta.                             ///\n");
     printf("///                                                                         ///\n");
     printf("*******************************************************************************\n");
     printf("\n");
