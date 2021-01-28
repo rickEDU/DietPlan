@@ -72,3 +72,57 @@ void menuPrincipal(void){
     printf(">>> Tecle <ENTER> para continuar...\n");
     getchar();
 }
+
+void menuPrincipal(void){
+  system("clear");
+    printf("\n");
+    printf("*******************************************************************************\n");
+    printf("///                                                                         ///\n");
+    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
+    printf("///                                                                         ///\n");
+    printf("*******************************************************************************\n");
+    printf("///                            %%%%%%%%%%%%%%%%%%                           ///\n");
+    printf("///                  = = = = = Menu Nutricionista = = = = =                 ///\n");
+    printf("///                            %%%%%%%%%%%%%%%%%%                           ///\n");
+    printf("///                                                                         ///\n");
+    printf("///    *  Das opções abaixo digite o número do menu que deseja acessar  *   ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                           1- Cadastrar Paciente.                        ///\n");
+    printf("///                           2- Pesquisar Paciente                         ///\n");
+    printf("///                           3- Atualizar Dados.                           ///\n");
+    printf("///                           4- Excluir Paciente.                          ///\n");
+    printf("///                                                                         ///\n");
+    printf("*******************************************************************************\n");
+    printf("\n");
+    printf(">>> Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
+void menuPrincipal(void){
+  system("clear");
+    printf("\n");
+    printf("*******************************************************************************\n");
+    printf("///                                                                         ///\n");
+    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
+    printf("///                                                                         ///\n");
+    printf("*******************************************************************************\n");
+    printf("///                            %%%%%%%%%%%%%%%%                             ///\n");
+    printf("///                  = = = = = Menu Coordenador = = = = =                   ///\n");
+    printf("///                            %%%%%%%%%%%%%%%%                             ///\n");
+    printf("///                                                                         ///\n");
+    printf("///    *  Das opções abaixo digite o número do menu que deseja acessar  *   ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                           1- Cadastrar Paciente.                        ///\n");
+    printf("///                           2- Pesquisar Paciente.                        ///\n");
+    printf("///                           3- Atualizar Dados.                           ///\n");
+    printf("///                           4- Excluir Paciente.                          ///\n");
+    printf("///                                                                         ///\n");
+    printf("*******************************************************************************\n");
+    printf("\n");
+    printf(">>> Tecle <ENTER> para continuar...\n");
+    getchar();
+}
