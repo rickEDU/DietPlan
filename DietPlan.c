@@ -21,9 +21,19 @@ void nutriCafe_exclui(void);
 void nutriLanche1(void);
 void nutriLanche1_acrescenta(void);
 void nutriLanche1_exclui(void);
+void nutriAlmoco(void);
+void nutriAlmoco_acrescenta(void);
+void nutriAlmoco_exclui(void);
+void nutriLanche2(void);
+void nutriLanche2_acrescenta(void);
+void nutriLanche2_exclui(void);
+void nutriJanta(void);
+void nutriJanta_acrescenta(void);
+void nutriJanta_exclui(void);
 void nutriPesquisa(void);
 void nutriAtualizar(void);
 void nutriExclui(void);
+
 
 int main(void) {
   resulmo();
@@ -38,6 +48,15 @@ int main(void) {
   nutriLanche1();
   nutriLanche1_acrescenta();
   nutriLanche1_exclui();
+  nutriAlmoco();
+  nutriAlmoco_acrescenta();
+  nutriAlmoco_exclui();
+  nutriLanche2();
+  nutriLanche2_acrescenta();
+  nutriLanche2_exclui();
+  nutriJanta();
+  nutriJanta_acrescenta();
+  nutriJanta_exclui();
   nutriPesquisa();
   nutriAtualizar();
   nutriExclui();
@@ -370,6 +389,230 @@ void nutriLanche1_exclui(void){
     getchar();
 }
 
+void nutriAlmoco(void){
+  system("clear");
+    printf("\n");
+    printf("*******************************************************************************\n");
+    printf("///                                                                         ///\n");
+    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
+    printf("///                                                                         ///\n");
+    printf("*******************************************************************************\n");
+    printf("///                                 ######                                  ///\n");
+    printf("///                       = = = = = Almoço = = = = =                        ///\n");
+    printf("///                                 ######                                  ///\n");
+    printf("///                                                                         ///\n");
+    printf("///    *  Das opções abaixo digite o número do menu que deseja acessar  *   ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                         1- Acrescentar alimento.                        ///\n");
+    printf("///                         2- Excluir alimento.                            ///\n");
+    printf("///                         3- Voltar para o menu anterior.                 ///\n");
+    printf("///                                                                         ///\n");
+    printf("*******************************************************************************\n");
+    printf("\n");
+    printf(">>> Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
+void nutriAlmoco_acrescenta(void){
+  system("clear");
+    printf("\n");
+    printf("*******************************************************************************\n");
+    printf("///                                                                         ///\n");
+    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
+    printf("///                                                                         ///\n");
+    printf("*******************************************************************************\n");
+    printf("///                    &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&                    ///\n");
+    printf("///          = = = = = Acrescentando aliemento no Almoço = = = = =          ///\n");
+    printf("///                    &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&                    ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                *  Preencha os dados do alimento pedidos  *              ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                   Nome do Alimento que será acrescentado:               ///\n");
+    printf("///                   Quantidade de calorias do alimento:                   ///\n");
+    printf("///                                                                         ///\n");
+    printf("*******************************************************************************\n");
+    printf("\n");
+    printf(">>> Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
+void nutriAlmoco_exclui(void){
+  system("clear");
+    printf("\n");
+    printf("*******************************************************************************\n");
+    printf("///                                                                         ///\n");
+    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
+    printf("///                                                                         ///\n");
+    printf("*******************************************************************************\n");
+    printf("///                     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@                       ///\n");
+    printf("///           = = = = = Excluindo aliemento no Almoço = = = = =             ///\n");
+    printf("///                     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@                       ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                *  Preencha os dados do alimento pedidos  *              ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                   Nome do Alimento que será EXCLUIDO:                   ///\n");
+    printf("///                                                                         ///\n");
+    printf("*******************************************************************************\n");
+    printf("\n");
+    printf(">>> Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
+void nutriLanche2(void){
+  system("clear");
+    printf("\n");
+    printf("*******************************************************************************\n");
+    printf("///                                                                         ///\n");
+    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
+    printf("///                                                                         ///\n");
+    printf("*******************************************************************************\n");
+    printf("///                                 ########                                ///\n");
+    printf("///                       = = = = = Lanche 2 = = = = =                      ///\n");
+    printf("///                                 ########                                ///\n");
+    printf("///                                                                         ///\n");
+    printf("///    *  Das opções abaixo digite o número do menu que deseja acessar  *   ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                         1- Acrescentar alimento.                        ///\n");
+    printf("///                         2- Excluir alimento.                            ///\n");
+    printf("///                         3- Voltar para o menu anterior.                 ///\n");
+    printf("///                                                                         ///\n");
+    printf("*******************************************************************************\n");
+    printf("\n");
+    printf(">>> Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
+void nutriLanche2_acrescenta(void){
+  system("clear");
+    printf("\n");
+    printf("*******************************************************************************\n");
+    printf("///                                                                         ///\n");
+    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
+    printf("///                                                                         ///\n");
+    printf("*******************************************************************************\n");
+    printf("///                    &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&                  ///\n");
+    printf("///          = = = = = Acrescentando aliemento no Lanche 2 = = = = =        ///\n");
+    printf("///                    &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&                  ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                *  Preencha os dados do alimento pedidos  *              ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                   Nome do Alimento que será acrescentado:               ///\n");
+    printf("///                   Quantidade de calorias do alimento:                   ///\n");
+    printf("///                                                                         ///\n");
+    printf("*******************************************************************************\n");
+    printf("\n");
+    printf(">>> Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
+void nutriLanche2_exclui(void){
+  system("clear");
+    printf("\n");
+    printf("*******************************************************************************\n");
+    printf("///                                                                         ///\n");
+    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
+    printf("///                                                                         ///\n");
+    printf("*******************************************************************************\n");
+    printf("///                     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                     ///\n");
+    printf("///           = = = = = Excluindo aliemento no Lanche 2 = = = = =           ///\n");
+    printf("///                     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                     ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                *  Preencha os dados do alimento pedidos  *              ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                   Nome do Alimento que será EXCLUIDO:                   ///\n");
+    printf("///                                                                         ///\n");
+    printf("*******************************************************************************\n");
+    printf("\n");
+    printf(">>> Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
+void nutriJanta(void){
+  system("clear");
+    printf("\n");
+    printf("*******************************************************************************\n");
+    printf("///                                                                         ///\n");
+    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
+    printf("///                                                                         ///\n");
+    printf("*******************************************************************************\n");
+    printf("///                                    ######                               ///\n");
+    printf("///                          = = = = = Jantar = = = = =                      ///\n");
+    printf("///                                    ######                               ///\n");
+    printf("///                                                                         ///\n");
+    printf("///    *  Das opções abaixo digite o número do menu que deseja acessar  *   ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                         1- Acrescentar alimento.                        ///\n");
+    printf("///                         2- Excluir alimento.                            ///\n");
+    printf("///                         3- Voltar para o menu anterior.                 ///\n");
+    printf("///                                                                         ///\n");
+    printf("*******************************************************************************\n");
+    printf("\n");
+    printf(">>> Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
+void nutriJanta_acrescenta(void){
+  system("clear");
+    printf("\n");
+    printf("*******************************************************************************\n");
+    printf("///                                                                         ///\n");
+    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
+    printf("///                                                                         ///\n");
+    printf("*******************************************************************************\n");
+    printf("///                    &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&                  ///\n");
+    printf("///          = = = = = Acrescentando aliemento no Jantar = = = = =        ///\n");
+    printf("///                    &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&                  ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                *  Preencha os dados do alimento pedidos  *              ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                   Nome do Alimento que será acrescentado:               ///\n");
+    printf("///                   Quantidade de calorias do alimento:                   ///\n");
+    printf("///                                                                         ///\n");
+    printf("*******************************************************************************\n");
+    printf("\n");
+    printf(">>> Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
+void nutriJanta_exclui(void){
+  system("clear");
+    printf("\n");
+    printf("*******************************************************************************\n");
+    printf("///                                                                         ///\n");
+    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
+    printf("///                                                                         ///\n");
+    printf("*******************************************************************************\n");
+    printf("///                     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@                       ///\n");
+    printf("///           = = = = = Excluindo aliemento no Jantar = = = = =             ///\n");
+    printf("///                     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@                       ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                *  Preencha os dados do alimento pedidos  *              ///\n");
+    printf("///                                                                         ///\n");
+    printf("///                   Nome do Alimento que será EXCLUIDO:                   ///\n");
+    printf("///                                                                         ///\n");
+    printf("*******************************************************************************\n");
+    printf("\n");
+    printf(">>> Tecle <ENTER> para continuar...\n");
+    getchar();
+}
 void nutriPesquisa(void){
   system("clear");
     printf("\n");
