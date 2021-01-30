@@ -103,10 +103,11 @@ void nutricionista(void){
     printf("///    *  Das opções abaixo digite o número do menu que deseja acessar  *   ///\n");
     printf("///                                                                         ///\n");
     printf("///                           1- Cadastrar Paciente.                        ///\n");
-    printf("///                           2- Pesquisar Paciente                         ///\n");
-    printf("///                           3- Atualizar Dados.                           ///\n");
-    printf("///                           4- Excluir Paciente.                          ///\n");
-    printf("///                           5. Voltar ao menu anterior                    ///\n");
+    printf("///                           2- Registrar dieta.                           ///\n");
+    printf("///                           3- Pesquisar Paciente.                        ///\n");
+    printf("///                           4- Atualizar Dados.                           ///\n");
+    printf("///                           5- Excluir Paciente.                          ///\n");
+    printf("///                           6. Voltar ao menu anterior.                   ///\n");
     printf("///                                                                         ///\n");
     printf("*******************************************************************************\n");
     printf("\n");
@@ -134,7 +135,7 @@ void coordenador(void){
     printf("///                           2- Pesquisar Paciente.                        ///\n");
     printf("///                           3- Atualizar Dados.                           ///\n");
     printf("///                           4- Excluir Paciente.                          ///\n");
-    printf("///                           5. Voltar ao menu anterior                    ///\n");
+    printf("///                           5. Voltar ao menu anterior.                   ///\n");
     printf("///                                                                         ///\n");
     printf("*******************************************************************************\n");
     printf("\n");
@@ -174,6 +175,7 @@ void paciente(void){
 // Submenus nutricionista
 //
 
+
 void nutriCadastro(void){
   system("clear");
     printf("\n");
@@ -190,16 +192,49 @@ void nutriCadastro(void){
     printf("///                                                                         ///\n");
     printf("///                *  Preencha com as informações do Paciente  *            ///\n");
     printf("///                                                                         ///\n");
-    printf("///                            Nome:                                        ///\n");
-    printf("///                            Telefone:                                    ///\n");
-    printf("///                            E-mail:                                      ///\n");
-    printf("///                            Peso Atual:                                  ///\n");
+    printf("///                  Nome:                                                  ///\n");
+    printf("///                  Peso Atual:                                            ///\n");
+    printf("///                  Altura:                                                ///\n");
+    printf("///                  IMC:                                                   ///\n");
+    printf("///                  Nível de atividade física (Baixo, Moderado ou Alto):   ///\n");
+    printf("///                  Quantidade de calorias diarias:                        ///\n");
     printf("///                                                                         ///\n");
     printf("*******************************************************************************\n");
     printf("\n");
     printf(">>> Tecle <ENTER> para continuar...\n");
     getchar();
 }
+
+
+void nutriDieta(void){
+  system("clear");
+    printf("\n");
+    printf("*******************************************************************************\n");
+    printf("///                                                                         ///\n");
+    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                                                                         ///\n");
+    printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
+    printf("///                                                                         ///\n");
+    printf("*******************************************************************************\n");
+    printf("///                              &&&&&&&&&&&&&&&&&&&&                       ///\n");
+    printf("///                    = = = = = Cadastro de Paciente = = = = =             ///\n");
+    printf("///                              &&&&&&&&&&&&&&&&&&&&                       ///\n");
+    printf("///                                                                         ///\n");
+    printf("///*Digite o Número da reição que deseja acrescentar ou excluir um alimento*///\n");
+    printf("///                                                                         ///\n");
+    printf("///                  1- Café da manhã.                                      ///\n");
+    printf("///                  2- Lanche 1.                                           ///\n");
+    printf("///                  3- Almoço.                                             ///\n");
+    printf("///                  4- Lanche 2.                                           ///\n");
+    printf("///                  5- Jantar.                                             ///\n");
+    printf("///                  6- Lanche 3.                                           ///\n");
+    printf("///                                                                         ///\n");
+    printf("*******************************************************************************\n");
+    printf("\n");
+    printf(">>> Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
 
 void nutriPesquisa(void){
   system("clear");
@@ -241,10 +276,12 @@ void nutriAtualizar(void){
     printf("///                                                                         ///\n");
     printf("///            *  Preencha com as informações atuais do Paciente  *         ///\n");
     printf("///                                                                         ///\n");
-    printf("///                            Nome:                                        ///\n");
-    printf("///                            Telefone:                                    ///\n");
-    printf("///                            E-mail:                                      ///\n");
-    printf("///                            Peso Atual:                                  ///\n");
+    printf("///                  Nome:                                                  ///\n");
+    printf("///                  Peso Atual:                                            ///\n");
+    printf("///                  Altura:                                                ///\n");
+    printf("///                  IMC:                                                   ///\n");
+    printf("///                  Nível de atividade física (Baixo, Moderado ou Alto):   ///\n");
+    printf("///                  Quantidade de calorias diarias:                        ///\n");
     printf("///                                                                         ///\n");
     printf("*******************************************************************************\n");
     printf("\n");
@@ -275,3 +312,4 @@ void nutriExclui(void){
     printf(">>> Tecle <ENTER> para continuar...\n");
     getchar();
 }
+
