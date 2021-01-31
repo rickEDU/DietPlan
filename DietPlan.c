@@ -103,7 +103,7 @@ void menuPrincipal(void){
     printf("\n");
     printf("*******************************************************************************\n");
     printf("///                                                                         ///\n");
-    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                           Ministério da Saúde                           ///\n");
     printf("///                                                                         ///\n");
     printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
     printf("///                                                                         ///\n");
@@ -128,7 +128,7 @@ void nutricionista(void){
     printf("\n");
     printf("*******************************************************************************\n");
     printf("///                                                                         ///\n");
-    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                           Ministério da Saúde                           ///\n");
     printf("///                                                                         ///\n");
     printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
     printf("///                                                                         ///\n");
@@ -157,7 +157,7 @@ void paciente(void){
     printf("\n");
     printf("*******************************************************************************\n");
     printf("///                                                                         ///\n");
-    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                           Ministério da Saúde                           ///\n");
     printf("///                                                                         ///\n");
     printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
     printf("///                                                                         ///\n");
@@ -190,7 +190,7 @@ void nutriCadastro(void){
     printf("\n");
     printf("*******************************************************************************\n");
     printf("///                                                                         ///\n");
-    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                           Ministério da Saúde                           ///\n");
     printf("///                                                                         ///\n");
     printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
     printf("///                                                                         ///\n");
@@ -220,7 +220,7 @@ void nutriDieta(void){
     printf("\n");
     printf("*******************************************************************************\n");
     printf("///                                                                         ///\n");
-    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                           Ministério da Saúde                           ///\n");
     printf("///                                                                         ///\n");
     printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
     printf("///                                                                         ///\n");
@@ -250,7 +250,7 @@ void nutriCafe(void){
     printf("\n");
     printf("*******************************************************************************\n");
     printf("///                                                                         ///\n");
-    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                           Ministério da Saúde                           ///\n");
     printf("///                                                                         ///\n");
     printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
     printf("///                                                                         ///\n");
@@ -276,7 +276,7 @@ void nutriCafe_acrescenta(void){
     printf("\n");
     printf("*******************************************************************************\n");
     printf("///                                                                         ///\n");
-    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                           Ministério da Saúde                           ///\n");
     printf("///                                                                         ///\n");
     printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
     printf("///                                                                         ///\n");
@@ -301,7 +301,7 @@ void nutriCafe_exclui(void){
     printf("\n");
     printf("*******************************************************************************\n");
     printf("///                                                                         ///\n");
-    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                           Ministério da Saúde                           ///\n");
     printf("///                                                                         ///\n");
     printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
     printf("///                                                                         ///\n");
@@ -325,7 +325,7 @@ void nutriLanche1(void){
     printf("\n");
     printf("*******************************************************************************\n");
     printf("///                                                                         ///\n");
-    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                           Ministério da Saúde                           ///\n");
     printf("///                                                                         ///\n");
     printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
     printf("///                                                                         ///\n");
@@ -351,7 +351,7 @@ void nutriLanche1_acrescenta(void){
     printf("\n");
     printf("*******************************************************************************\n");
     printf("///                                                                         ///\n");
-    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                           Ministério da Saúde                           ///\n");
     printf("///                                                                         ///\n");
     printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
     printf("///                                                                         ///\n");
@@ -376,7 +376,7 @@ void nutriLanche1_exclui(void){
     printf("\n");
     printf("*******************************************************************************\n");
     printf("///                                                                         ///\n");
-    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                           Ministério da Saúde                           ///\n");
     printf("///                                                                         ///\n");
     printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
     printf("///                                                                         ///\n");
@@ -400,7 +400,7 @@ void nutriAlmoco(void){
     printf("\n");
     printf("*******************************************************************************\n");
     printf("///                                                                         ///\n");
-    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                           Ministério da Saúde                           ///\n");
     printf("///                                                                         ///\n");
     printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
     printf("///                                                                         ///\n");
@@ -426,7 +426,7 @@ void nutriAlmoco_acrescenta(void){
     printf("\n");
     printf("*******************************************************************************\n");
     printf("///                                                                         ///\n");
-    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                           Ministério da Saúde                           ///\n");
     printf("///                                                                         ///\n");
     printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
     printf("///                                                                         ///\n");
@@ -451,7 +451,7 @@ void nutriAlmoco_exclui(void){
     printf("\n");
     printf("*******************************************************************************\n");
     printf("///                                                                         ///\n");
-    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                           Ministério da Saúde                           ///\n");
     printf("///                                                                         ///\n");
     printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
     printf("///                                                                         ///\n");
@@ -475,7 +475,7 @@ void nutriLanche2(void){
     printf("\n");
     printf("*******************************************************************************\n");
     printf("///                                                                         ///\n");
-    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                           Ministério da Saúde                           ///\n");
     printf("///                                                                         ///\n");
     printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
     printf("///                                                                         ///\n");
@@ -501,7 +501,7 @@ void nutriLanche2_acrescenta(void){
     printf("\n");
     printf("*******************************************************************************\n");
     printf("///                                                                         ///\n");
-    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                           Ministério da Saúde                           ///\n");
     printf("///                                                                         ///\n");
     printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
     printf("///                                                                         ///\n");
@@ -526,7 +526,7 @@ void nutriLanche2_exclui(void){
     printf("\n");
     printf("*******************************************************************************\n");
     printf("///                                                                         ///\n");
-    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                           Ministério da Saúde                           ///\n");
     printf("///                                                                         ///\n");
     printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
     printf("///                                                                         ///\n");
@@ -550,7 +550,7 @@ void nutriJanta(void){
     printf("\n");
     printf("*******************************************************************************\n");
     printf("///                                                                         ///\n");
-    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                           Ministério da Saúde                           ///\n");
     printf("///                                                                         ///\n");
     printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
     printf("///                                                                         ///\n");
@@ -576,7 +576,7 @@ void nutriJanta_acrescenta(void){
     printf("\n");
     printf("*******************************************************************************\n");
     printf("///                                                                         ///\n");
-    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                           Ministério da Saúde                           ///\n");
     printf("///                                                                         ///\n");
     printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
     printf("///                                                                         ///\n");
@@ -601,7 +601,7 @@ void nutriJanta_exclui(void){
     printf("\n");
     printf("*******************************************************************************\n");
     printf("///                                                                         ///\n");
-    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                           Ministério da Saúde                           ///\n");
     printf("///                                                                         ///\n");
     printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
     printf("///                                                                         ///\n");
@@ -625,14 +625,14 @@ void nutriLanche3(void){
     printf("\n");
     printf("*******************************************************************************\n");
     printf("///                                                                         ///\n");
-    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                           Ministério da Saúde                           ///\n");
     printf("///                                                                         ///\n");
     printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
     printf("///                                                                         ///\n");
     printf("*******************************************************************************\n");
-    printf("///                                    ########                             ///\n");
-    printf("///                          = = = = = Lanche 3 = = = = =                   ///\n");
-    printf("///                                    ########                             ///\n");
+    printf("///                                 ########                                ///\n");
+    printf("///                       = = = = = Lanche 3 = = = = =                      ///\n");
+    printf("///                                 ########                                ///\n");
     printf("///                                                                         ///\n");
     printf("///    *  Das opções abaixo digite o número do menu que deseja acessar  *   ///\n");
     printf("///                                                                         ///\n");
@@ -651,7 +651,7 @@ void nutriLanche3_acrescenta(void){
     printf("\n");
     printf("*******************************************************************************\n");
     printf("///                                                                         ///\n");
-    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                           Ministério da Saúde                           ///\n");
     printf("///                                                                         ///\n");
     printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
     printf("///                                                                         ///\n");
@@ -676,7 +676,7 @@ void nutriLanche3_exclui(void){
     printf("\n");
     printf("*******************************************************************************\n");
     printf("///                                                                         ///\n");
-    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                           Ministério da Saúde                           ///\n");
     printf("///                                                                         ///\n");
     printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
     printf("///                                                                         ///\n");
@@ -700,7 +700,7 @@ void nutriPesquisa(void){
     printf("\n");
     printf("*******************************************************************************\n");
     printf("///                                                                         ///\n");
-    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                           Ministério da Saúde                           ///\n");
     printf("///                                                                         ///\n");
     printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
     printf("///                                                                         ///\n");
@@ -724,7 +724,7 @@ void nutriAtualizar(void){
     printf("\n");
     printf("*******************************************************************************\n");
     printf("///                                                                         ///\n");
-    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                           Ministério da Saúde                           ///\n");
     printf("///                                                                         ///\n");
     printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
     printf("///                                                                         ///\n");
@@ -753,7 +753,7 @@ void nutriExclui(void){
     printf("\n");
     printf("*******************************************************************************\n");
     printf("///                                                                         ///\n");
-    printf("///                         Ministério da Saúde                             ///\n");
+    printf("///                           Ministério da Saúde                           ///\n");
     printf("///                                                                         ///\n");
     printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
     printf("///                                                                         ///\n");
