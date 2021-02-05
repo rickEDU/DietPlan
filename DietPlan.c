@@ -11,8 +11,8 @@
 
 void resulmo(void);
 void menuPrincipal(void);
-void nutricionista(void);
-void paciente(void);
+char nutricionista(void);
+char paciente(void);
 void nutriCadastro(void);
 void nutriDieta(void);
 void nutriCafe(void);
@@ -42,36 +42,37 @@ void pacienteExclui(void);
 
 
 int main(void) {
-  resulmo();
-  menuPrincipal();
-  nutricionista();
-  paciente();
-  nutriCadastro();
-  nutriDieta();
-  nutriCafe();
-  nutriCafe_acrescenta();
-  nutriCafe_exclui();
-  nutriLanche1();
-  nutriLanche1_acrescenta();
-  nutriLanche1_exclui();
-  nutriAlmoco();
-  nutriAlmoco_acrescenta();
-  nutriAlmoco_exclui();
-  nutriLanche2();
-  nutriLanche2_acrescenta();
-  nutriLanche2_exclui();
-  nutriJanta();
-  nutriJanta_acrescenta();
-  nutriJanta_exclui();
-  nutriLanche3();
-  nutriLanche3_acrescenta();
-  nutriLanche3_exclui();
-  nutriPesquisa();
-  nutriAtualizar();
-  nutriExclui();
-  pacienteConsulta();
-  pacienteAtualiza();
-  pacienteExclui();
+  char opcao;
+    resulmo();
+    menuPrincipal();
+    opcao = nutricionista();
+    opcao = paciente();
+    nutriCadastro();
+    nutriDieta();
+    nutriCafe();
+    nutriCafe_acrescenta();
+    nutriCafe_exclui();
+    nutriLanche1();
+    nutriLanche1_acrescenta();
+    nutriLanche1_exclui();
+    nutriAlmoco();
+    nutriAlmoco_acrescenta();
+    nutriAlmoco_exclui();
+    nutriLanche2();
+    nutriLanche2_acrescenta();
+    nutriLanche2_exclui();
+    nutriJanta();
+    nutriJanta_acrescenta();
+    nutriJanta_exclui();
+    nutriLanche3();
+    nutriLanche3_acrescenta();
+    nutriLanche3_exclui();
+    nutriPesquisa();
+    nutriAtualizar();
+    nutriExclui();
+    pacienteConsulta();
+    pacienteAtualiza();
+    pacienteExclui();
 
   return 0;
 }
@@ -129,8 +130,9 @@ void menuPrincipal(void){
     getchar();
 }
 
-void nutricionista(void){
-  system("clear");
+char nutricionista(void){
+  char op;
+    system("clear");
     printf("\n");
     printf("*******************************************************************************\n");
     printf("///                                                                         ///\n");
@@ -151,14 +153,18 @@ void nutricionista(void){
     printf("///                           4- Atualizar Dados.                           ///\n");
     printf("///                           5- Excluir Paciente.                          ///\n");
     printf("///                           6. Voltar ao menu anterior.                   ///\n");
+	  printf("///           Escolha a opção desejada: ");
+	  scanf("%c", &op);
     printf("///                                                                         ///\n");
     printf("*******************************************************************************\n");
     printf("\n");
     printf(">>> Tecle <ENTER> para continuar...\n");
     getchar();
+    return op;
 }
 
-void paciente(void){
+char paciente(void){
+  char op;
   system("clear");
     printf("\n");
     printf("*******************************************************************************\n");
@@ -178,11 +184,14 @@ void paciente(void){
     printf("///                           2- Atualizar Dados.                           ///\n");
     printf("///                           3- Excluir Conta.                             ///\n");
     printf("///                           4. Voltar ao menu anterior                    ///\n");
+	  printf("///           Escolha a opção desejada: ");
+	  scanf("%c", &op);
     printf("///                                                                         ///\n");
     printf("*******************************************************************************\n");
     printf("\n");
     printf(">>> Tecle <ENTER> para continuar...\n");
     getchar();
+    return op;
 }
 
 
