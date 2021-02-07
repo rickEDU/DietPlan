@@ -840,6 +840,7 @@ void nutriLanche3_exclui(void){
 }
 
 void nutriPesquisa(void){
+  char paciente[51];
   system("clear");
   printf("\n");
   printf("*******************************************************************************\n");
@@ -856,8 +857,10 @@ void nutriPesquisa(void){
   printf("///             *  Digite o nome do Paciente que deseja pesquisar  *        ///\n");
   printf("///              #  Caso queira voltar ao menu anterior Digite 0  #         ///\n");
   printf("///                                                                         ///\n");
-  printf("///                    Nome do Paciente:                                    ///\n");
   printf("///                    0- Para voltar ao menu anterior:                     ///\n");
+  printf("///   Nome do Paciente: ");
+	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ0]", paciente);
+  getchar();
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
@@ -915,6 +918,7 @@ void nutriAtualizar(void){
 }
 
 void nutriExclui(void){
+  char paciente[51];
   system("clear");
   printf("\n");
   printf("*******************************************************************************\n");
@@ -931,8 +935,10 @@ void nutriExclui(void){
   printf("///             *  Digite o nome do Paciente que deseja EXCLUIR  *          ///\n");
   printf("///            #  Caso queira voltar ao menu anterior Digite 0  #           ///\n");
   printf("///                                                                         ///\n");
-  printf("///                    Nome do Paciente:                                    ///\n");
   printf("///                    0- Para voltar ao menu anterior:                     ///\n");
+  printf("///   Nome do Paciente: ");
+	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ0]", paciente);
+  getchar();
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
@@ -1025,6 +1031,7 @@ void pacienteAtualiza(void){
 }
 
 void pacienteExclui(void){
+  char paciente[51];
   system("clear");
   printf("\n");
   printf("*******************************************************************************\n");
@@ -1041,8 +1048,10 @@ void pacienteExclui(void){
   printf("///             *  Digite o Seu nome para cancelar sua conta  *             ///\n");
   printf("///            #  Caso queira voltar ao menu anterior Digite 0  #           ///\n");
   printf("///                                                                         ///\n");
-  printf("///                    Digite seu nome:                                     ///\n");
   printf("///                    0- Para voltar ao menu anterior:                     ///\n");
+  printf("///   Nome do Paciente: ");
+	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ0]", paciente);
+  getchar();
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
