@@ -920,6 +920,12 @@ void pacienteConsulta(void){
 }
 
 void pacienteAtualiza(void){
+  char nome[51];
+  char peso[4];
+  char altura[5];
+  char imc[4];
+  char atividade[9];
+  char calorias[6];
   system("clear");
   printf("\n");
   printf("*******************************************************************************\n");
@@ -936,12 +942,24 @@ void pacienteAtualiza(void){
   printf("///        *  Para atualizar seus dados preencha os campo a seguir  *       ///\n");
   printf("///            #  Caso queira voltar ao menu anterior Digite 0  #           ///\n");
   printf("///                                                                         ///\n");
-  printf("///                  Nome:                                                  ///\n");
-  printf("///                  Peso Atual:                                            ///\n");
-  printf("///                  Altura:                                                ///\n");
-  printf("///                  IMC:                                                   ///\n");
-  printf("///                  Nível de atividade física (Baixo, Moderado ou Alto):   ///\n");
-  printf("///                  Quantidade de calorias diarias:                        ///\n");
+  printf("///       Nome: ");
+	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome);
+  getchar();
+  printf("///       Peso Atual: ");
+	scanf("%[0-9,.]", peso);
+  getchar();
+  printf("///       Altura: ");
+	scanf("%[0-9,.]", altura);
+  getchar();
+  printf("///       IMC: ");
+	scanf("%[0-9,.]", imc);
+  getchar();
+  printf("///       Nível de atividade física (Baixo, Moderado ou Alto): ");
+	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", altura);
+  getchar();
+  printf("///       Quantidade de calorias diarias: ");
+	scanf("%[0-9,.]", calorias);
+  getchar();
   printf("///                  0- Para voltar ao menu anterior:                       ///\n");
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
