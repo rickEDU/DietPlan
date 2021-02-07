@@ -885,27 +885,27 @@ void pacienteAtualiza(void){
 
 void pacienteExclui(void){
   system("clear");
-    printf("\n");
-    printf("*******************************************************************************\n");
-    printf("///                                                                         ///\n");
-    printf("///                           Ministério da Saúde                           ///\n");
-    printf("///                                                                         ///\n");
-    printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
-    printf("///                                                                         ///\n");
-    printf("*******************************************************************************\n");
-    printf("///                         &&&&&&&&&&&&&&&&&&&&&&&&&                       ///\n");
-    printf("///               = = = = = Excluir Conta do Paciente = = = = =             ///\n");
-    printf("///                         &&&&&&&&&&&&&&&&&&&&&&&&&                       ///\n");
-    printf("///                                                                         ///\n");
-    printf("///             *  Digite o Seu nome para cancelar sua conta  *             ///\n");
-    printf("///            #  Caso queira voltar ao menu anterior Digite 0  #           ///\n");
-    printf("///                                                                         ///\n");
-    printf("///                    Digite seu nome:                                     ///\n");
-    printf("///                    0- Para voltar ao menu anterior:                     ///\n");
-    printf("///                                                                         ///\n");
-    printf("*******************************************************************************\n");
-    printf("\n");
-    printf(">>> Tecle <ENTER> para continuar...\n");
-    getchar();
+  printf("\n");
+  printf("*******************************************************************************\n");
+  printf("///                                                                         ///\n");
+  printf("///                           Ministério da Saúde                           ///\n");
+  printf("///                                                                         ///\n");
+  printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
+  printf("///                                                                         ///\n");
+  printf("*******************************************************************************\n");
+  printf("///                         &&&&&&&&&&&&&&&&&&&&&&&&&                       ///\n");
+  printf("///               = = = = = Excluir Conta do Paciente = = = = =             ///\n");
+  printf("///                         &&&&&&&&&&&&&&&&&&&&&&&&&                       ///\n");
+  printf("///                                                                         ///\n");
+  printf("///             *  Digite o Seu nome para cancelar sua conta  *             ///\n");
+  printf("///            #  Caso queira voltar ao menu anterior Digite 0  #           ///\n");
+  printf("///                                                                         ///\n");
+  printf("///                    Digite seu nome:                                     ///\n");
+  printf("///                    0- Para voltar ao menu anterior:                     ///\n");
+  printf("///                                                                         ///\n");
+  printf("*******************************************************************************\n");
+  printf("\n");
+  printf(">>> Tecle <ENTER> para continuar...\n");
+  getchar();
 }
 
