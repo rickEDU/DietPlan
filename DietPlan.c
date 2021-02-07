@@ -24,23 +24,23 @@ char nutriCafe(void);
 void nutriCafe_acrescenta(void);
 void nutriCafe_exclui(void);
 
-void nutriLanche1(void);
+char nutriLanche1(void);
 void nutriLanche1_acrescenta(void);
 void nutriLanche1_exclui(void);
 
-void nutriAlmoco(void);
+char nutriAlmoco(void);
 void nutriAlmoco_acrescenta(void);
 void nutriAlmoco_exclui(void);
 
-void nutriLanche2(void);
+char nutriLanche2(void);
 void nutriLanche2_acrescenta(void);
 void nutriLanche2_exclui(void);
 
-void nutriJanta(void);
+char nutriJanta(void);
 void nutriJanta_acrescenta(void);
 void nutriJanta_exclui(void);
 
-void nutriLanche3(void);
+char nutriLanche3(void);
 void nutriLanche3_acrescenta(void);
 void nutriLanche3_exclui(void);
 
@@ -65,29 +65,29 @@ int main(void) {
 
     nutriCadastro();
 
-    nutriDieta();
+    opcao = nutriDieta();
 
-    nutriCafe();
+    opcao = nutriCafe();
     nutriCafe_acrescenta();
     nutriCafe_exclui();
 
-    nutriLanche1();
+    opcao = nutriLanche1();
     nutriLanche1_acrescenta();
     nutriLanche1_exclui();
 
-    nutriAlmoco();
+    opcao = nutriAlmoco();
     nutriAlmoco_acrescenta();
     nutriAlmoco_exclui();
 
-    nutriLanche2();
+    opcao = nutriLanche2();
     nutriLanche2_acrescenta();
     nutriLanche2_exclui();
 
-    nutriJanta();
+    opcao = nutriJanta();
     nutriJanta_acrescenta();
     nutriJanta_exclui();
 
-    nutriLanche3();
+    opcao = nutriLanche3();
     nutriLanche3_acrescenta();
     nutriLanche3_exclui();
 
@@ -397,7 +397,8 @@ void nutriCafe_exclui(void){
   getchar();
 }
 
-void nutriLanche1(void){
+char nutriLanche1(void){
+  char a;
   system("clear");
   printf("\n");
   printf("*******************************************************************************\n");
@@ -416,11 +417,14 @@ void nutriLanche1(void){
   printf("///                         1- Acrescentar alimento.                        ///\n");
   printf("///                         2- Excluir alimento.                            ///\n");
   printf("///                         3- Voltar para o menu anterior.                 ///\n");
+	printf("///                         Escolha a opção desejada: ");
+	scanf("%c", &a);
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
   printf(">>> Tecle <ENTER> para continuar...\n");
   getchar();
+  return a;
 }
 
 void nutriLanche1_acrescenta(void){
@@ -478,7 +482,8 @@ void nutriLanche1_exclui(void){
   getchar();
 }
 
-void nutriAlmoco(void){
+char nutriAlmoco(void){
+  char a;
   system("clear");
   printf("\n");
   printf("*******************************************************************************\n");
@@ -497,11 +502,14 @@ void nutriAlmoco(void){
   printf("///                         1- Acrescentar alimento.                        ///\n");
   printf("///                         2- Excluir alimento.                            ///\n");
   printf("///                         3- Voltar para o menu anterior.                 ///\n");
+	printf("///                         Escolha a opção desejada: ");
+	scanf("%c", &a);
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
   printf(">>> Tecle <ENTER> para continuar...\n");
   getchar();
+  return a;
 }
 
 void nutriAlmoco_acrescenta(void){
@@ -559,7 +567,8 @@ void nutriAlmoco_exclui(void){
   getchar();
 }
 
-void nutriLanche2(void){
+char nutriLanche2(void){
+  char a;
   system("clear");
   printf("\n");
   printf("*******************************************************************************\n");
@@ -578,11 +587,14 @@ void nutriLanche2(void){
   printf("///                         1- Acrescentar alimento.                        ///\n");
   printf("///                         2- Excluir alimento.                            ///\n");
   printf("///                         3- Voltar para o menu anterior.                 ///\n");
+	printf("///                         Escolha a opção desejada: ");
+	scanf("%c", &a);
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
   printf(">>> Tecle <ENTER> para continuar...\n");
   getchar();
+  return a;
 }
 
 void nutriLanche2_acrescenta(void){
@@ -640,7 +652,8 @@ void nutriLanche2_exclui(void){
   getchar();
 }
 
-void nutriJanta(void){
+char nutriJanta(void){
+  char a;
   system("clear");
   printf("\n");
   printf("*******************************************************************************\n");
@@ -659,11 +672,14 @@ void nutriJanta(void){
   printf("///                         1- Acrescentar alimento.                        ///\n");
   printf("///                         2- Excluir alimento.                            ///\n");
   printf("///                         3- Voltar para o menu anterior.                 ///\n");
+	printf("///                         Escolha a opção desejada: ");
+	scanf("%c", &a);
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
   printf(">>> Tecle <ENTER> para continuar...\n");
   getchar();
+  return a;
 }
 
 void nutriJanta_acrescenta(void){
@@ -721,7 +737,8 @@ void nutriJanta_exclui(void){
   getchar();
 }
 
-void nutriLanche3(void){
+char nutriLanche3(void){
+  char a;
   system("clear");
   printf("\n");
   printf("*******************************************************************************\n");
@@ -740,10 +757,13 @@ void nutriLanche3(void){
   printf("///                         1- Acrescentar alimento.                        ///\n");
   printf("///                         2- Excluir alimento.                            ///\n");
   printf("///                         3- Voltar para o menu anterior.                 ///\n");
+	printf("///                         Escolha a opção desejada: ");
+	scanf("%c", &a);
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf(">>> Tecle <ENTER> para continuar...\n");
   getchar();
+  return a;
 }
 
 void nutriLanche3_acrescenta(void){
