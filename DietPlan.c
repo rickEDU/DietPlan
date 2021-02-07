@@ -424,6 +424,8 @@ void nutriLanche1(void){
 }
 
 void nutriLanche1_acrescenta(void){
+  char alimento[51];
+  char alimentCalorias[6];
   system("clear");
   printf("\n");
   printf("*******************************************************************************\n");
@@ -439,8 +441,12 @@ void nutriLanche1_acrescenta(void){
   printf("///                                                                         ///\n");
   printf("///                *  Preencha os dados do alimento pedidos  *              ///\n");
   printf("///                                                                         ///\n");
-  printf("///                   Nome do Alimento que será acrescentado:               ///\n");
-  printf("///                   Quantidade de calorias do alimento:                   ///\n");
+  printf("///  Nome do Alimento que será acrescentado: ");
+	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", alimento);
+  getchar();
+  printf("///  Quantidade de calorias do alimento: ");
+  scanf("%[0-9,.]", alimentCalorias);
+  getchar();
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
@@ -499,6 +505,8 @@ void nutriAlmoco(void){
 }
 
 void nutriAlmoco_acrescenta(void){
+  char alimento[51];
+  char alimentCalorias[6];
   system("clear");
   printf("\n");
   printf("*******************************************************************************\n");
@@ -514,8 +522,12 @@ void nutriAlmoco_acrescenta(void){
   printf("///                                                                         ///\n");
   printf("///                *  Preencha os dados do alimento pedidos  *              ///\n");
   printf("///                                                                         ///\n");
-  printf("///                   Nome do Alimento que será acrescentado:               ///\n");
-  printf("///                   Quantidade de calorias do alimento:                   ///\n");
+  printf("///  Nome do Alimento que será acrescentado: ");
+	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", alimento);
+  getchar();
+  printf("///  Quantidade de calorias do alimento: ");
+  scanf("%[0-9,.]", alimentCalorias);
+  getchar();
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
@@ -574,6 +586,8 @@ void nutriLanche2(void){
 }
 
 void nutriLanche2_acrescenta(void){
+  char alimento[51];
+  char alimentCalorias[6];
   system("clear");
   printf("\n");
   printf("*******************************************************************************\n");
@@ -589,8 +603,12 @@ void nutriLanche2_acrescenta(void){
   printf("///                                                                         ///\n");
   printf("///                *  Preencha os dados do alimento pedidos  *              ///\n");
   printf("///                                                                         ///\n");
-  printf("///                   Nome do Alimento que será acrescentado:               ///\n");
-  printf("///                   Quantidade de calorias do alimento:                   ///\n");
+  printf("///  Nome do Alimento que será acrescentado: ");
+	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", alimento);
+  getchar();
+  printf("///  Quantidade de calorias do alimento: ");
+  scanf("%[0-9,.]", alimentCalorias);
+  getchar();
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
@@ -649,6 +667,8 @@ void nutriJanta(void){
 }
 
 void nutriJanta_acrescenta(void){
+  char alimento[51];
+  char alimentCalorias[6];
   system("clear");
   printf("\n");
   printf("*******************************************************************************\n");
@@ -664,8 +684,12 @@ void nutriJanta_acrescenta(void){
   printf("///                                                                         ///\n");
   printf("///                *  Preencha os dados do alimento pedidos  *              ///\n");
   printf("///                                                                         ///\n");
-  printf("///                   Nome do Alimento que será acrescentado:               ///\n");
-  printf("///                   Quantidade de calorias do alimento:                   ///\n");
+  printf("///  Nome do Alimento que será acrescentado: ");
+	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", alimento);
+  getchar();
+  printf("///  Quantidade de calorias do alimento: ");
+  scanf("%[0-9,.]", alimentCalorias);
+  getchar();
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
@@ -723,6 +747,8 @@ void nutriLanche3(void){
 }
 
 void nutriLanche3_acrescenta(void){
+  char alimento[51];
+  char alimentCalorias[6];
   system("clear");
   printf("\n");
   printf("*******************************************************************************\n");
@@ -738,8 +764,12 @@ void nutriLanche3_acrescenta(void){
   printf("///                                                                         ///\n");
   printf("///                *  Preencha os dados do alimento pedidos  *              ///\n");
   printf("///                                                                         ///\n");
-  printf("///                   Nome do Alimento que será acrescentado:               ///\n");
-  printf("///                   Quantidade de calorias do alimento:                   ///\n");
+  printf("///  Nome do Alimento que será acrescentado: ");
+	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", alimento);
+  getchar();
+  printf("///  Quantidade de calorias do alimento: ");
+  scanf("%[0-9,.]", alimentCalorias);
+  getchar();
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
