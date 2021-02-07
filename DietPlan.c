@@ -374,6 +374,7 @@ void nutriCafe_acrescenta(void){
 }
 
 void nutriCafe_exclui(void){
+  char alimento[51];
   system("clear");
   printf("\n");
   printf("*******************************************************************************\n");
@@ -389,7 +390,9 @@ void nutriCafe_exclui(void){
   printf("///                                                                         ///\n");
   printf("///                *  Preencha os dados do alimento pedidos  *              ///\n");
   printf("///                                                                         ///\n");
-  printf("///                   Nome do Alimento que será EXCLUIDO:                   ///\n");
+  printf("///         Nome do Alimento que será EXCLUIDO: ");
+	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", alimento);
+  getchar();
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
@@ -459,6 +462,7 @@ void nutriLanche1_acrescenta(void){
 }
 
 void nutriLanche1_exclui(void){
+  char alimento[51];
   system("clear");
   printf("\n");
   printf("*******************************************************************************\n");
@@ -474,7 +478,9 @@ void nutriLanche1_exclui(void){
   printf("///                                                                         ///\n");
   printf("///                *  Preencha os dados do alimento pedidos  *              ///\n");
   printf("///                                                                         ///\n");
-  printf("///                   Nome do Alimento que será EXCLUIDO:                   ///\n");
+  printf("///         Nome do Alimento que será EXCLUIDO: ");
+	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", alimento);
+  getchar();
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
@@ -544,6 +550,7 @@ void nutriAlmoco_acrescenta(void){
 }
 
 void nutriAlmoco_exclui(void){
+  char alimento[51];
   system("clear");
   printf("\n");
   printf("*******************************************************************************\n");
@@ -559,7 +566,9 @@ void nutriAlmoco_exclui(void){
   printf("///                                                                         ///\n");
   printf("///                *  Preencha os dados do alimento pedidos  *              ///\n");
   printf("///                                                                         ///\n");
-  printf("///                   Nome do Alimento que será EXCLUIDO:                   ///\n");
+  printf("///         Nome do Alimento que será EXCLUIDO: ");
+	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", alimento);
+  getchar();
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
@@ -629,6 +638,7 @@ void nutriLanche2_acrescenta(void){
 }
 
 void nutriLanche2_exclui(void){
+  char alimento[51];
   system("clear");
   printf("\n");
   printf("*******************************************************************************\n");
@@ -644,7 +654,9 @@ void nutriLanche2_exclui(void){
   printf("///                                                                         ///\n");
   printf("///                *  Preencha os dados do alimento pedidos  *              ///\n");
   printf("///                                                                         ///\n");
-  printf("///                   Nome do Alimento que será EXCLUIDO:                   ///\n");
+  printf("///         Nome do Alimento que será EXCLUIDO: ");
+	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", alimento);
+  getchar();
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
@@ -714,6 +726,7 @@ void nutriJanta_acrescenta(void){
 }
 
 void nutriJanta_exclui(void){
+  char alimento[51];
   system("clear");
   printf("\n");
   printf("*******************************************************************************\n");
@@ -729,7 +742,9 @@ void nutriJanta_exclui(void){
   printf("///                                                                         ///\n");
   printf("///                *  Preencha os dados do alimento pedidos  *              ///\n");
   printf("///                                                                         ///\n");
-  printf("///                   Nome do Alimento que será EXCLUIDO:                   ///\n");
+  printf("///         Nome do Alimento que será EXCLUIDO: ");
+	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", alimento);
+  getchar();
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
@@ -798,6 +813,7 @@ void nutriLanche3_acrescenta(void){
 }
 
 void nutriLanche3_exclui(void){
+  char alimento[51];
   system("clear");
   printf("\n");
   printf("*******************************************************************************\n");
@@ -813,7 +829,9 @@ void nutriLanche3_exclui(void){
   printf("///                                                                         ///\n");
   printf("///                *  Preencha os dados do alimento pedidos  *              ///\n");
   printf("///                                                                         ///\n");
-  printf("///                   Nome do Alimento que será EXCLUIDO:                   ///\n");
+  printf("///         Nome do Alimento que será EXCLUIDO: ");
+	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", alimento);
+  getchar();
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
@@ -1031,4 +1049,3 @@ void pacienteExclui(void){
   printf(">>> Tecle <ENTER> para continuar...\n");
   getchar();
 }
-
