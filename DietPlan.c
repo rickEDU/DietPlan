@@ -15,7 +15,7 @@ char menuPrincipal(void);
 
 char nutricionista(void);
 char paciente(void);
-
+// Submenus Nutricionista
 void nutriCadastro(void);
 
 char nutriDieta(void);
@@ -49,7 +49,7 @@ void nutriPesquisa(void);
 void nutriAtualizar(void);
 
 void nutriExclui(void);
-
+// Submenus Paciente
 void pacienteConsulta(void);
 void pacienteAtualiza(void);
 void pacienteExclui(void);
@@ -59,31 +59,44 @@ int main(void) {
   char opcao;
     resulmo();
     opcao = menuPrincipal();
+
     opcao = nutricionista();
     opcao = paciente();
+
     nutriCadastro();
+
     nutriDieta();
+
     nutriCafe();
     nutriCafe_acrescenta();
     nutriCafe_exclui();
+
     nutriLanche1();
     nutriLanche1_acrescenta();
     nutriLanche1_exclui();
+
     nutriAlmoco();
     nutriAlmoco_acrescenta();
     nutriAlmoco_exclui();
+
     nutriLanche2();
     nutriLanche2_acrescenta();
     nutriLanche2_exclui();
+
     nutriJanta();
     nutriJanta_acrescenta();
     nutriJanta_exclui();
+
     nutriLanche3();
     nutriLanche3_acrescenta();
     nutriLanche3_exclui();
+
     nutriPesquisa();
+
     nutriAtualizar();
+
     nutriExclui();
+
     pacienteConsulta();
     pacienteAtualiza();
     pacienteExclui();
@@ -122,94 +135,94 @@ void resulmo(void) {
 char menuPrincipal(void){
   char a;
   system("clear");
-    printf("\n");
-    printf("*******************************************************************************\n");
-    printf("///                                                                         ///\n");
-    printf("///                           Ministério da Saúde                           ///\n");
-    printf("///                                                                         ///\n");
-    printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
-    printf("///                                                                         ///\n");
-    printf("*******************************************************************************\n");
-    printf("///                            ##############                               ///\n");
-    printf("///                  = = = = = Menu principal = = = = =                     ///\n");
-    printf("///                            ##############                               ///\n");
-    printf("///                                                                         ///\n");
-    printf("///    *  Das opções abaixo digite o número do menu que deseja acessar  *   ///\n");
-    printf("///                                                                         ///\n");
-    printf("///                            1- Nutricionista.                            ///\n");
-    printf("///                            2- Paciente.                                 ///\n");
-	  printf("///                       Escolha a opção desejada: ");
-	  scanf("%c", &a);
-    printf("///                                                                         ///\n");
-    printf("*******************************************************************************\n");
-    printf("\n");
-    printf(">>> Tecle <ENTER> para continuar...\n");
-    getchar();
-    return a;
+  printf("\n");
+  printf("*******************************************************************************\n");
+  printf("///                                                                         ///\n");
+  printf("///                           Ministério da Saúde                           ///\n");
+  printf("///                                                                         ///\n");
+  printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
+  printf("///                                                                         ///\n");
+  printf("*******************************************************************************\n");
+  printf("///                            ##############                               ///\n");
+  printf("///                  = = = = = Menu principal = = = = =                     ///\n");
+  printf("///                            ##############                               ///\n");
+  printf("///                                                                         ///\n");
+  printf("///    *  Das opções abaixo digite o número do menu que deseja acessar  *   ///\n");
+  printf("///                                                                         ///\n");
+  printf("///                            1- Nutricionista.                            ///\n");
+  printf("///                            2- Paciente.                                 ///\n");
+	printf("///                       Escolha a opção desejada: ");
+	scanf("%c", &a);
+  printf("///                                                                         ///\n");
+  printf("*******************************************************************************\n");
+  printf("\n");
+  printf(">>> Tecle <ENTER> para continuar...\n");
+  getchar();
+  return a;
 }
 
 char nutricionista(void){
   char a;
-    system("clear");
-    printf("\n");
-    printf("*******************************************************************************\n");
-    printf("///                                                                         ///\n");
-    printf("///                           Ministério da Saúde                           ///\n");
-    printf("///                                                                         ///\n");
-    printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
-    printf("///                                                                         ///\n");
-    printf("*******************************************************************************\n");
-    printf("///                            ##################                           ///\n");
-    printf("///                  = = = = = Menu Nutricionista = = = = =                 ///\n");
-    printf("///                            ##################                           ///\n");
-    printf("///                                                                         ///\n");
-    printf("///    *  Das opções abaixo digite o número do menu que deseja acessar  *   ///\n");
-    printf("///                                                                         ///\n");
-    printf("///                           1- Cadastrar Paciente.                        ///\n");
-    printf("///                           2- Registrar dieta.                           ///\n");
-    printf("///                           3- Pesquisar Paciente.                        ///\n");
-    printf("///                           4- Atualizar Dados.                           ///\n");
-    printf("///                           5- Excluir Paciente.                          ///\n");
-    printf("///                           6. Voltar ao menu anterior.                   ///\n");
-	  printf("///                       Escolha a opção desejada: ");
-	  scanf("%c", &a);
-    printf("///                                                                         ///\n");
-    printf("*******************************************************************************\n");
-    printf("\n");
-    printf(">>> Tecle <ENTER> para continuar...\n");
-    getchar();
-    return a;
+  system("clear");
+  printf("\n");
+  printf("*******************************************************************************\n");
+  printf("///                                                                         ///\n");
+  printf("///                           Ministério da Saúde                           ///\n");
+  printf("///                                                                         ///\n");
+  printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
+  printf("///                                                                         ///\n");
+  printf("*******************************************************************************\n");
+  printf("///                            ##################                           ///\n");
+  printf("///                  = = = = = Menu Nutricionista = = = = =                 ///\n");
+  printf("///                            ##################                           ///\n");
+  printf("///                                                                         ///\n");
+  printf("///    *  Das opções abaixo digite o número do menu que deseja acessar  *   ///\n");
+  printf("///                                                                         ///\n");
+  printf("///                           1- Cadastrar Paciente.                        ///\n");
+  printf("///                           2- Registrar dieta.                           ///\n");
+  printf("///                           3- Pesquisar Paciente.                        ///\n");
+  printf("///                           4- Atualizar Dados.                           ///\n");
+  printf("///                           5- Excluir Paciente.                          ///\n");
+  printf("///                           6. Voltar ao menu anterior.                   ///\n");
+	printf("///                       Escolha a opção desejada: ");
+	scanf("%c", &a);
+  printf("///                                                                         ///\n");
+  printf("*******************************************************************************\n");
+  printf("\n");
+  printf(">>> Tecle <ENTER> para continuar...\n");
+  getchar();
+  return a;
 }
 
 char paciente(void){
   char a;
   system("clear");
-    printf("\n");
-    printf("*******************************************************************************\n");
-    printf("///                                                                         ///\n");
-    printf("///                           Ministério da Saúde                           ///\n");
-    printf("///                                                                         ///\n");
-    printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
-    printf("///                                                                         ///\n");
-    printf("*******************************************************************************\n");
-    printf("///                              #############                              ///\n");
-    printf("///                    = = = = = Menu Paciente = = = = =                    ///\n");
-    printf("///                              #############                              ///\n");
-    printf("///                                                                         ///\n");
-    printf("///    *  Das opções abaixo digite o número do menu que deseja acessar  *   ///\n");
-    printf("///                                                                         ///\n");
-    printf("///                           1- Consultar Dieta.                           ///\n");
-    printf("///                           2- Atualizar Dados.                           ///\n");
-    printf("///                           3- Excluir Conta.                             ///\n");
-    printf("///                           4. Voltar ao menu anterior                    ///\n");
-	  printf("///                       Escolha a opção desejada: ");
-	  scanf("%c", &a);
-    printf("///                                                                         ///\n");
-    printf("*******************************************************************************\n");
-    printf("\n");
-    printf(">>> Tecle <ENTER> para continuar...\n");
-    getchar();
-    return a;
+  printf("\n");
+  printf("*******************************************************************************\n");
+  printf("///                                                                         ///\n");
+  printf("///                           Ministério da Saúde                           ///\n");
+  printf("///                                                                         ///\n");
+  printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
+  printf("///                                                                         ///\n");
+  printf("*******************************************************************************\n");
+  printf("///                              #############                              ///\n");
+  printf("///                    = = = = = Menu Paciente = = = = =                    ///\n");
+  printf("///                              #############                              ///\n");
+  printf("///                                                                         ///\n");
+  printf("///    *  Das opções abaixo digite o número do menu que deseja acessar  *   ///\n");
+  printf("///                                                                         ///\n");
+  printf("///                           1- Consultar Dieta.                           ///\n");
+  printf("///                           2- Atualizar Dados.                           ///\n");
+  printf("///                           3- Excluir Conta.                             ///\n");
+  printf("///                           4. Voltar ao menu anterior                    ///\n");
+	printf("///                       Escolha a opção desejada: ");
+	scanf("%c", &a);
+  printf("///                                                                         ///\n");
+  printf("*******************************************************************************\n");
+  printf("\n");
+  printf(">>> Tecle <ENTER> para continuar...\n");
+  getchar();
+  return a;
 }
 
 
@@ -219,67 +232,85 @@ char paciente(void){
 
 
 void nutriCadastro(void){
-  system("clear");
-    printf("\n");
-    printf("*******************************************************************************\n");
-    printf("///                                                                         ///\n");
-    printf("///                           Ministério da Saúde                           ///\n");
-    printf("///                                                                         ///\n");
-    printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
-    printf("///                                                                         ///\n");
-    printf("*******************************************************************************\n");
-    printf("///                           &&&&&&&&&&&&&&&&&&&&                          ///\n");
-    printf("///                 = = = = = Cadastro de Paciente = = = = =                ///\n");
-    printf("///                           &&&&&&&&&&&&&&&&&&&&                          ///\n");
-    printf("///                                                                         ///\n");
-    printf("///                *  Preencha com as informações do Paciente  *            ///\n");
-    printf("///                                                                         ///\n");
-    printf("///                  Nome:                                                  ///\n");
-    printf("///                  Peso Atual:                                            ///\n");
-    printf("///                  Altura:                                                ///\n");
-    printf("///                  IMC:                                                   ///\n");
-    printf("///                  Nível de atividade física (Baixo, Moderado ou Alto):   ///\n");
-    printf("///                  Quantidade de calorias diarias:                        ///\n");
-    printf("///                                                                         ///\n");
-    printf("*******************************************************************************\n");
-    printf("\n");
-    printf(">>> Tecle <ENTER> para continuar...\n");
-    getchar();
+  char nome[51];
+  char peso[4];
+  char altura[5];
+  char imc[4];
+  char atividade[9];
+  char calorias[6];
+    system("clear");
+  printf("\n");
+  printf("*******************************************************************************\n");
+  printf("///                                                                         ///\n");
+  printf("///                           Ministério da Saúde                           ///\n");
+  printf("///                                                                         ///\n");
+  printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
+  printf("///                                                                         ///\n");
+  printf("*******************************************************************************\n");
+  printf("///                           &&&&&&&&&&&&&&&&&&&&                          ///\n");
+  printf("///                 = = = = = Cadastro de Paciente = = = = =                ///\n");
+  printf("///                           &&&&&&&&&&&&&&&&&&&&                          ///\n");
+  printf("///                                                                         ///\n");
+  printf("///                *  Preencha com as informações do Paciente  *            ///\n");
+  printf("///                                                                         ///\n");
+  printf("///       Nome: ");
+	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome);
+  getchar();
+  printf("///       Peso Atual: ");
+	scanf("%[0-9,.]", peso);
+  getchar();
+  printf("///       Altura: ");
+	scanf("%[0-9,.]", altura);
+  getchar();
+  printf("///       IMC: ");
+	scanf("%[0-9,.]", imc);
+  getchar();
+  printf("///       Nível de atividade física (Baixo, Moderado ou Alto): ");
+	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", altura);
+  getchar();
+  printf("///       Quantidade de calorias diarias: ");
+	scanf("%[0-9,.]", calorias);
+  getchar();
+  printf("///                                                                         ///\n");
+  printf("*******************************************************************************\n");
+  printf("\n");
+  printf(">>> Tecle <ENTER> para continuar...\n");
+  getchar();
 }
 
 
 char nutriDieta(void){
   char a;
   system("clear");
-    printf("\n");
-    printf("*******************************************************************************\n");
-    printf("///                                                                         ///\n");
-    printf("///                           Ministério da Saúde                           ///\n");
-    printf("///                                                                         ///\n");
-    printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
-    printf("///                                                                         ///\n");
-    printf("*******************************************************************************\n");
-    printf("///                             &&&&&&&&&&&&&&&&                            ///\n");
-    printf("///                   = = = = = Registrar Dienta = = = = =                  ///\n");
-    printf("///                             &&&&&&&&&&&&&&&&                            ///\n");
-    printf("///                                                                         ///\n");
-    printf("///*Digite o Número da reição que deseja acrescentar ou excluir um alimento*///\n");
-    printf("///                                                                         ///\n");
-    printf("///                             1- Café da manhã.                           ///\n");
-    printf("///                             2- Lanche 1.                                ///\n");
-    printf("///                             3- Almoço.                                  ///\n");
-    printf("///                             4- Lanche 2.                                ///\n");
-    printf("///                             5- Jantar.                                  ///\n");
-    printf("///                             6- Lanche 3.                                ///\n");
-    printf("///                             7- Voltar para o menu anterior.             ///\n");
-	  printf("///                          Escolha a opção desejada: ");
-	  scanf("%c", &a);
-    printf("///                                                                         ///\n");
-    printf("*******************************************************************************\n");
-    printf("\n");
-    printf(">>> Tecle <ENTER> para continuar...\n");
-    getchar();
-    return a;
+  printf("\n");
+  printf("*******************************************************************************\n");
+  printf("///                                                                         ///\n");
+  printf("///                           Ministério da Saúde                           ///\n");
+  printf("///                                                                         ///\n");
+  printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
+  printf("///                                                                         ///\n");
+  printf("*******************************************************************************\n");
+  printf("///                             &&&&&&&&&&&&&&&&                            ///\n");
+  printf("///                   = = = = = Registrar Dienta = = = = =                  ///\n");
+  printf("///                             &&&&&&&&&&&&&&&&                            ///\n");
+  printf("///                                                                         ///\n");
+  printf("///*Digite o Número da reição que deseja acrescentar ou excluir um alimento*///\n");
+  printf("///                                                                         ///\n");
+  printf("///                             1- Café da manhã.                           ///\n");
+  printf("///                             2- Lanche 1.                                ///\n");
+  printf("///                             3- Almoço.                                  ///\n");
+  printf("///                             4- Lanche 2.                                ///\n");
+  printf("///                             5- Jantar.                                  ///\n");
+  printf("///                             6- Lanche 3.                                ///\n");
+  printf("///                             7- Voltar para o menu anterior.             ///\n");
+	printf("///                          Escolha a opção desejada: ");
+	scanf("%c", &a);
+  printf("///                                                                         ///\n");
+  printf("*******************************************************************************\n");
+  printf("\n");
+  printf(">>> Tecle <ENTER> para continuar...\n");
+  getchar();
+  return a;
 }
 
 char nutriCafe(void){
