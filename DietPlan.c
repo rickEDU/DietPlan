@@ -18,9 +18,9 @@ char paciente(void);
 
 void nutriCadastro(void);
 
-void nutriDieta(void);
+char nutriDieta(void);
 
-void nutriCafe(void);
+char nutriCafe(void);
 void nutriCafe_acrescenta(void);
 void nutriCafe_exclui(void);
 
@@ -282,7 +282,7 @@ char nutriDieta(void){
     return a;
 }
 
-void nutriCafe(void){
+char nutriCafe(void){
   char a;
   system("clear");
   printf("\n");
