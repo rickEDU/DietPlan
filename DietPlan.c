@@ -238,7 +238,7 @@ void nutriCadastro(void){
   char imc[4];
   char atividade[9];
   char calorias[6];
-    system("clear");
+  system("clear");
   printf("\n");
   printf("*******************************************************************************\n");
   printf("///                                                                         ///\n");
@@ -344,6 +344,8 @@ char nutriCafe(void){
 }
 
 void nutriCafe_acrescenta(void){
+  char alimento[51];
+  char alimentCalorias[6];
   system("clear");
   printf("\n");
   printf("*******************************************************************************\n");
@@ -358,8 +360,12 @@ void nutriCafe_acrescenta(void){
   printf("///                 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&                ///\n");
   printf("///                                                                         ///\n");
   printf("///                                                                         ///\n");
-  printf("///                   Nome do Alimento que será acrescentado:               ///\n");
-  printf("///                   Quantidade de calorias do alimento:                   ///\n");
+  printf("///  Nome do Alimento que será acrescentado: ");
+	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", alimento);
+  getchar();
+  printf("///  Quantidade de calorias do alimento: ");
+  scanf("%[0-9,.]", alimentCalorias);
+  getchar();
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
