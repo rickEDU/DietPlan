@@ -419,7 +419,7 @@ void nutriCadastro(void){
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
-  printf(">>> Tecle <ENTER> para continuar...\n");
+  printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
   getchar();
 }
 
@@ -453,7 +453,7 @@ char nutriDieta(void){
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
-  printf(">>> Tecle <ENTER> para continuar...\n");
+  printf(">>> Tecle <ENTER> para contuniar...\n");
   getchar();
   return a;
 }
@@ -514,7 +514,7 @@ void nutriCafe_acrescenta(void){
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
-  printf(">>> Tecle <ENTER> para continuar...\n");
+  printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
   getchar();
 }
 
@@ -541,7 +541,7 @@ void nutriCafe_exclui(void){
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
-  printf(">>> Tecle <ENTER> para continuar...\n");
+  printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
   getchar();
 }
 
@@ -602,7 +602,7 @@ void nutriLanche1_acrescenta(void){
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
-  printf(">>> Tecle <ENTER> para continuar...\n");
+  printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
   getchar();
 }
 
@@ -629,7 +629,7 @@ void nutriLanche1_exclui(void){
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
-  printf(">>> Tecle <ENTER> para continuar...\n");
+  printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
   getchar();
 }
 
@@ -690,7 +690,7 @@ void nutriAlmoco_acrescenta(void){
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
-  printf(">>> Tecle <ENTER> para continuar...\n");
+  printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
   getchar();
 }
 
@@ -717,7 +717,7 @@ void nutriAlmoco_exclui(void){
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
-  printf(">>> Tecle <ENTER> para continuar...\n");
+  printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
   getchar();
 }
 
@@ -778,7 +778,7 @@ void nutriLanche2_acrescenta(void){
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
-  printf(">>> Tecle <ENTER> para continuar...\n");
+  printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
   getchar();
 }
 
@@ -805,7 +805,7 @@ void nutriLanche2_exclui(void){
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
-  printf(">>> Tecle <ENTER> para continuar...\n");
+  printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
   getchar();
 }
 
@@ -866,7 +866,7 @@ void nutriJanta_acrescenta(void){
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
-  printf(">>> Tecle <ENTER> para continuar...\n");
+  printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
   getchar();
 }
 
@@ -893,7 +893,7 @@ void nutriJanta_exclui(void){
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
-  printf(">>> Tecle <ENTER> para continuar...\n");
+  printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
   getchar();
 }
 
@@ -921,6 +921,7 @@ char nutriLanche3(void){
 	scanf("%c", &a);
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
+  printf("\n");
   printf(">>> Tecle <ENTER> para continuar...\n");
   getchar();
   return a;
@@ -953,7 +954,7 @@ void nutriLanche3_acrescenta(void){
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
-  printf(">>> Tecle <ENTER> para continuar...\n");
+  printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
   getchar();
 }
 
@@ -980,7 +981,7 @@ void nutriLanche3_exclui(void){
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
-  printf(">>> Tecle <ENTER> para continuar...\n");
+  printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
   getchar();
 }
 
@@ -1000,16 +1001,15 @@ void nutriPesquisa(void){
   printf("///                             &&&&&&&&&&&&&&&&&&                          ///\n");
   printf("///                                                                         ///\n");
   printf("///             *  Digite o nome do Paciente que deseja pesquisar  *        ///\n");
-  printf("///              #  Caso queira voltar ao menu anterior Digite 0  #         ///\n");
+  printf("///   #  Caso queira voltar ao menu anterior não digite nada e dê enter  #  ///\n");
   printf("///                                                                         ///\n");
-  printf("///                    0- Para voltar ao menu anterior:                     ///\n");
   printf("///   Nome do Paciente: ");
 	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ0]", paciente);
   getchar();
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
-  printf(">>> Tecle <ENTER> para continuar...\n");
+  printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
   getchar();
 }
 
@@ -1034,7 +1034,7 @@ void nutriAtualizar(void){
   printf("///                     &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&                   ///\n");
   printf("///                                                                         ///\n");
   printf("///            *  Preencha com as informações atuais do Paciente  *         ///\n");
-  printf("///            #  Caso queira voltar ao menu anterior Digite 0  #           ///\n");
+  printf("///   #  Caso queira voltar ao menu anterior não digite nada e dê enter  #  ///\n");
   printf("///                                                                         ///\n");
   printf("///       Nome: ");
 	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome);
@@ -1058,7 +1058,7 @@ void nutriAtualizar(void){
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
-  printf(">>> Tecle <ENTER> para continuar...\n");
+  printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
   getchar();
 }
 
@@ -1078,16 +1078,15 @@ void nutriExclui(void){
   printf("///                            &&&&&&&&&&&&&&&&                             ///\n");
   printf("///                                                                         ///\n");
   printf("///             *  Digite o nome do Paciente que deseja EXCLUIR  *          ///\n");
-  printf("///            #  Caso queira voltar ao menu anterior Digite 0  #           ///\n");
+  printf("///   #  Caso queira voltar ao menu anterior não digite nada e dê enter  #  ///\n");
   printf("///                                                                         ///\n");
-  printf("///                    0- Para voltar ao menu anterior:                     ///\n");
   printf("///   Nome do Paciente: ");
 	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ0]", paciente);
   getchar();
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
-  printf(">>> Tecle <ENTER> para continuar...\n");
+  printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
   getchar();
 }
 
@@ -1110,7 +1109,7 @@ void pacienteConsulta(void){
   printf("///                             &&&&&&&&&&&&&&&                             ///\n");
   printf("///                                                                         ///\n");
   printf("///            *  Sua Dieta para essa semana é a escrita abaixo  *          ///\n");
-  printf("///            #  Caso queira voltar ao menu anterior Digite 0  #           ///\n");
+  printf("///   #  Caso queira voltar ao menu anterior não digite nada e dê enter  #  ///\n");
   printf("///                                                                         ///\n");
   printf("///                    Café da manhã:                                       ///\n");
   printf("///                    Lanche 1:                                            ///\n");
@@ -1118,11 +1117,10 @@ void pacienteConsulta(void){
   printf("///                    Lanche 2:                                            ///\n");
   printf("///                    Jantar:                                              ///\n");
   printf("///                    Lanche 3:                                            ///\n");
-  printf("///                    0- Para voltar ao menu anterior:                     ///\n");
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
-  printf(">>> Tecle <ENTER> para continuar...\n");
+  printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
   getchar();
 }
 
@@ -1147,7 +1145,7 @@ void pacienteAtualiza(void){
   printf("///                        &&&&&&&&&&&&&&&&&&&&&&&&                         ///\n");
   printf("///                                                                         ///\n");
   printf("///        *  Para atualizar seus dados preencha os campo a seguir  *       ///\n");
-  printf("///            #  Caso queira voltar ao menu anterior Digite 0  #           ///\n");
+  printf("///   #  Caso queira voltar ao menu anterior não digite nada e dê enter  #  ///\n");
   printf("///                                                                         ///\n");
   printf("///       Nome: ");
 	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome);
@@ -1167,11 +1165,10 @@ void pacienteAtualiza(void){
   printf("///       Quantidade de calorias diarias: ");
 	scanf("%[0-9,.]", calorias);
   getchar();
-  printf("///                  0- Para voltar ao menu anterior:                       ///\n");
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
-  printf(">>> Tecle <ENTER> para continuar...\n");
+  printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
   getchar();
 }
 
@@ -1191,15 +1188,14 @@ void pacienteExclui(void){
   printf("///                         &&&&&&&&&&&&&&&&&&&&&&&&&                       ///\n");
   printf("///                                                                         ///\n");
   printf("///             *  Digite o Seu nome para cancelar sua conta  *             ///\n");
-  printf("///            #  Caso queira voltar ao menu anterior Digite 0  #           ///\n");
+  printf("///   #  Caso queira voltar ao menu anterior não digite nada e dê enter  #  ///\n");
   printf("///                                                                         ///\n");
-  printf("///                    0- Para voltar ao menu anterior:                     ///\n");
   printf("///   Nome do Paciente: ");
 	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ0]", paciente);
   getchar();
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
-  printf(">>> Tecle <ENTER> para continuar...\n");
+  printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
   getchar();
 }
