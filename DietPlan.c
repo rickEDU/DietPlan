@@ -12,6 +12,7 @@
 void resulmo(void);
 
 char menuPrincipal(void);
+void modulo_principal(void);
 
 char nutricionista(void);
 void modulo_nutricionista(void);
@@ -26,26 +27,32 @@ char nutriDieta(void);
 void modulo_dieta(void);
 
 char nutriCafe(void);
+void modulo_cafe(void);
 void nutriCafe_acrescenta(void);
 void nutriCafe_exclui(void);
 
 char nutriLanche1(void);
+void modulo_lanche1(void);
 void nutriLanche1_acrescenta(void);
 void nutriLanche1_exclui(void);
 
 char nutriAlmoco(void);
+void modulo_almoco(void);
 void nutriAlmoco_acrescenta(void);
 void nutriAlmoco_exclui(void);
 
 char nutriLanche2(void);
+void modulo_lanche2(void);
 void nutriLanche2_acrescenta(void);
 void nutriLanche2_exclui(void);
 
 char nutriJanta(void);
+void modulo_janta(void);
 void nutriJanta_acrescenta(void);
 void nutriJanta_exclui(void);
 
 char nutriLanche3(void);
+void modulo_lanche3(void);
 void nutriLanche3_acrescenta(void);
 void nutriLanche3_exclui(void);
 
@@ -69,9 +76,27 @@ int main(void) {
         break;
       case '2' : modulo_paciente();
         break;
+      case '3' : resulmo();
+        break;
     }
   } while (opcao != '0');
   return 0;
+}
+
+
+void modulo_principal(void) {
+  char opcao;
+  do {
+    opcao = menuPrincipal();
+    switch (opcao){
+      case '1' : modulo_nutricionista();
+        break;
+      case '2' : modulo_paciente();
+        break;
+      case '3' : resulmo();
+        break;
+    }
+  } while (opcao != '0');
 }
 
 void modulo_nutricionista(void){
@@ -89,6 +114,8 @@ void modulo_nutricionista(void){
         break;
       case '5' : nutriExclui();
         break;
+      case '6' : modulo_principal();
+        break;
     }
   }while(opcao != '0');
 } 
@@ -104,6 +131,8 @@ void modulo_paciente(void){
         break;
       case '3' : pacienteExclui();
         break;
+      case '4' : modulo_principal();
+        break;
     }
   }while (opcao != '0');
 }
@@ -113,21 +142,113 @@ void modulo_dieta(void){
   do{
     opcao = nutriDieta();
     switch (opcao){
-      case '1' : nutriCafe();
+      case '1' : modulo_cafe();
         break;
-      case '2' : nutriLanche1();
+      case '2' : modulo_lanche1();
         break;
-      case '3' : nutriAlmoco();
+      case '3' : modulo_almoco();
         break;
-      case '4' : nutriLanche2();
+      case '4' : modulo_lanche2();
         break;
-      case '5' : nutriJanta();
+      case '5' : modulo_janta();
         break;
-      case '6' : nutriLanche3();
+      case '6' : modulo_lanche3();
+        break;
+      case '7' : modulo_nutricionista();
+        break;
     }
   }while(opcao != '0');
 }
 
+void modulo_cafe(void){
+  char opcao;
+  do{
+    opcao = nutriCafe();
+    switch (opcao){
+      case '1' : nutriCafe_acrescenta();
+        break;
+      case '2' : nutriCafe_exclui();
+        break;
+      case '3' : modulo_dieta();
+        break;
+    }
+  }while (opcao != '0');
+}
+
+void modulo_lanche1(void){
+  char opcao;
+  do{
+    opcao = nutriLanche1();
+    switch (opcao){
+      case '1' : nutriLanche1_acrescenta();
+        break;
+      case '2' : nutriLanche1_exclui();
+        break;
+      case '3' : modulo_dieta();
+        break;
+    }
+  }while (opcao != '0');
+}
+
+void modulo_almoco(void){
+  char opcao;
+  do{
+    opcao = nutriAlmoco();
+    switch (opcao){
+      case '1' : nutriAlmoco_acrescenta();
+        break;
+      case '2' : nutriAlmoco_exclui();
+        break;
+      case '3' : modulo_dieta();
+        break;
+    }
+  }while (opcao != '0');
+}
+
+void modulo_lanche2(void){
+  char opcao;
+  do{
+    opcao = nutriLanche2();
+    switch (opcao){
+      case '1' : nutriLanche2_acrescenta();
+        break;
+      case '2' : nutriLanche2_exclui();
+        break;
+      case '3' : modulo_dieta();
+        break;
+    }
+  }while (opcao != '0');
+}
+
+void modulo_janta(void){
+  char opcao;
+  do{
+    opcao = nutriJanta();
+    switch (opcao){
+      case '1' : nutriJanta_acrescenta();
+        break;
+      case '2' : nutriJanta_exclui();
+        break;
+      case '3' : modulo_dieta();
+        break;
+    }
+  }while (opcao != '0');
+}
+
+void modulo_lanche3(void){
+  char opcao;
+  do{
+    opcao = nutriLanche3();
+    switch (opcao){
+      case '1' : nutriLanche3_acrescenta();
+        break;
+      case '2' : nutriLanche3_exclui();
+        break;
+      case '3' : modulo_dieta();
+        break;
+    }
+  }while (opcao != '0');
+}
 
 void resulmo(void) {
   printf("\n");
@@ -150,7 +271,7 @@ void resulmo(void) {
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
-  printf(">>> Tecle <ENTER> para continuar...\n");
+  printf(">>> Tecle <ENTER> para voltar ao menu principal...\n");
   getchar();
 }
 
@@ -175,6 +296,7 @@ char menuPrincipal(void){
   printf("///                                                                         ///\n");
   printf("///                            1- Nutricionista.                            ///\n");
   printf("///                            2- Paciente.                                 ///\n");
+  printf("///                            3- Sobre o projeto.                          ///\n");
 	printf("///                       Escolha a opção desejada: ");
 	scanf("%c", &a);
   printf("///                                                                         ///\n");
