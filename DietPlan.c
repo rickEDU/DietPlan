@@ -83,7 +83,6 @@ int main(void) {
   return 0;
 }
 
-
 void modulo_principal(void) {
   char opcao;
   do {
