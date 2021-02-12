@@ -12,7 +12,6 @@
 void resulmo(void);
 
 char menuPrincipal(void);
-void modulo_principal(void);
 
 char nutricionista(void);
 void modulo_nutricionista(void);
@@ -83,21 +82,6 @@ int main(void) {
   return 0;
 }
 
-void modulo_principal(void) {
-  char opcao;
-  do {
-    opcao = menuPrincipal();
-    switch (opcao){
-      case '1' : modulo_nutricionista();
-        break;
-      case '2' : modulo_paciente();
-        break;
-      case '3' : resulmo();
-        break;
-    }
-  } while (opcao != '0');
-}
-
 void modulo_nutricionista(void){
   char opcao;
   do{
@@ -113,7 +97,7 @@ void modulo_nutricionista(void){
         break;
       case '5' : nutriExclui();
         break;
-      case '6' : modulo_principal();
+      case '6' : main();
         break;
     }
   }while(opcao != '0');
@@ -130,7 +114,7 @@ void modulo_paciente(void){
         break;
       case '3' : pacienteExclui();
         break;
-      case '4' : modulo_principal();
+      case '4' : main();
         break;
     }
   }while (opcao != '0');
