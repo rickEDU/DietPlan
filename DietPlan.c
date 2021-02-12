@@ -234,6 +234,7 @@ void modulo_lanche3(void){
 }
 
 void resulmo(void) {
+  system("clear");
   printf("\n");
   printf("*******************************************************************************\n");
   printf("///                                                                         ///\n");
