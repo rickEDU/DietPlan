@@ -9,7 +9,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "assinaturas.h"
-#include "funcoes.c"
+#include "telaprincipal.h"
+#include "modulonutri.c"
+#include "telanutri.h"
+#include "telaSubdieta.h"
+#include "modulopacient.c"
+#include "telapacient.h"
 
 int main(void) {
   char opcao;
@@ -26,4 +31,3 @@ int main(void) {
   } while (opcao != '0');
   return 0;
 }
-
