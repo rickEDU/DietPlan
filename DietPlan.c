@@ -8,13 +8,14 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "assinaturas.h"
+
 #include "telaprincipal.h"
+#include "modulonutri.h"
+#include "modulopacient.h"
+
+#include "telaprincipal.c"
 #include "modulonutri.c"
-#include "telanutri.h"
-#include "telaSubdieta.h"
 #include "modulopacient.c"
-#include "telapacient.h"
 
 int main(void) {
   char opcao;

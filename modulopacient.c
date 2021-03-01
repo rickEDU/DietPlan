@@ -1,3 +1,5 @@
+#include "telapacient.c"
+
 //
 /// MODULO Paciente
 //
