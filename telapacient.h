@@ -1,4 +1,4 @@
-
+#include "telapacient.c"
 //
 //// TELAS DO PACIENTE.
 //

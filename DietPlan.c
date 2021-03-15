@@ -15,7 +15,6 @@
 #include "modulorelatorio.h"
 
 #include "modulonutri.c"
-#include "modulopacient.c"
 
 int main(void) {
   char opcao;

@@ -1,4 +1,4 @@
-#include "telapacient.c"
+#include "telapacient.h"
 
 //
 /// MODULO Paciente
