@@ -58,7 +58,8 @@ char menuPrincipal(void){
   printf("///                                                                         ///\n");
   printf("///                            1- Nutricionista.                            ///\n");
   printf("///                            2- Paciente.                                 ///\n");
-  printf("///                            3- Sobre o projeto.                          ///\n");
+  printf("///                            3- Relatórios do Projeto.                    ///\n");
+  printf("///                            4- Sobre o projeto.                          ///\n");
 	printf("///                       Escolha a opção desejada: ");
 	scanf("%c", &a);
   printf("///                                                                         ///\n");

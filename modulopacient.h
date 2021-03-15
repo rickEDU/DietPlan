@@ -1,4 +1,4 @@
-#include "telapacient.h"
+
 
 //
 //// ASSINATURA DO MODULO PACIENTE

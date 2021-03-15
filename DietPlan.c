@@ -12,8 +12,8 @@
 #include "telaprincipal.h"
 #include "modulonutri.h"
 #include "modulopacient.h"
+#include "modulorelatorio.h"
 
-#include "telaprincipal.c"
 #include "modulonutri.c"
 #include "modulopacient.c"
 
@@ -26,9 +26,13 @@ int main(void) {
         break;
       case '2' : modulo_paciente();
         break;
-      case '3' : resulmo();
+      case '3' : modulo_relatorio();
+        break;
+      case '4' : resulmo();
         break;
     }
   } while (opcao != '0');
   return 0;
 }
+
+//Crie um módulo Relatórios no seu projeto, que deverá conter algumas propostas de possíveis relatórios que serão futuramente implementados. Por enquanto, basta criar um opção Relatórios no seu Menu Principal e criar algumas telas adicionais simulando os relatórios que serão implementados posteriormente.
