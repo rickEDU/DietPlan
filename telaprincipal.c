@@ -56,8 +56,8 @@ char menuPrincipal(void){
   printf("///                                                                         ///\n");
   printf("///    *  Das opções abaixo digite o número do menu que deseja acessar  *   ///\n");
   printf("///                                                                         ///\n");
-  printf("///                            1- Nutricionista.                            ///\n");
-  printf("///                            2- Paciente.                                 ///\n");
+  printf("///                            1- Modulo paciente.                          ///\n");
+  printf("///                            2- Modulo Dieta.                             ///\n");
   printf("///                            3- Relatórios do Projeto.                    ///\n");
   printf("///                            4- Sobre o projeto.                          ///\n");
 	printf("///                       Escolha a opção desejada: ");

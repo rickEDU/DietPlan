@@ -1,11 +1,9 @@
+
 #include "valida.h"
-#include "valida.c"
 
-//
-//// Menus do Paciente
-//
 
-char paciente(void){
+
+char dieta(void){
   char a;
   system("clear");
   printf("\n");
@@ -16,16 +14,16 @@ char paciente(void){
   printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
-  printf("///                              #############                              ///\n");
-  printf("///                    = = = = = Menu Paciente = = = = =                    ///\n");
-  printf("///                              #############                              ///\n");
+  printf("///                                 ##########                              ///\n");
+  printf("///                       = = = = = Menu Dieta = = = = =                    ///\n");
+  printf("///                                 ##########                              ///\n");
   printf("///                                                                         ///\n");
   printf("///    *  Das opções abaixo digite o número do menu que deseja acessar  *   ///\n");
   printf("///                                                                         ///\n");
-  printf("///                           1- Cadastrar Paciente.                        ///\n");
-  printf("///                           2- Pesquisar Paciente.                        ///\n");
-  printf("///                           3- Atualizar dados do Paciente.               ///\n");
-  printf("///                           4. Excluir Paciente.                          ///\n");
+  printf("///                           1- Cadastrar Dieta.                        ///\n");
+  printf("///                           2- Pesquisar Dieta.                        ///\n");
+  printf("///                           3- Atualizar dados da Deita.               ///\n");
+  printf("///                           4. Excluir Dieta.                          ///\n");
   printf("///                           4. Voltar ao Menu anterior.                   ///\n");
 	printf("///                       Escolha a opção desejada: ");
 	scanf("%c", &a);
@@ -37,11 +35,8 @@ char paciente(void){
   return a;
 }
 
-//
-//// Submenus Paciente
-//
 
-void pacienteCadastro(void){
+void dietaCadastro(void){
   char nome[51];
   char peso[8];
   char altura[5];
@@ -58,7 +53,7 @@ void pacienteCadastro(void){
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("///                           &&&&&&&&&&&&&&&&&&&&                          ///\n");
-  printf("///                 = = = = = Cadastro de Paciente = = = = =                ///\n");
+  printf("///                 = = = = = Cadastro de Dieta = = = = =                ///\n");
   printf("///                           &&&&&&&&&&&&&&&&&&&&                          ///\n");
   printf("///                                                                         ///\n");
   printf("///                *  Preencha com as informações do Paciente  *            ///\n");
@@ -120,7 +115,7 @@ void pacienteCadastro(void){
   getchar();
 }
 
-void pacientePesquisa(void){
+void dietaPesquisa(void){
   char nome[51];
   system("clear");
   printf("\n");
@@ -132,7 +127,7 @@ void pacientePesquisa(void){
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("///                             &&&&&&&&&&&&&&&&&&                          ///\n");
-  printf("///                   = = = = = Pesquisar Paciente = = = = =                ///\n");
+  printf("///                   = = = = = Pesquisar Dieta = = = = =                ///\n");
   printf("///                             &&&&&&&&&&&&&&&&&&                          ///\n");
   printf("///                                                                         ///\n");
   printf("///             *  Digite o nome do Paciente que deseja pesquisar  *        ///\n");
@@ -153,7 +148,7 @@ void pacientePesquisa(void){
   getchar();
 }
 
-void pacienteAtualiza(void){
+void dietaAtualiza(void){
   char nome[51];
   char peso[8];
   char altura[5];
@@ -170,7 +165,7 @@ void pacienteAtualiza(void){
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("///                        &&&&&&&&&&&&&&&&&&&&&&&&                         ///\n");
-  printf("///              = = = = = Atualizar Dados Paciente = = = = =               ///\n");
+  printf("///              = = = = = Atualizar Dados Dieta = = = = =               ///\n");
   printf("///                        &&&&&&&&&&&&&&&&&&&&&&&&                         ///\n");
   printf("///                                                                         ///\n");
   printf("///        *  Para atualizar seus dados preencha os campo a seguir  *       ///\n");
@@ -234,7 +229,7 @@ void pacienteAtualiza(void){
 }
 
 
-void pacienteExclui(void){
+void dietaExclui(void){
   char paciente[51];
   system("clear");
   printf("\n");
@@ -246,7 +241,7 @@ void pacienteExclui(void){
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("///                         &&&&&&&&&&&&&&&&&&&&&&&&&                       ///\n");
-  printf("///               = = = = = Excluir Conta do Paciente = = = = =             ///\n");
+  printf("///                     = = = = = Excluir Dieta = = = = =                   ///\n");
   printf("///                         &&&&&&&&&&&&&&&&&&&&&&&&&                       ///\n");
   printf("///                                                                         ///\n");
   printf("///             *  Digite o nome do Paciente que deseja excluir  *          ///\n");

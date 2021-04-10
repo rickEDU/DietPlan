@@ -1,7 +1,6 @@
 #include <string.h>
 
 
-
 ///
 /// Função de validação vista e adaptada de 
 /// "https://repl.it/@flaviusgorgonio/ValidacaoDeEntradasc" 

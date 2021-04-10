@@ -5,6 +5,7 @@
 
 char paciente(void);
 
-void pacienteConsulta(void);
+void pacienteCadastro(void);
+void pacientePesquisa(void);
 void pacienteAtualiza(void);
 void pacienteExclui(void);

@@ -9,13 +9,15 @@ void modulo_paciente(void){
   do{
     opcao = paciente();
     switch (opcao){
-      case '1' : pacienteConsulta();
+      case '1' : pacienteCadastro();
         break;
-      case '2' : pacienteAtualiza();
+      case '2' : pacientePesquisa();
         break;
-      case '3' : pacienteExclui();
+      case '3' : pacienteAtualiza();
         break;
-      case '4' : main();
+      case '4' : pacienteExclui();
+        break;
+      case '5' : main();
         break;
     }
   }while (opcao != '0');

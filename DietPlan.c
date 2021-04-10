@@ -10,20 +10,18 @@
 #include <stdlib.h>
 
 #include "telaprincipal.h"
-#include "modulonutri.h"
 #include "modulopacient.h"
+#include "modulodieta.h"
 #include "modulorelatorio.h"
-
-#include "modulonutri.c"
 
 int main(void) {
   char opcao;
   do {
     opcao = menuPrincipal();
     switch (opcao){
-      case '1' : modulo_nutricionista();
+      case '1' : modulo_paciente();
         break;
-      case '2' : modulo_paciente();
+      case '2' : modulo_dieta();
         break;
       case '3' : modulo_relatorio();
         break;
@@ -34,4 +32,56 @@ int main(void) {
   return 0;
 }
 
-//Crie um módulo Relatórios no seu projeto, que deverá conter algumas propostas de possíveis relatórios que serão futuramente implementados. Por enquanto, basta criar um opção Relatórios no seu Menu Principal e criar algumas telas adicionais simulando os relatórios que serão implementados posteriormente.
+// FLAVIUS GORGONIO16:18
+// CRUD Paciente:
+// CRUD Paciente:
+// Cadastrar Paciente
+// Pesquisar Paciente
+// Editar Paciente
+// Excluir Paciente
+// CRUD Dieta:
+// Cadastrar Dieta
+// Pesquisar Dieta
+// Editar Dieta
+// Excluir Dieta
+// FLAVIUS GORGONIO16:22
+// struct refeicao {
+// int codigo;
+// char nome[51];
+// char refeicao;
+// int listaAlimentos[5];
+// ...
+// }
+// struct refeicao {
+// int codigo;
+// char nome[51];
+// char tipoRefeicao;
+// int listaAlimentos[5];
+// ...
+// }
+// FLAVIUS GORGONIO16:23
+// 001
+// Café da Manha 3
+// 1
+// 12, 3, 5, 21, 56
+// FLAVIUS GORGONIO16:25
+// struct alimento {
+// int codigo;
+// char nomeAlimento[51];
+// int qdeCalorias;
+// ...
+// }
+// struct alimento {
+// int codAlimento;
+// char nomeAlimento[51];
+// int qdeCalorias;
+// ...
+// }
+// FLAVIUS GORGONIO16:28
+// struct consulta {
+// int codPaciente;
+// int codDieta;
+// char dataConsulta[11];
+// ...
+// }
+
