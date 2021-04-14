@@ -28,18 +28,18 @@ int validanome(char nome[]){
   return 1;
 }
 
-int validapeso(char peso[]){
+int validanumber(char num[]){
   int tam;
-  tam = strlen(peso);
+  tam = strlen(num);
   if(tam == 0){
      return 0;
   }
   for (int i = 0; i < tam; i++) {
-    if (peso[i] >= '0' && peso[i] <= '9') {
+    if (num[i] >= '0' && num[i] <= '9') {
       continue;
-    } else if (peso[i] == '.') {
+    } else if (num[i] == '.') {
       continue;
-    } else if (peso[i] == ',') {
+    } else if (num[i] == ',') {
       continue;
     } else {
       return 0;
@@ -48,25 +48,25 @@ int validapeso(char peso[]){
   return 1;
 }
 
-int validaaltura(char altura[]){
-  int tam;
-  tam = strlen(altura);
-  if(tam == 0){
-     return 0;
-  }
-  for (int i = 0; i < tam; i++) {
-    if (altura[i] >= '0' && altura[i] <= '9') {
-      continue;
-    } else if (altura[i] == '.') {
-      continue;
-    } else if (altura[i] == ',') {
-      continue;
-    } else {
-      return 0;
-    }
-  }
-  return 1;
-}
+// int validaaltura(char altura[]){
+//   int tam;
+//   tam = strlen(altura);
+//   if(tam == 0){
+//      return 0;
+//   }
+//   for (int i = 0; i < tam; i++) {
+//     if (altura[i] >= '0' && altura[i] <= '9') {
+//       continue;
+//     } else if (altura[i] == '.') {
+//       continue;
+//     } else if (altura[i] == ',') {
+//       continue;
+//     } else {
+//       return 0;
+//     }
+//   }
+//   return 1;
+// }
 
 
 int validaemail(char email[]){

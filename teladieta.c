@@ -58,56 +58,48 @@ void dietaCadastro(void){
   printf("///                                                                         ///\n");
   printf("///                *  Preencha com as informações do Paciente  *            ///\n");
   printf("///                                                                         ///\n");
-  printf("///       Nome: ");
-  scanf("%[^\n]", nome);
-  getchar();
-  while(!validanome(nome)){
-    printf("Nome inválido !!\n");
-    printf("Informe o Nome novamente :");
-    scanf("%[^\n]", nome);
-    getchar();
-  }
-  printf("///       Peso Atual: ");
-  scanf("%[^\n]", peso);
-  getchar();
-  while(!validapeso(peso)){
-    printf("Peso inválido !!\n");
-    printf("Informe o Peso novamente :");
-    scanf("%[^\n]", peso);
-    getchar();
-  }
-  printf("///       Altura: ");
-  getchar();
-  while(!validaaltura(altura)){
-    printf("Altura inválida !!\n");
-    printf("Informe a altura novamente :");
-    scanf("%[^\n]", altura);
-    getchar();
-  }
-  printf("///       E-mail: ");
-  getchar();
-  while(!validaemail(email)){
-    printf("E-mail inválido !!\n");
-    printf("Informe o E-mail novamente :");
-    scanf("%[^\n]", email);
-    getchar();
-  }
-  printf("///       Telefone: ");
-  getchar();
-  while(!validatel(tel)){
-    printf("Telefone inválido !!\n");
-    printf("Informe o Telefone novamente :");
-    scanf("%[^\n]", tel);
-    getchar();
-  }
-  printf("///       Nível de atividade física (Baixo, Moderado ou Alto): ");
-  getchar();
-  while(!validaatividade(atividade)){
-    printf("Atividade informada erroneamente !!\n");
-    printf("Informe o Nível de atividade física novamente :");
-    scanf("%[^\n]", atividade);
-    getchar();
-  }
+  // printf("///       Nome: ");
+  // scanf("%[^\n]", nome);
+  // getchar();
+  // while(!validanome(nome)){
+  //   printf("Nome inválido !!\n");
+  //   printf("Informe o Nome novamente :");
+  //   scanf("%[^\n]", nome);
+  //   getchar();
+  // }
+  // printf("///       Peso Atual: ");
+  // scanf("%[^\n]", peso);
+  // getchar();
+  // while(!validapeso(peso)){
+  //   printf("Peso inválido !!\n");
+  //   printf("Informe o Peso novamente :");
+  //   scanf("%[^\n]", peso);
+  //   getchar();
+  // }
+  // printf("///       Altura: ");
+  // getchar();
+  // while(!validaaltura(altura)){
+  //   printf("Altura inválida !!\n");
+  //   printf("Informe a altura novamente :");
+  //   scanf("%[^\n]", altura);
+  //   getchar();
+  // }
+  // printf("///       E-mail: ");
+  // getchar();
+  // while(!validaemail(email)){
+  //   printf("E-mail inválido !!\n");
+  //   printf("Informe o E-mail novamente :");
+  //   scanf("%[^\n]", email);
+  //   getchar();
+  // }
+  // printf("///       Telefone: ");
+  // getchar();
+  // while(!validatel(tel)){
+  //   printf("Telefone inválido !!\n");
+  //   printf("Informe o Telefone novamente :");
+  //   scanf("%[^\n]", tel);
+  //   getchar();
+  // }
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
@@ -133,14 +125,14 @@ void dietaPesquisa(void){
   printf("///             *  Digite o nome do Paciente que deseja pesquisar  *        ///\n");
   printf("///   #  Caso queira voltar ao menu anterior não digite nada e dê enter  #  ///\n");
   printf("///                                                                         ///\n");
-  printf("///   Nome do Paciente: ");
-  getchar();
-  while(!validanome(nome)){
-    printf("Nome inválido !!\n");
-    printf("Informe o Nome novamente :");
-    scanf("%[^\n]", nome);
-    getchar();
-  }
+  // printf("///   Nome do Paciente: ");
+  // getchar();
+  // while(!validanome(nome)){
+  //   printf("Nome inválido !!\n");
+  //   printf("Informe o Nome novamente :");
+  //   scanf("%[^\n]", nome);
+  //   getchar();
+  //}
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
@@ -171,56 +163,56 @@ void dietaAtualiza(void){
   printf("///        *  Para atualizar seus dados preencha os campo a seguir  *       ///\n");
   printf("///   #  Caso queira voltar ao menu anterior não digite nada e dê enter  #  ///\n");
   printf("///                                                                         ///\n");
-  printf("///       Nome: ");
-  scanf("%[^\n]", nome);
-  getchar();
-  while(!validanome(nome)){
-    printf("Nome inválido !!\n");
-    printf("Informe o Nome novamente :");
-    scanf("%[^\n]", nome);
-    getchar();
-  }
-  printf("///       Peso Atual: ");
-  scanf("%[^\n]", peso);
-  getchar();
-  while(!validapeso(peso)){
-    printf("Peso inválido !!\n");
-    printf("Informe o Peso novamente :");
-    scanf("%[^\n]", peso);
-    getchar();
-  }
-  printf("///       Altura: ");
-  getchar();
-  while(!validaaltura(altura)){
-    printf("Altura inválida !!\n");
-    printf("Informe a altura novamente :");
-    scanf("%[^\n]", altura);
-    getchar();
-  }
-  printf("///       E-mail: ");
-  getchar();
-  while(!validaemail(email)){
-    printf("E-mail inválido !!\n");
-    printf("Informe o E-mail novamente :");
-    scanf("%[^\n]", email);
-    getchar();
-  }
-  printf("///       Telefone: ");
-  getchar();
-  while(!validatel(tel)){
-    printf("Telefone inválido !!\n");
-    printf("Informe o Telefone novamente :");
-    scanf("%[^\n]", tel);
-    getchar();
-  }
-  printf("///       Nível de atividade física (Baixo, Moderado ou Alto): ");
-  getchar();
-  while(!validaatividade(atividade)){
-    printf("Atividade informada erroneamente !!\n");
-    printf("Informe o Nível de atividade física novamente :");
-    scanf("%[^\n]", atividade);
-    getchar();
-  }
+  // printf("///       Nome: ");
+  // scanf("%[^\n]", nome);
+  // getchar();
+  // while(!validanome(nome)){
+  //   printf("Nome inválido !!\n");
+  //   printf("Informe o Nome novamente :");
+  //   scanf("%[^\n]", nome);
+  //   getchar();
+  // }
+  // printf("///       Peso Atual: ");
+  // scanf("%[^\n]", peso);
+  // getchar();
+  // while(!validapeso(peso)){
+  //   printf("Peso inválido !!\n");
+  //   printf("Informe o Peso novamente :");
+  //   scanf("%[^\n]", peso);
+  //   getchar();
+  // }
+  // printf("///       Altura: ");
+  // getchar();
+  // while(!validaaltura(altura)){
+  //   printf("Altura inválida !!\n");
+  //   printf("Informe a altura novamente :");
+  //   scanf("%[^\n]", altura);
+  //   getchar();
+  // }
+  // printf("///       E-mail: ");
+  // getchar();
+  // while(!validaemail(email)){
+  //   printf("E-mail inválido !!\n");
+  //   printf("Informe o E-mail novamente :");
+  //   scanf("%[^\n]", email);
+  //   getchar();
+  // }
+  // printf("///       Telefone: ");
+  // getchar();
+  // while(!validatel(tel)){
+  //   printf("Telefone inválido !!\n");
+  //   printf("Informe o Telefone novamente :");
+  //   scanf("%[^\n]", tel);
+  //   getchar();
+  // }
+  // printf("///       Nível de atividade física (Baixo, Moderado ou Alto): ");
+  // getchar();
+  // while(!validaatividade(atividade)){
+  //   printf("Atividade informada erroneamente !!\n");
+  //   printf("Informe o Nível de atividade física novamente :");
+  //   scanf("%[^\n]", atividade);
+  //   getchar();
+  // }
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
