@@ -4,6 +4,16 @@
 //
 //// Menus do Paciente
 //
+typedef struct paciente Paciente;
+
+struct paciente{
+  char nome[51];
+  char peso[8];
+  char altura[5];
+  char email[4];
+  char tel[16];
+  char atividade[9];
+};
 
 char paciente(void){
   char a;
@@ -42,12 +52,10 @@ char paciente(void){
 //
 
 void pacienteCadastro(void){
-  char nome[51];
-  char peso[8];
-  char altura[5];
-  char email[4];
-  char tel[16];
-  char atividade[9];
+  Paciente* pc;
+
+  pc= (Paciente*)malloc(sizeof(Paciente));
+
   system("clear");
   printf("\n");
   printf("*******************************************************************************\n");
@@ -64,53 +72,53 @@ void pacienteCadastro(void){
   printf("///                *  Preencha com as informações do Paciente  *            ///\n");
   printf("///                                                                         ///\n");
   printf("///       Nome: ");
-  scanf("%[^\n]", nome);
+  scanf("%[^\n]", pc->nome);
   getchar();
-  while(!validanome(nome)){
+  while(!validanome(pc->nome)){
     printf("Nome inválido !!\n");
     printf("Informe o Nome novamente :");
-    scanf("%[^\n]", nome);
+    scanf("%[^\n]", pc->nome);
     getchar();
   }
   printf("///       Peso Atual: ");
-  scanf("%[^\n]", peso);
+  scanf("%[^\n]", pc->peso);
   getchar();
-  while(!validapeso(peso)){
+  while(!validapeso(pc->peso)){
     printf("Peso inválido !!\n");
     printf("Informe o Peso novamente :");
-    scanf("%[^\n]", peso);
+    scanf("%[^\n]", pc->peso);
     getchar();
   }
   printf("///       Altura: ");
   getchar();
-  while(!validaaltura(altura)){
+  while(!validaaltura(pc->altura)){
     printf("Altura inválida !!\n");
     printf("Informe a altura novamente :");
-    scanf("%[^\n]", altura);
+    scanf("%[^\n]", pc->altura);
     getchar();
   }
   printf("///       E-mail: ");
   getchar();
-  while(!validaemail(email)){
+  while(!validaemail(pc->email)){
     printf("E-mail inválido !!\n");
     printf("Informe o E-mail novamente :");
-    scanf("%[^\n]", email);
+    scanf("%[^\n]", pc->email);
     getchar();
   }
   printf("///       Telefone: ");
   getchar();
-  while(!validatel(tel)){
+  while(!validatel(pc->tel)){
     printf("Telefone inválido !!\n");
     printf("Informe o Telefone novamente :");
-    scanf("%[^\n]", tel);
+    scanf("%[^\n]", pc->tel);
     getchar();
   }
   printf("///       Nível de atividade física (Baixo, Moderado ou Alto): ");
   getchar();
-  while(!validaatividade(atividade)){
+  while(!validaatividade(pc->atividade)){
     printf("Atividade informada erroneamente !!\n");
     printf("Informe o Nível de atividade física novamente :");
-    scanf("%[^\n]", atividade);
+    scanf("%[^\n]", pc->atividade);
     getchar();
   }
   printf("///                                                                         ///\n");
@@ -154,12 +162,10 @@ void pacientePesquisa(void){
 }
 
 void pacienteAtualiza(void){
-  char nome[51];
-  char peso[8];
-  char altura[5];
-  char email[4];
-  char tel[16];
-  char atividade[9];
+  Paciente* pc;
+
+  pc= (Paciente*)malloc(sizeof(Paciente));
+
   system("clear");
   printf("\n");
   printf("*******************************************************************************\n");
@@ -177,53 +183,53 @@ void pacienteAtualiza(void){
   printf("///   #  Caso queira voltar ao menu anterior não digite nada e dê enter  #  ///\n");
   printf("///                                                                         ///\n");
   printf("///       Nome: ");
-  scanf("%[^\n]", nome);
+  scanf("%[^\n]", pc->nome);
   getchar();
-  while(!validanome(nome)){
+  while(!validanome(pc->nome)){
     printf("Nome inválido !!\n");
     printf("Informe o Nome novamente :");
-    scanf("%[^\n]", nome);
+    scanf("%[^\n]", pc->nome);
     getchar();
   }
   printf("///       Peso Atual: ");
-  scanf("%[^\n]", peso);
+  scanf("%[^\n]", pc->peso);
   getchar();
-  while(!validapeso(peso)){
+  while(!validapeso(pc->peso)){
     printf("Peso inválido !!\n");
     printf("Informe o Peso novamente :");
-    scanf("%[^\n]", peso);
+    scanf("%[^\n]", pc->peso);
     getchar();
   }
   printf("///       Altura: ");
   getchar();
-  while(!validaaltura(altura)){
+  while(!validaaltura(pc->altura)){
     printf("Altura inválida !!\n");
     printf("Informe a altura novamente :");
-    scanf("%[^\n]", altura);
+    scanf("%[^\n]", pc->altura);
     getchar();
   }
   printf("///       E-mail: ");
   getchar();
-  while(!validaemail(email)){
+  while(!validaemail(pc->email)){
     printf("E-mail inválido !!\n");
     printf("Informe o E-mail novamente :");
-    scanf("%[^\n]", email);
+    scanf("%[^\n]", pc->email);
     getchar();
   }
   printf("///       Telefone: ");
   getchar();
-  while(!validatel(tel)){
+  while(!validatel(pc->tel)){
     printf("Telefone inválido !!\n");
     printf("Informe o Telefone novamente :");
-    scanf("%[^\n]", tel);
+    scanf("%[^\n]", pc->tel);
     getchar();
   }
   printf("///       Nível de atividade física (Baixo, Moderado ou Alto): ");
   getchar();
-  while(!validaatividade(atividade)){
+  while(!validaatividade(pc->atividade)){
     printf("Atividade informada erroneamente !!\n");
     printf("Informe o Nível de atividade física novamente :");
-    scanf("%[^\n]", atividade);
+    scanf("%[^\n]", pc->atividade);
     getchar();
   }
   printf("///                                                                         ///\n");

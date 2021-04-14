@@ -7,7 +7,7 @@
 //// Tela sobre nós
 //
 
-void resulmo(void) {
+void resumo(void) {
   system("clear");
   printf("\n");
   printf("*******************************************************************************\n");

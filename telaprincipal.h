@@ -4,6 +4,6 @@
 //
 
 
-void resulmo(void);
+void resumo(void);
 
 char menuPrincipal(void);

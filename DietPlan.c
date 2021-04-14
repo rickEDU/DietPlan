@@ -25,7 +25,7 @@ int main(void) {
         break;
       case '3' : modulo_relatorio();
         break;
-      case '4' : resulmo();
+      case '4' : resumo();
         break;
     }
   } while (opcao != '0');
