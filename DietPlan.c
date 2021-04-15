@@ -84,4 +84,3 @@ int main(void) {
 // char dataConsulta[11];
 // ...
 // }
-

@@ -15,6 +15,8 @@ struct paciente{
   char tel[16];
 };
 
+
+
 char paciente(void){
   char a;
   system("clear");
@@ -51,7 +53,9 @@ char paciente(void){
 //// Submenus Paciente
 //
 
-void pacienteCadastro(void){
+
+
+Paciente* pacienteCadastro(void){
   Paciente* pc;
 
   pc= (Paciente*)malloc(sizeof(Paciente));
@@ -129,7 +133,10 @@ void pacienteCadastro(void){
   printf("\n");
   printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
   getchar();
+  return pc;
 }
+
+
 
 void pacientePesquisa(void){
   char nome[51];
@@ -268,6 +275,35 @@ void pacienteExclui(void){
   printf("///   Nome do Paciente: ");
 	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ0]", paciente);
   getchar();
+  printf("///                                                                         ///\n");
+  printf("*******************************************************************************\n");
+  printf("\n");
+  printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
+  getchar();
+}
+
+
+void pacienteErro(void){
+  char paciente[51];
+  system("clear");
+  printf("\n");
+  printf("*******************************************************************************\n");
+  printf("///                                                                         ///\n");
+  printf("///                           Ministério da Saúde                           ///\n");
+  printf("///                                                                         ///\n");
+  printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
+  printf("///                                                                         ///\n");
+  printf("*******************************************************************************\n");
+  printf("///                      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&                     ///\n");
+  printf("///            = = = = = Erro ao tentar gravar os Dados = = = = =           ///\n");
+  printf("///                      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&                     ///\n");
+  printf("///                                                                         ///\n");
+  printf("///                                                                         ///\n");
+  printf("///                               *  ERRO  *                                ///\n");
+  printf("///                                                                         ///\n");
+  printf("///          *  Não foi possível completar a Gravação do arquivo  *         ///\n");
+  printf("///                          *  Tente novamente   *                         ///\n");
+  printf("///                                                                         ///\n");
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");

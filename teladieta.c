@@ -2,6 +2,14 @@
 #include "valida.h"
 
 
+typedef struct refeicao Refeicao;
+
+struct refeicao{
+ int codigo;
+ char nome[51];
+ char calorias[5];
+ int listaAlimentos[5];
+};
 
 char dieta(void){
   char a;
@@ -37,12 +45,6 @@ char dieta(void){
 
 
 void dietaCadastro(void){
-  char nome[51];
-  char peso[8];
-  char altura[5];
-  char email[4];
-  char tel[16];
-  char atividade[9];
   system("clear");
   printf("\n");
   printf("*******************************************************************************\n");
@@ -141,12 +143,6 @@ void dietaPesquisa(void){
 }
 
 void dietaAtualiza(void){
-  char nome[51];
-  char peso[8];
-  char altura[5];
-  char email[4];
-  char tel[16];
-  char atividade[9];
   system("clear");
   printf("\n");
   printf("*******************************************************************************\n");

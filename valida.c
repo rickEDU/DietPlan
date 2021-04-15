@@ -48,25 +48,21 @@ int validanumber(char num[]){
   return 1;
 }
 
-// int validaaltura(char altura[]){
-//   int tam;
-//   tam = strlen(altura);
-//   if(tam == 0){
-//      return 0;
-//   }
-//   for (int i = 0; i < tam; i++) {
-//     if (altura[i] >= '0' && altura[i] <= '9') {
-//       continue;
-//     } else if (altura[i] == '.') {
-//       continue;
-//     } else if (altura[i] == ',') {
-//       continue;
-//     } else {
-//       return 0;
-//     }
-//   }
-//   return 1;
-// }
+int validacpf(char cpf[]){
+  int tam;
+  tam = strlen(cpf);
+  if(tam != 11){
+     return 0;
+  }
+  for (int i = 0; i < tam; i++) {
+    if (cpf[i] >= '0' && cpf[i] <= '9') {
+      continue;
+    } else {
+      return 0;
+    }
+  }
+  return 1;
+}
 
 
 int validaemail(char email[]){

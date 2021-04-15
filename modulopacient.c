@@ -1,5 +1,5 @@
 #include "telapacient.h"
-
+void gravarPaciente(Paciente*);
 //
 /// MODULO Paciente
 //
@@ -9,7 +9,7 @@ void modulo_paciente(void){
   do{
     opcao = paciente();
     switch (opcao){
-      case '1' : pacienteCadastro();
+      case '1' : cdtPaciente();
         break;
       case '2' : pacientePesquisa();
         break;
@@ -22,3 +22,25 @@ void modulo_paciente(void){
     }
   }while (opcao != '0');
 }
+
+
+void cdtPaciente(void){
+  Paciente* pc;
+
+  pc=pacienteCadastro();
+  gravarPaciente(pc);
+  free(pc);
+}
+
+void gravarPaciente(Paciente* pc){
+  FILE* fp;
+
+	fp = fopen("PACIENTE.dat", "ab");
+	if (fp == NULL) {
+		pacienteErro();
+	}
+	fwrite(pc, sizeof(Paciente), 1, fp);
+	fclose(fp);
+}
+
+
