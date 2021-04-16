@@ -283,3 +283,4 @@ void telapacienteErro(void){
   printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
   getchar();
 }
+

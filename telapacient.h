@@ -16,3 +16,9 @@ void telapacienteErro(void);
 
 
 
+void pesquisarPaciente(void);
+Paciente* buscarPaciente(char*);
+void exibirPaciente(Paciente*);
+void regravarPaciente(Paciente*);
+void atualizarPaciente(void);
+void excluirPaciente(void);
