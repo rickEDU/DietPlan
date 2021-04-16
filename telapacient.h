@@ -5,10 +5,14 @@
 
 
 
-char paciente(void);
+char telapaciente(void);
 void cdtPaciente(void);
-void pacientePesquisa(void);
-void pacienteAtualiza(void);
-void pacienteExclui(void);
-void pacienteErro(void);
+void gravarPaciente(Paciente*);
+Paciente* telapacientecadastro(void);
+char* telapacientePesquisa(void);
+char* telapacienteAtualiza(void);
+char* telapacienteExclui(void);
+void telapacienteErro(void);
+
+
 

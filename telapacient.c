@@ -1,9 +1,12 @@
 #include "valida.h"
 #include "valida.c"
-
+#define true 1
+#define false 0
 //
 //// Menus do Paciente
 //
+
+
 typedef struct paciente Paciente;
 
 struct paciente{
@@ -13,11 +16,13 @@ struct paciente{
   char altura[5];
   char email[4];
   char tel[16];
+  int status;
 };
 
 
 
-char paciente(void){
+
+char telapaciente(void){
   char a;
   system("clear");
   printf("\n");
@@ -55,7 +60,7 @@ char paciente(void){
 
 
 
-Paciente* pacienteCadastro(void){
+Paciente* telapacienteCadastro(void){
   Paciente* pc;
 
   pc= (Paciente*)malloc(sizeof(Paciente));
@@ -128,6 +133,7 @@ Paciente* pacienteCadastro(void){
     scanf("%[^\n]", pc->tel);
     getchar();
   }
+  pc->status=true;
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
@@ -138,8 +144,11 @@ Paciente* pacienteCadastro(void){
 
 
 
-void pacientePesquisa(void){
-  char nome[51];
+char* telapacientePesquisa(void){
+  char* cpf;
+
+  cpf = (char*)malloc(12*sizeof(char));
+
   system("clear");
   printf("\n");
   printf("*******************************************************************************\n");
@@ -153,28 +162,29 @@ void pacientePesquisa(void){
   printf("///                   = = = = = Pesquisar Paciente = = = = =                ///\n");
   printf("///                             &&&&&&&&&&&&&&&&&&                          ///\n");
   printf("///                                                                         ///\n");
-  printf("///             *  Digite o nome do Paciente que deseja pesquisar  *        ///\n");
+  printf("///             *  Digite o CPF do Paciente que deseja pesquisar  *        ///\n");
   printf("///   #  Caso queira voltar ao menu anterior não digite nada e dê enter  #  ///\n");
   printf("///                                                                         ///\n");
-  printf("///   Nome do Paciente: ");
+  printf("///   CPF do Paciente: ");
+  scanf("%[^\n]", cpf);
   getchar();
-  while(!validanome(nome)){
-    printf("Nome inválido !!\n");
-    printf("Informe o Nome novamente :");
-    scanf("%[^\n]", nome);
+  while(!validacpf(cpf)){
+    printf("CPF inválido !!\n");
+    printf("Informe o CPF novamente :");
+    scanf("%[^\n]", cpf);
     getchar();
   }
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
   printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
-  getchar();
+  return cpf;
 }
 
-void pacienteAtualiza(void){
-  Paciente* pc;
+char* telapacienteAtualiza(void){
+ char* cpf;
 
-  pc= (Paciente*)malloc(sizeof(Paciente));
+  cpf= (char*)malloc(12*sizeof(char));
 
   system("clear");
   printf("\n");
@@ -192,70 +202,28 @@ void pacienteAtualiza(void){
   printf("///        *  Para atualizar seus dados preencha os campo a seguir  *       ///\n");
   printf("///   #  Caso queira voltar ao menu anterior não digite nada e dê enter  #  ///\n");
   printf("///                                                                         ///\n");  
-  printf("///       CPF: ");
-  scanf("%[^\n]", pc->cpf);
+  printf("///             *  Digite o CPF do Paciente que deseja Atualizar  *         ///\n");
+  printf("///                                                                         ///\n");
+  printf("///   CPF do Paciente: ");
+  scanf("%[^\n]", cpf);
   getchar();
-  while(!validanumber(pc->cpf)){
-    printf("Nome inválido !!\n");
-    printf("Informe o Nome novamente :");
-    scanf("%[^\n]", pc->cpf);
-    getchar();
-  }
-  printf("///       Nome: ");
-  scanf("%[^\n]", pc->nome);
-  getchar();
-  while(!validanome(pc->nome)){
-    printf("Nome inválido !!\n");
-    printf("Informe o Nome novamente :");
-    scanf("%[^\n]", pc->nome);
-    getchar();
-  }
-  printf("///       Peso Atual: ");
-  scanf("%[^\n]", pc->peso);
-  getchar();
-  while(!validanumber(pc->peso)){
-    printf("Peso inválido !!\n");
-    printf("Informe o Peso novamente :");
-    scanf("%[^\n]", pc->peso);
-    getchar();
-  }
-  printf("///       Altura: ");
-  scanf("%[^\n]", pc->altura);
-  getchar();
-  while(!validanumber(pc->altura)){
-    printf("Altura inválida !!\n");
-    printf("Informe a altura novamente :");
-    scanf("%[^\n]", pc->altura);
-    getchar();
-  }
-  printf("///       E-mail: ");
-  scanf("%[^\n]", pc->email);
-  getchar();
-  while(!validaemail(pc->email)){
-    printf("E-mail inválido !!\n");
-    printf("Informe o E-mail novamente :");
-    scanf("%[^\n]", pc->email);
-    getchar();
-  }
-  printf("///       Telefone: ");
-  scanf("%[^\n]", pc->tel);
-  getchar();
-  while(!validatel(pc->tel)){
-    printf("Telefone inválido !!\n");
-    printf("Informe o Telefone novamente :");
-    scanf("%[^\n]", pc->tel);
+  while(!validacpf(cpf)){
+    printf("CPF inválido !!\n");
+    printf("Informe o CPF novamente :");
+    scanf("%[^\n]", cpf);
     getchar();
   }
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
   printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
-  getchar();
+  return cpf;
 }
 
 
-void pacienteExclui(void){
-  char paciente[51];
+char* telapacienteExclui(void){
+  char* cpf;
+  cpf = (char*)malloc(12*sizeof(char));
   system("clear");
   printf("\n");
   printf("*******************************************************************************\n");
@@ -269,21 +237,26 @@ void pacienteExclui(void){
   printf("///               = = = = = Excluir Conta do Paciente = = = = =             ///\n");
   printf("///                         &&&&&&&&&&&&&&&&&&&&&&&&&                       ///\n");
   printf("///                                                                         ///\n");
-  printf("///             *  Digite o nome do Paciente que deseja excluir  *          ///\n");
-  printf("///   #  Caso queira voltar ao menu anterior não digite nada e dê enter  #  ///\n");
+  printf("///             *  Digite o CPF do Paciente que deseja excluir  *           ///\n");
   printf("///                                                                         ///\n");
-  printf("///   Nome do Paciente: ");
-	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ0]", paciente);
+  printf("///   CPF do Paciente: ");
+  scanf("%[^\n]", cpf);
   getchar();
+  while(!validacpf(cpf)){
+    printf("CPF inválido !!\n");
+    printf("Informe o CPF novamente :");
+    scanf("%[^\n]", cpf);
+    getchar();
+  }
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
   printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
-  getchar();
+  return cpf;
 }
 
 
-void pacienteErro(void){
+void telapacienteErro(void){
   char paciente[51];
   system("clear");
   printf("\n");

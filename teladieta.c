@@ -28,11 +28,11 @@ char dieta(void){
   printf("///                                                                         ///\n");
   printf("///    *  Das opções abaixo digite o número do menu que deseja acessar  *   ///\n");
   printf("///                                                                         ///\n");
-  printf("///                           1- Cadastrar Dieta.                        ///\n");
-  printf("///                           2- Pesquisar Dieta.                        ///\n");
-  printf("///                           3- Atualizar dados da Deita.               ///\n");
-  printf("///                           4. Excluir Dieta.                          ///\n");
-  printf("///                           4. Voltar ao Menu anterior.                   ///\n");
+  printf("///                           1- Cadastrar Dieta.                           ///\n");
+  printf("///                           2- Pesquisar Dieta.                           ///\n");
+  printf("///                           3- Atualizar dados da Deita.                  ///\n");
+  printf("///                           4. Excluir Dieta.                             ///\n");
+  printf("///                           5. Voltar ao Menu anterior.                   ///\n");
 	printf("///                       Escolha a opção desejada: ");
 	scanf("%c", &a);
   printf("///                                                                         ///\n");
