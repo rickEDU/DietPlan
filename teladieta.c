@@ -5,13 +5,12 @@
 typedef struct refeicao Refeicao;
 
 struct refeicao{
- int codigo;
- char nome[51];
+ char alimento[51];
  char calorias[5];
- int listaAlimentos[5];
+ char alimCod[5];
 };
 
-char dieta(void){
+char teladieta(void){
   char a;
   system("clear");
   printf("\n");
@@ -44,7 +43,11 @@ char dieta(void){
 }
 
 
-void dietaCadastro(void){
+Refeicao* teladietaCadastro(void){
+  Refeicao* alm;
+
+  alm = (Refeicao*)malloc(sizeof(Refeicao));
+
   system("clear");
   printf("\n");
   printf("*******************************************************************************\n");
@@ -58,58 +61,44 @@ void dietaCadastro(void){
   printf("///                 = = = = = Cadastro de Dieta = = = = =                ///\n");
   printf("///                           &&&&&&&&&&&&&&&&&&&&                          ///\n");
   printf("///                                                                         ///\n");
-  printf("///                *  Preencha com as informações do Paciente  *            ///\n");
+  printf("///                *  Preencha com as informações do Alimento  *            ///\n");
   printf("///                                                                         ///\n");
-  // printf("///       Nome: ");
-  // scanf("%[^\n]", nome);
-  // getchar();
-  // while(!validanome(nome)){
-  //   printf("Nome inválido !!\n");
-  //   printf("Informe o Nome novamente :");
-  //   scanf("%[^\n]", nome);
-  //   getchar();
-  // }
-  // printf("///       Peso Atual: ");
-  // scanf("%[^\n]", peso);
-  // getchar();
-  // while(!validapeso(peso)){
-  //   printf("Peso inválido !!\n");
-  //   printf("Informe o Peso novamente :");
-  //   scanf("%[^\n]", peso);
-  //   getchar();
-  // }
-  // printf("///       Altura: ");
-  // getchar();
-  // while(!validaaltura(altura)){
-  //   printf("Altura inválida !!\n");
-  //   printf("Informe a altura novamente :");
-  //   scanf("%[^\n]", altura);
-  //   getchar();
-  // }
-  // printf("///       E-mail: ");
-  // getchar();
-  // while(!validaemail(email)){
-  //   printf("E-mail inválido !!\n");
-  //   printf("Informe o E-mail novamente :");
-  //   scanf("%[^\n]", email);
-  //   getchar();
-  // }
-  // printf("///       Telefone: ");
-  // getchar();
-  // while(!validatel(tel)){
-  //   printf("Telefone inválido !!\n");
-  //   printf("Informe o Telefone novamente :");
-  //   scanf("%[^\n]", tel);
-  //   getchar();
-  // }
+  printf("///       Nome do Alimento: ");
+  scanf("%[^\n]", alm->alimento);
+  getchar();
+  while(!validanome(alm->alimento)){
+    printf("Nome inválido !!\n");
+    printf("Informe o Nome novamente :");
+    scanf("%[^\n]", alm->alimento);
+    getchar();
+  }
+  printf("///       Quantidade de Calorias(xx,xx): ");
+  scanf("%[^\n]", alm->calorias);
+  getchar();
+  while(!validanumber(alm->calorias)){
+    printf("Peso inválido !!\n");
+    printf("Informe o Peso novamente :");
+    scanf("%[^\n]", alm->calorias);
+    getchar();
+  }
+  printf("///       Código do Alimento que pretende cadastrar: ");
+  scanf("%[^\n]", alm->alimCod);
+  getchar();
+  while(!validanumber(alm->alimCod)){
+    printf("Peso inválido !!\n");
+    printf("Informe o Peso novamente :");
+    scanf("%[^\n]", alm->alimCod);
+    getchar();
+  }
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
   printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
   getchar();
+  return alm;
 }
 
-void dietaPesquisa(void){
+void teladietaPesquisa(void){
   char nome[51];
   system("clear");
   printf("\n");
@@ -142,7 +131,7 @@ void dietaPesquisa(void){
   getchar();
 }
 
-void dietaAtualiza(void){
+void teladietaAtualiza(void){
   system("clear");
   printf("\n");
   printf("*******************************************************************************\n");
@@ -217,7 +206,7 @@ void dietaAtualiza(void){
 }
 
 
-void dietaExclui(void){
+void teladietaExclui(void){
   char paciente[51];
   system("clear");
   printf("\n");
@@ -238,6 +227,31 @@ void dietaExclui(void){
   printf("///   Nome do Paciente: ");
 	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ0]", paciente);
   getchar();
+  printf("///                                                                         ///\n");
+  printf("*******************************************************************************\n");
+  printf("\n");
+  printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
+  getchar();
+}
+
+void teladietaErro(void){
+  char paciente[51];
+  system("clear");
+  printf("\n");
+  printf("*******************************************************************************\n");
+  printf("///                                                                         ///\n");
+  printf("///                           Ministério da Saúde                           ///\n");
+  printf("///                                                                         ///\n");
+  printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
+  printf("///                                                                         ///\n");
+  printf("*******************************************************************************\n");
+  printf("///                         &&&&&&&&&&&&&&&&&&&&&&&&&                       ///\n");
+  printf("///                     = = = = = Excluir Dieta = = = = =                   ///\n");
+  printf("///                         &&&&&&&&&&&&&&&&&&&&&&&&&                       ///\n");
+  printf("///                                                                         ///\n");
+  printf("///             #  Código do alimento colocado erroneamente ou   #          ///\n");
+  printf("///                                #  ou  #                                 ///\n");
+  printf("///                       #  Ele não existe na lista   #                    ///\n");
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");

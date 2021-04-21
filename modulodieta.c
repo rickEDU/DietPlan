@@ -1,20 +1,26 @@
 #include "teladieta.h"
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 //
 //// MODULO DE REGISTRO DE DIETA
 //
 
+
+
 void modulo_dieta(void){
   char opcao;
   do{
-    opcao = dieta();
+    opcao = teladieta();
     switch (opcao){
-      case '1' : dietaCadastro();
+      case '1' : cdtDieta();
         break;
-      case '2' : dietaPesquisa();
+      case '2' : teladietaPesquisa();
         break;
-      case '3' : dietaAtualiza();
+      case '3' : teladietaAtualiza();
         break;
-      case '4' : dietaExclui();
+      case '4' : teladietaExclui();
         break;
       case '5' : main();
         break;
@@ -22,96 +28,24 @@ void modulo_dieta(void){
   }while (opcao != '0');
 }
 
-//
-//// MODULOS DOS SUBMENUS DO REGISTRO DE DIETA
-//
 
-// void modulo_cafe(void){
-//   char opcao;
-//   do{
-//     opcao = nutriCafe();
-//     switch (opcao){
-//       case '1' : nutriCafe_acrescenta();
-//         break;
-//       case '2' : nutriCafe_exclui();
-//         break;
-//       case '3' : modulo_dieta();
-//         break;
-//     }
-//   }while (opcao != '0');
-// }
 
-// void modulo_lanche1(void){
-//   char opcao;
-//   do{
-//     opcao = nutriLanche1();
-//     switch (opcao){
-//       case '1' : nutriLanche1_acrescenta();
-//         break;
-//       case '2' : nutriLanche1_exclui();
-//         break;
-//       case '3' : modulo_dieta();
-//         break;
-//     }
-//   }while (opcao != '0');
-// }
+/////////////////////////////////////////////////////////////////
+void cdtDieta(void){
+  Refeicao* al;
 
-// void modulo_almoco(void){
-//   char opcao;
-//   do{
-//     opcao = nutriAlmoco();
-//     switch (opcao){
-//       case '1' : nutriAlmoco_acrescenta();
-//         break;
-//       case '2' : nutriAlmoco_exclui();
-//         break;
-//       case '3' : modulo_dieta();
-//         break;
-//     }
-//   }while (opcao != '0');
-// }
+  al=teladietaCadastro();
+  gravarDieta(al);
+  free(al);
+}
 
-// void modulo_lanche2(void){
-//   char opcao;
-//   do{
-//     opcao = nutriLanche2();
-//     switch (opcao){
-//       case '1' : nutriLanche2_acrescenta();
-//         break;
-//       case '2' : nutriLanche2_exclui();
-//         break;
-//       case '3' : modulo_dieta();
-//         break;
-//     }
-//   }while (opcao != '0');
-// }
+void gravarDieta(Refeicao* al){
+  FILE* fp;
 
-// void modulo_janta(void){
-//   char opcao;
-//   do{
-//     opcao = nutriJanta();
-//     switch (opcao){
-//       case '1' : nutriJanta_acrescenta();
-//         break;
-//       case '2' : nutriJanta_exclui();
-//         break;
-//       case '3' : modulo_dieta();
-//         break;
-//     }
-//   }while (opcao != '0');
-// }
-
-// void modulo_lanche3(void){
-//   char opcao;
-//   do{
-//     opcao = nutriLanche3();
-//     switch (opcao){
-//       case '1' : nutriLanche3_acrescenta();
-//         break;
-//       case '2' : nutriLanche3_exclui();
-//         break;
-//       case '3' : modulo_dieta();
-//         break;
-//     }
-//   }while (opcao != '0');
-// }
+	fp = fopen("ALIMENTOS.dat", "ab");
+	if (fp == NULL) {
+		teladietaErro();
+	}
+	fwrite(al, sizeof(Refeicao), 1, fp);
+	fclose(fp);
+}

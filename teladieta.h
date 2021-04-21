@@ -1,7 +1,11 @@
 #include "teladieta.c"
 
-char dieta(void);
-void dietaCadastro(void);
-void dietaPesquisa(void);
-void dietaAtualiza(void);
-void dietaExclui(void);
+char teladieta(void);
+;
+void cdtDieta(void);
+void gravarDieta(Refeicao*);
+Refeicao* teladietaCadastro(void);
+void teladietaPesquisa(void);
+void teladietaAtualiza(void);
+void teladietaExclui(void);
+void teladietaErro(void);
