@@ -111,7 +111,7 @@ int validatel(char tel[]){
   return 1;
 }
 
- int validaatividade(char atividade[]){
+int validaatividade(char atividade[]){
      int tam;
   tam = strlen(atividade);
   if(tam == 0){
@@ -127,4 +127,21 @@ int validatel(char tel[]){
     }
   }
   return 1;
- }
+}
+
+
+int validatipo(char tipo[]){
+  int tam;
+  tam = strlen(tipo);
+  if(tam != 1){
+     return 0;
+  }
+  for (int i = 0; i < tam; i++) {
+    if (tipo[i] >= '1' && tipo[i] <= '6') {
+      continue;
+    } else {
+      return 0;
+    }
+  }
+  return 1;
+}

@@ -1,14 +1,26 @@
 
 #include "valida.h"
 
+typedef struct alimento Alimento;
+
+struct alimento{
+  int codAlimento[4];
+  char nomeAlimento[20];
+  int calorias[5];
+};
+
 
 typedef struct refeicao Refeicao;
 
 struct refeicao{
- char alimento[51];
- char calorias[5];
- char alimCod[5];
+  char cpfDig[12];
+  char tipo[2];
+  int alim1[2];
+  int alim2[2];
+  int alim3[2];
+  int alim4[2];
 };
+
 
 char teladieta(void){
   char a;
@@ -31,7 +43,8 @@ char teladieta(void){
   printf("///                           2- Pesquisar Dieta.                           ///\n");
   printf("///                           3- Atualizar dados da Deita.                  ///\n");
   printf("///                           4. Excluir Dieta.                             ///\n");
-  printf("///                           5. Voltar ao Menu anterior.                   ///\n");
+  printf("///                           5. Acrescentar Alimentos na lista.            ///\n");
+  printf("///                           6. Voltar ao Menu anterior.                   ///\n");
 	printf("///                       Escolha a opção desejada: ");
 	scanf("%c", &a);
   printf("///                                                                         ///\n");
@@ -44,9 +57,9 @@ char teladieta(void){
 
 
 Refeicao* teladietaCadastro(void){
-  Refeicao* alm;
+  Refeicao* rfc;
 
-  alm = (Refeicao*)malloc(sizeof(Refeicao));
+  rfc = (Refeicao*)malloc(sizeof(Refeicao));
 
   system("clear");
   printf("\n");
@@ -58,36 +71,70 @@ Refeicao* teladietaCadastro(void){
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("///                           &&&&&&&&&&&&&&&&&&&&                          ///\n");
-  printf("///                 = = = = = Cadastro de Dieta = = = = =                ///\n");
+  printf("///                 = = = = = Cadastro de Dieta = = = = =                   ///\n");
   printf("///                           &&&&&&&&&&&&&&&&&&&&                          ///\n");
   printf("///                                                                         ///\n");
   printf("///                *  Preencha com as informações do Alimento  *            ///\n");
   printf("///                                                                         ///\n");
-  printf("///       Nome do Alimento: ");
-  scanf("%[^\n]", alm->alimento);
+  printf("///       Digite o CPF do paciente que deseja cadastrar essa dieta: ");
+  scanf("%[^\n]", rfc->cpfDig);
   getchar();
-  while(!validanome(alm->alimento)){
+  while(!validacpf(rfc->cpfDig)){
     printf("Nome inválido !!\n");
     printf("Informe o Nome novamente :");
-    scanf("%[^\n]", alm->alimento);
+    scanf("%[^\n]", rfc->cpfDig);
     getchar();
   }
-  printf("///       Quantidade de Calorias(xx,xx): ");
-  scanf("%[^\n]", alm->calorias);
+  printf("///                *  1 - Café da manhã  *                                  ///\n");
+  printf("///                *  2 - Lanche 1  *                                       ///\n");
+  printf("///                *  3 - Almoço  *                                         ///\n");
+  printf("///                *  4 - Lanche 2  *                                       ///\n");
+  printf("///                *  5 - Jantar  *                                         ///\n");
+  printf("///                *  6 - Lanche 3  *                                       ///\n");
+  printf("///                                                                         ///\n");
+  printf("///                Tipo da reifeição (1-6): "); 
+  scanf("%[^\n]", rfc->tipo);
   getchar();
-  while(!validanumber(alm->calorias)){
-    printf("Peso inválido !!\n");
-    printf("Informe o Peso novamente :");
-    scanf("%[^\n]", alm->calorias);
+  while(!validatipo(rfc->tipo)){
+    printf("Tipo inválido !!\n");
+    printf("Informe o Tipo novamente :");
+    scanf("%[^\n]", rfc->tipo);
     getchar();
   }
-  printf("///       Código do Alimento que pretende cadastrar: ");
-  scanf("%[^\n]", alm->alimCod);
+  printf("///       Digite o código do alimento 1 : ");
+  scanf("%[^\n]", rfc->alim1);
   getchar();
-  while(!validanumber(alm->alimCod)){
-    printf("Peso inválido !!\n");
-    printf("Informe o Peso novamente :");
-    scanf("%[^\n]", alm->alimCod);
+  while(!validanumber(rfc->alim1)){
+    printf("Código do Alimento inválido !!\n");
+    printf("Informe o Código novamente :");
+    scanf("%[^\n]", rfc->alim1);
+    getchar();
+  }
+  printf("///       Digite o código do alimento 2 : ");
+  scanf("%[^\n]", rfc->alim2);
+  getchar();
+  while(!validanumber(rfc->alim2)){
+    printf("Código do Alimento inválido !!\n");
+    printf("Informe o Código novamente :");
+    scanf("%[^\n]", rfc->alim2);
+    getchar();
+  }
+  printf("///       Digite o código do alimento 3 : ");
+  scanf("%[^\n]", rfc->alim3);
+  getchar();
+  while(!validanumber(rfc->alim3)){
+    printf("Código do Alimento inválido !!\n");
+    printf("Informe o Código novamente :");
+    scanf("%[^\n]", rfc->alim3);
+    getchar();
+  }
+  printf("///       Digite o código do alimento 4 : ");
+  scanf("%[^\n]", rfc->alim4);
+  getchar();
+  while(!validanumber(rfc->alim4)){
+    printf("Código do Alimento inválido !!\n");
+    printf("Informe o Código novamente :");
+    scanf("%[^\n]", rfc->alim4);
     getchar();
   }
   printf("///                                                                         ///\n");
@@ -95,7 +142,7 @@ Refeicao* teladietaCadastro(void){
   printf("\n");
   printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
   getchar();
-  return alm;
+  return rfc;
 }
 
 void teladietaPesquisa(void){
@@ -257,4 +304,60 @@ void teladietaErro(void){
   printf("\n");
   printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
   getchar();
+}
+
+
+Alimento* telaAcrescentaalimento(void){
+  Alimento* alm;
+
+  alm = (Alimento*)malloc(sizeof(Alimento*));
+
+  system("clear");
+  printf("\n");
+  printf("*******************************************************************************\n");
+  printf("///                                                                         ///\n");
+  printf("///                           Ministério da Saúde                           ///\n");
+  printf("///                                                                         ///\n");
+  printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
+  printf("///                                                                         ///\n");
+  printf("*******************************************************************************\n");
+  printf("///                             &&&&&&&&&&&&&&&&&&&&                        ///\n");
+  printf("///                   = = = = = Acrescentar Alimento = = = = =              ///\n");
+  printf("///                             &&&&&&&&&&&&&&&&&&&&                        ///\n");
+  printf("///                                                                         ///\n");
+  printf("///     *  Preencha as informações do alimento que deseja acrescentar  *    ///\n");
+  printf("///                                                                         ///\n");
+  printf("///       Digite o código do alimento para fins de indentificão(xxx): ");
+  scanf("%[^\n]", alm->codAlimento);
+  getchar();
+  while(!validanumber(alm->codAlimento)){
+    printf("Código doAlimento inválido !!\n");
+    printf("Informe o Código do Alimento novamente :");
+    scanf("%[^\n]", alm->codAlimento);
+    getchar();
+  }
+  printf("///       Digite o Nome do alimento: ");
+  scanf("%[^\n]", alm->nomeAlimento);
+  getchar();
+  while(!validanome(alm->nomeAlimento)){
+    printf("Nome do Alimento inválido !!\n");
+    printf("Informe o Nome do Alimento novamente :");
+    scanf("%[^\n]", alm->nomeAlimento);
+    getchar();
+  }
+  printf("///       Digite a quantidade de Calorias do alimento: ");
+  scanf("%[^\n]", alm->calorias);
+  getchar();
+  while(!validanumber(alm->calorias)){
+    printf("Calorias do Alimento inválido !!\n");
+    printf("Informe o Calorias do Alimento novamente :");
+    scanf("%[^\n]", alm->calorias);
+    getchar();
+  }
+  printf("///                                                                         ///\n");
+  printf("*******************************************************************************\n");
+  printf("\n");
+  printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
+  getchar();
+  return alm;
 }

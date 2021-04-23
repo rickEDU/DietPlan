@@ -9,3 +9,6 @@ void teladietaPesquisa(void);
 void teladietaAtualiza(void);
 void teladietaExclui(void);
 void teladietaErro(void);
+Alimento* telaAcrescentaalimento(void);
+void cdtAlimento(void);
+void gravarAlimento(Alimento*);

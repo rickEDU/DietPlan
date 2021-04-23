@@ -22,7 +22,9 @@ void modulo_dieta(void){
         break;
       case '4' : teladietaExclui();
         break;
-      case '5' : main();
+      case '5' : cdtAlimento();
+        break;
+      case '6' : main();
         break;
     }
   }while (opcao != '0');
@@ -42,10 +44,34 @@ void cdtDieta(void){
 void gravarDieta(Refeicao* al){
   FILE* fp;
 
-	fp = fopen("ALIMENTOS.dat", "ab");
+	fp = fopen("CONSULTA.dat", "ab");
 	if (fp == NULL) {
 		teladietaErro();
 	}
 	fwrite(al, sizeof(Refeicao), 1, fp);
+	fclose(fp);
+}
+
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////
+
+void cdtAlimento(void){
+  Alimento* alm;
+
+  alm=telaAcrescentaalimento();
+  gravarAlimento(alm);
+  free(alm);
+}
+
+void gravarAlimento(Alimento* alm){
+  FILE* fp;
+
+	fp = fopen("ALIMENTOS.dat", "ab");
+	if (fp == NULL) {
+		teladietaErro();
+	}
+	fwrite(alm, sizeof(Alimento), 1, fp);
 	fclose(fp);
 }
