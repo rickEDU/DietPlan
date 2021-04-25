@@ -22,6 +22,16 @@ struct refeicao{
 };
 
 
+// typedef struct prato Prato;
+
+// struct prato{
+//   int alim1[4];
+//   int alim2[4];
+//   int alim3[4];
+//   int alim[4];
+// };
+// na tela do cadastro de  dieta eu coloco todas as refeições, vou ter q mudar a struct e talvez diminuir a quantidade de refeições no dia, assim eu cadastro todas as refeições de uma vez.
+
 char teladieta(void){
   char a;
   system("clear");
@@ -80,8 +90,8 @@ Refeicao* teladietaCadastro(void){
   scanf("%[^\n]", rfc->cpfDig);
   getchar();
   while(!validacpf(rfc->cpfDig)){
-    printf("Nome inválido !!\n");
-    printf("Informe o Nome novamente :");
+    printf("CPF inválido !!\n");
+    printf("Informe o CPF novamente :");
     scanf("%[^\n]", rfc->cpfDig);
     getchar();
   }
@@ -145,8 +155,10 @@ Refeicao* teladietaCadastro(void){
   return rfc;
 }
 
-void teladietaPesquisa(void){
-  char nome[51];
+char* teladietaPesquisa(void){
+  char* cpf;
+
+  cpf = (char*)malloc(sizeof(char));
   system("clear");
   printf("\n");
   printf("*******************************************************************************\n");
@@ -157,25 +169,27 @@ void teladietaPesquisa(void){
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("///                             &&&&&&&&&&&&&&&&&&                          ///\n");
-  printf("///                   = = = = = Pesquisar Dieta = = = = =                ///\n");
+  printf("///                   = = = = = Pesquisar Dieta = = = = =                   ///\n");
   printf("///                             &&&&&&&&&&&&&&&&&&                          ///\n");
   printf("///                                                                         ///\n");
   printf("///             *  Digite o nome do Paciente que deseja pesquisar  *        ///\n");
   printf("///   #  Caso queira voltar ao menu anterior não digite nada e dê enter  #  ///\n");
   printf("///                                                                         ///\n");
-  // printf("///   Nome do Paciente: ");
-  // getchar();
-  // while(!validanome(nome)){
-  //   printf("Nome inválido !!\n");
-  //   printf("Informe o Nome novamente :");
-  //   scanf("%[^\n]", nome);
-  //   getchar();
-  //}
+  printf("///       Digite o CPF do paciente que deseja cadastrar essa dieta: ");
+  scanf("%[^\n]", cpf);
+  getchar();
+  while(!validacpf(cpf)){
+    printf("CPF inválido !!\n");
+    printf("Informe o CPF novamente :");
+    scanf("%[^\n]", cpf);
+    getchar();
+  }
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
   printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
   getchar();
+  return cpf;
 }
 
 void teladietaAtualiza(void){

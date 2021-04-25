@@ -105,7 +105,7 @@ void exibirPaciente(Paciente* pc) {
 		printf("Telefone: %s\n", pc->tel);
 	}
 	printf("\n\nTecle ENTER para continuar!\n\n");
-	getchar();
+  getchar();
 }
 
 
