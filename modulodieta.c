@@ -16,9 +16,6 @@ void pesquisarDieta(void);
 Refeicao* buscarDieta(char*);
 void exibirDieta(Refeicao*);
 Alimento* buscarAlimento(int*);
-// Alimento* buscarAlimento2(int*);
-// Alimento* buscarAlimento3(int*);
-// Alimento* buscarAlimento4(int*);
 void exibirAL1(Alimento*);
 void exibirAL2(Alimento*);
 
@@ -133,7 +130,7 @@ Refeicao* buscarDieta(char* cpf) {
 
 
 
-Alimento* buscarAlimento(int* AL1) {
+Alimento* buscarAlimento(int* AL) {
 	FILE* fp;
 	Alimento* almt1;
 
@@ -143,35 +140,35 @@ Alimento* buscarAlimento(int* AL1) {
 		telapacienteErro();
 	}
 	while(fread(almt1, sizeof(Alimento), 1, fp)) {
-		if (strcmp(almt1->codAlimento, AL1) == 0) {
+		if (strcmp(almt1->codAlimento, AL) == 0) {
       fclose(fp);
       return almt1;
 		}
 	}
-  free(AL1);
+  free(AL);
 	fclose(fp);
 	return NULL;
 }
 
 
-void exibirAL1(Alimento* AL1) {
+void exibirAL1(Alimento* AL) {
 
-	if (AL1 == NULL) {
+	if (AL == NULL) {
 		printf("\n= = = Dieta Inexistente = = =\n");
 	} else {
-		printf("Alimento : %s\n", AL1->nomeAlimento);
-		printf("Calorias : %s\n", AL1->calorias);
+		printf("Alimento : %s\n", AL->nomeAlimento);
+		printf("Calorias : %s\n", AL->calorias);
 	}
 }
 
 
-void exibirAL2(Alimento* AL1) {
+void exibirAL2(Alimento* AL) {
 
-	if (AL1 == NULL) {
+	if (AL == NULL) {
 		printf("\n= = = Dieta Inexistente = = =\n");
 	} else {
-		printf("Alimento : %s\n", AL1->nomeAlimento);
-		printf("Calorias : %s\n", AL1->calorias);
+		printf("Alimento : %s\n", AL->nomeAlimento);
+		printf("Calorias : %s\n", AL->calorias);
 	}
   printf("\n\nTecle ENTER para continuar!\n\n");
  	getchar();
