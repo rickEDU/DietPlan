@@ -76,14 +76,14 @@ void relatorioProgresso(void){
   printf("///                                                                         ///\n");
   printf("///              DIGITE O NOME DO PACIENTE QUE DESEJA VER O PROGRESSO       ///\n");
   printf("///       Nome do Paciente: ");
-  scanf("%[^\n]", nome);
-  getchar();
-  while(!validanome(nome)){
-    printf("Nome inválido !!\n");
-    printf("Informe o Nome novamente :");
-    scanf("%[^\n]", nome);
-    getchar();
-  }
+  // scanf("%[^\n]", nome);
+  // getchar();
+  // while(!validanome(nome)){
+  //   printf("Nome inválido !!\n");
+  //   printf("Informe o Nome novamente :");
+  //   scanf("%[^\n]", nome);
+  //   getchar();
+  // }
   printf("///                       Peso inicial do paciente: xxx kg                  ///\n");
   printf("///                       Peso atual do paciente: yyy kg                    ///\n");
   printf("///                                                                         ///\n");
