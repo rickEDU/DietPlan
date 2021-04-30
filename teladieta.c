@@ -290,8 +290,10 @@ char* teladietaAtualiza(void){
 }
 
 
-void teladietaExclui(void){
-  char paciente[51];
+char* teladietaExclui(void){
+  char* cpf;
+
+  cpf = (char*)malloc(sizeof(char));
   system("clear");
   printf("\n");
   printf("*******************************************************************************\n");
@@ -308,18 +310,25 @@ void teladietaExclui(void){
   printf("///             *  Digite o nome do Paciente que deseja excluir  *          ///\n");
   printf("///   #  Caso queira voltar ao menu anterior não digite nada e dê enter  #  ///\n");
   printf("///                                                                         ///\n");
-  printf("///   Nome do Paciente: ");
-	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ0]", paciente);
+  printf("///       Digite o CPF do paciente que deseja Excluir : ");
+  scanf("%[^\n]", cpf);
   getchar();
+  while(!validacpf (cpf)){
+    printf("CPF inválido !!\n");
+    printf("Informe o CPF novamente :");
+    scanf("%[^\n]", cpf);
+    getchar();
+  }
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");
   printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
   getchar();
+  return cpf;
 }
 
 void teladietaErro(void){
-  char paciente[51];
+  
   system("clear");
   printf("\n");
   printf("*******************************************************************************\n");

@@ -20,6 +20,7 @@ void exibirAL1(Alimento*);
 void exibirAL2(Alimento*);
 void atualizarDieta(void);
 void regravarDieta(Refeicao*);
+void excluirDieta(void);
 
 
 void modulo_dieta(void){
@@ -33,7 +34,7 @@ void modulo_dieta(void){
         break;
       case '3' : atualizarDieta();
         break;
-      case '4' : teladietaExclui();
+      case '4' : excluirDieta();
         break;
       case '5' : cdtAlimento();
         break;
@@ -111,56 +112,62 @@ AL12=(int*)malloc(sizeof(int));
 
 cpf = teladietaPesquisa();
 rfc = buscarDieta(cpf);
-AL1 = rfc->alim1;
-AL2 = rfc->alim2;
-AL3 = rfc->alim3;
-AL4 = rfc->alim4;
-AL5 = rfc->alim5;
-AL6 = rfc->alim6;
-AL7 = rfc->alim7;
-AL8 = rfc->alim8;
-AL9 = rfc->alim9;
-AL10 = rfc->alim10;
-AL11 = rfc->alim11;
-AL12 = rfc->alim12;
-almt1 = buscarAlimento(AL1);
-almt2 = buscarAlimento(AL2);
-almt3 = buscarAlimento(AL3);
-almt4 = buscarAlimento(AL4);
-almt5 = buscarAlimento(AL5);
-almt6 = buscarAlimento(AL6);
-almt7 = buscarAlimento(AL7);
-almt8 = buscarAlimento(AL8);
-almt9 = buscarAlimento(AL9);
-almt10 = buscarAlimento(AL10);
-almt11 = buscarAlimento(AL11);
-almt12 = buscarAlimento(AL12);
-exibirAL1(almt1);
-exibirAL1(almt2);
-exibirAL1(almt3);
-exibirAL1(almt4);
-exibirAL1(almt5);
-exibirAL1(almt6);
-exibirAL1(almt7);
-exibirAL1(almt8);
-exibirAL1(almt9);
-exibirAL1(almt10);
-exibirAL1(almt11);
-exibirAL2(almt12);
-free(cpf);
-free(rfc);
-free(almt1);
-free(almt2);
-free(almt3);
-free(almt4);
-free(almt5);
-free(almt6);
-free(almt7);
-free(almt8);
-free(almt9);
-free(almt10);
-free(almt11);
-free(almt12);
+if (rfc==NULL){
+  printf("/// Dieta inexistente /// \n");
+  getchar();
+  } else{
+      AL1 = rfc->alim1;
+      AL2 = rfc->alim2;
+      AL3 = rfc->alim3;
+      AL4 = rfc->alim4;
+      AL5 = rfc->alim5;
+      AL6 = rfc->alim6;
+      AL7 = rfc->alim7;
+      AL8 = rfc->alim8;
+      AL9 = rfc->alim9;
+      AL10 = rfc->alim10;
+      AL11 = rfc->alim11;
+      AL12 = rfc->alim12;
+      almt1 = buscarAlimento(AL1);
+      almt2 = buscarAlimento(AL2);
+      almt3 = buscarAlimento(AL3);
+      almt4 = buscarAlimento(AL4);
+      almt5 = buscarAlimento(AL5);
+      almt6 = buscarAlimento(AL6);
+      almt7 = buscarAlimento(AL7);
+      almt8 = buscarAlimento(AL8);
+      almt9 = buscarAlimento(AL9);
+      almt10 = buscarAlimento(AL10);
+      almt11 = buscarAlimento(AL11);
+      almt12 = buscarAlimento(AL12);
+      exibirAL1(almt1);
+      exibirAL1(almt2);
+      exibirAL1(almt3);
+      exibirAL1(almt4);
+      exibirAL1(almt5);
+      exibirAL1(almt6);
+      exibirAL1(almt7);
+      exibirAL1(almt8);
+      exibirAL1(almt9);
+      exibirAL1(almt10);
+      exibirAL1(almt11);
+      exibirAL2(almt12);
+      free(cpf);
+      free(rfc);
+      free(almt1);
+      free(almt2);
+      free(almt3);
+      free(almt4);
+      free(almt5);
+      free(almt6);
+      free(almt7);
+      free(almt8);
+      free(almt9);
+      free(almt10);
+      free(almt11);
+      free(almt12);
+  }
+
 }
 
 
@@ -174,10 +181,10 @@ Refeicao* buscarDieta(char* cpf) {
 	rfc = (Refeicao*) malloc(sizeof(Refeicao));
 	fp = fopen("CONSULTA.dat", "rb");
 	if (fp == NULL) {
-		telapacienteErro();
+		teladietaErro();
 	}
 	while(fread(rfc, sizeof(Refeicao), 1, fp)) {
-		if (strcmp(rfc->cpfDig, cpf) == 0) {
+		if ((strcmp(rfc->cpfDig, cpf) == 0)  && (rfc->status == true)) {
       fclose(fp);
       return rfc;
 		}
@@ -273,7 +280,26 @@ void regravarDieta(Refeicao* pc) {
 	fclose(fp);
 	free(pcLido);
 }
+
 /////////////////////////////////////////////////////////////////
+
+void excluirDieta(void) {
+	Refeicao* pc;
+	char *cpf;
+
+	cpf = teladietaExclui();
+	pc = (Refeicao*) malloc(sizeof(Refeicao));
+	pc = buscarDieta(cpf);
+	if (cpf == NULL) {
+    	printf("\n\nDieta não encontrada!\n\n");
+  	} else {
+		  pc->status = false;
+		  regravarDieta(pc);
+		  free(cpf);
+	}
+	free(pc);
+}
+
 /////////////////////////////////////////////////////////////////
 
 void cdtAlimento(void){

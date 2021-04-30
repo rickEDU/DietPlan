@@ -7,7 +7,7 @@ void gravarDieta(Refeicao*);
 Refeicao* teladietaCadastro(void);
 char* teladietaPesquisa(void);
 char* teladietaAtualiza(void);
-void teladietaExclui(void);
+char* teladietaExclui(void);
 void teladietaErro(void);
 Alimento* telaAcrescentaalimento(void);
 void cdtAlimento(void);

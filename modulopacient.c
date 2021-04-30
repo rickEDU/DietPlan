@@ -81,7 +81,7 @@ Paciente* buscarPaciente(char* cpf) {
 		telapacienteErro();
 	}
 	while(fread(pc, sizeof(Paciente), 1, fp)) {
-		if (strcmp(pc->cpf, cpf) == 0) {
+		if ((strcmp(pc->cpf, cpf) == 0)  && (pc->status == true)) {
       fclose(fp);
       return pc;
 		}
@@ -162,14 +162,14 @@ void excluirPaciente(void) {
 	char *cpf;
 
 	cpf = telapacienteExclui();
-	cpf = (Paciente*) malloc(sizeof(Paciente));
-	cpf = buscarPaciente(cpf);
+	pc = (Paciente*) malloc(sizeof(Paciente));
+	pc = buscarPaciente(cpf);
 	if (cpf == NULL) {
     	printf("\n\nPaciente não encontrado!\n\n");
   	} else {
 		  pc->status = false;
-		  regravarPaciente(cpf);
+		  regravarPaciente(pc);
 		  free(cpf);
 	}
-	free(cpf);
+	free(pc);
 }
