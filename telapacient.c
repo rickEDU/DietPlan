@@ -22,32 +22,29 @@ struct paciente{
   int status;
 };
 
-void telapacienteErro(void){
-  char paciente[51];
-  system("clear");
-  printf("\n");
-  printf("*******************************************************************************\n");
-  printf("///                                                                         ///\n");
-  printf("///                           Ministério da Saúde                           ///\n");
-  printf("///                                                                         ///\n");
-  printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
-  printf("///                                                                         ///\n");
-  printf("*******************************************************************************\n");
-  printf("///                      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&                     ///\n");
-  printf("///            = = = = = Erro ao tentar gravar os Dados = = = = =           ///\n");
-  printf("///                      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&                     ///\n");
-  printf("///                                                                         ///\n");
-  printf("///                                                                         ///\n");
-  printf("///                               *  ERRO  *                                ///\n");
-  printf("///                                                                         ///\n");
-  printf("///          *  Não foi possível completar a Gravação do arquivo  *         ///\n");
-  printf("///                          *  Tente novamente   *                         ///\n");
-  printf("///                                                                         ///\n");
-  printf("///                                                                         ///\n");
-  printf("*******************************************************************************\n");
-  printf("\n");
-  printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
-  getchar();
+
+
+
+
+
+
+char buscarPacienteAG(char* cpf) {
+	FILE* fp;
+	Paciente* pc;
+
+	pc = (Paciente*) malloc(sizeof(Paciente));
+	fp = fopen("PACIENTE.dat", "rb");
+	if (fp == NULL) {
+		printf("erro");
+	 }
+	while(fread(pc, sizeof(Paciente), 1, fp)) {
+		if ((strcmp(pc->cpf, cpf) == 0)  && (pc->status == true)) {
+      fclose(fp);
+      return true;
+		}
+	}
+	fclose(fp);
+	return false;
 }
 
 
@@ -94,7 +91,11 @@ char telapaciente(void){
 
 Paciente* telapacienteCadastro(void){
   Paciente* pc;
+  char* a;
+  char b;
 
+
+  a = (char*)malloc(sizeof(char));
   pc= (Paciente*)malloc(sizeof(Paciente));
 
   system("clear");
@@ -119,6 +120,24 @@ Paciente* telapacienteCadastro(void){
     printf("Informe o CPF novamente :");
     scanf("%[^\n]", pc->cpf);
     getchar();
+  }
+  a=pc->cpf;
+  b=buscarPacienteAG(a);
+  if(b==false){
+    printf("ok \n");
+  }else while(b!=false){
+    printf("///                *  CPF já existente no banco de dados  *                ///\n");
+    printf("///       Informe novamente o CPF: ");
+    scanf("%[^\n]", pc->cpf);
+    getchar();
+    while(!validacpf(pc->cpf)){
+    printf("CPF inválido !!\n");
+    printf("Informe o CPF novamente :");
+    scanf("%[^\n]", pc->cpf);
+    getchar();
+    }
+    a=pc->cpf;
+    b=buscarPacienteAG(a);
   }
   printf("///       Nome: ");
   scanf("%[^\n]", pc->nome);
@@ -171,6 +190,7 @@ Paciente* telapacienteCadastro(void){
   printf("\n");
   printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
   getchar();
+  free(a);
   return pc;
 }
 
@@ -287,4 +307,30 @@ char* telapacienteExclui(void){
   return cpf;
 }
 
-
+void telapacienteErro(void){
+  char paciente[51];
+  system("clear");
+  printf("\n");
+  printf("*******************************************************************************\n");
+  printf("///                                                                         ///\n");
+  printf("///                           Ministério da Saúde                           ///\n");
+  printf("///                                                                         ///\n");
+  printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
+  printf("///                                                                         ///\n");
+  printf("*******************************************************************************\n");
+  printf("///                      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&                     ///\n");
+  printf("///            = = = = = Erro ao tentar gravar os Dados = = = = =           ///\n");
+  printf("///                      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&                     ///\n");
+  printf("///                                                                         ///\n");
+  printf("///                                                                         ///\n");
+  printf("///                               *  ERRO  *                                ///\n");
+  printf("///                                                                         ///\n");
+  printf("///          *  Não foi possível completar a Gravação do arquivo  *         ///\n");
+  printf("///                          *  Tente novamente   *                         ///\n");
+  printf("///                                                                         ///\n");
+  printf("///                                                                         ///\n");
+  printf("*******************************************************************************\n");
+  printf("\n");
+  printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
+  getchar();
+}

@@ -41,6 +41,7 @@ void cdtPaciente(void){
   free(pc);
 }
 
+
 void gravarPaciente(Paciente* pc){
   FILE* fp;
 
@@ -121,7 +122,7 @@ void atualizarPaciente(void) {
 	cpf = telapacientePesquisa();
 	pc = buscarPaciente(cpf);
 	if (pc == NULL) {
-    	printf("\n\nAluno não encontrado!\n\n");
+    	printf("\n\n Paciente não encontrado!\n\n");
   	} else {
 		  pc = telapacienteCadastro();
 		  strcpy(pc->cpf, cpf);
