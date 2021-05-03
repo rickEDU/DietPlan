@@ -1,5 +1,8 @@
 #include "valida.h"
 #include "valida.c"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #define true 1
 #define false 0
 //
@@ -18,6 +21,35 @@ struct paciente{
   char tel[16];
   int status;
 };
+
+void telapacienteErro(void){
+  char paciente[51];
+  system("clear");
+  printf("\n");
+  printf("*******************************************************************************\n");
+  printf("///                                                                         ///\n");
+  printf("///                           Ministério da Saúde                           ///\n");
+  printf("///                                                                         ///\n");
+  printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
+  printf("///                                                                         ///\n");
+  printf("*******************************************************************************\n");
+  printf("///                      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&                     ///\n");
+  printf("///            = = = = = Erro ao tentar gravar os Dados = = = = =           ///\n");
+  printf("///                      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&                     ///\n");
+  printf("///                                                                         ///\n");
+  printf("///                                                                         ///\n");
+  printf("///                               *  ERRO  *                                ///\n");
+  printf("///                                                                         ///\n");
+  printf("///          *  Não foi possível completar a Gravação do arquivo  *         ///\n");
+  printf("///                          *  Tente novamente   *                         ///\n");
+  printf("///                                                                         ///\n");
+  printf("///                                                                         ///\n");
+  printf("*******************************************************************************\n");
+  printf("\n");
+  printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
+  getchar();
+}
+
 
 
 
@@ -82,7 +114,7 @@ Paciente* telapacienteCadastro(void){
   printf("///       CPF: ");
   scanf("%[^\n]", pc->cpf);
   getchar();
-  while(!validanumber(pc->cpf)){
+  while(!validacpf(pc->cpf)){
     printf("CPF inválido !!\n");
     printf("Informe o CPF novamente :");
     scanf("%[^\n]", pc->cpf);
@@ -255,32 +287,4 @@ char* telapacienteExclui(void){
   return cpf;
 }
 
-
-void telapacienteErro(void){
-  char paciente[51];
-  system("clear");
-  printf("\n");
-  printf("*******************************************************************************\n");
-  printf("///                                                                         ///\n");
-  printf("///                           Ministério da Saúde                           ///\n");
-  printf("///                                                                         ///\n");
-  printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
-  printf("///                                                                         ///\n");
-  printf("*******************************************************************************\n");
-  printf("///                      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&                     ///\n");
-  printf("///            = = = = = Erro ao tentar gravar os Dados = = = = =           ///\n");
-  printf("///                      &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&                     ///\n");
-  printf("///                                                                         ///\n");
-  printf("///                                                                         ///\n");
-  printf("///                               *  ERRO  *                                ///\n");
-  printf("///                                                                         ///\n");
-  printf("///          *  Não foi possível completar a Gravação do arquivo  *         ///\n");
-  printf("///                          *  Tente novamente   *                         ///\n");
-  printf("///                                                                         ///\n");
-  printf("///                                                                         ///\n");
-  printf("*******************************************************************************\n");
-  printf("\n");
-  printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
-  getchar();
-}
 

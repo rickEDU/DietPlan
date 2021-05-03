@@ -140,14 +140,17 @@ if (rfc==NULL){
       almt10 = buscarAlimento(AL10);
       almt11 = buscarAlimento(AL11);
       almt12 = buscarAlimento(AL12);
+      printf("Café da manhã: \n");
       exibirAL1(almt1);
       exibirAL1(almt2);
       exibirAL1(almt3);
       exibirAL1(almt4);
+      printf("Almoço: \n");
       exibirAL1(almt5);
       exibirAL1(almt6);
       exibirAL1(almt7);
       exibirAL1(almt8);
+      printf("Jantar: \n");
       exibirAL1(almt9);
       exibirAL1(almt10);
       exibirAL1(almt11);
@@ -304,9 +307,17 @@ void excluirDieta(void) {
 
 void cdtAlimento(void){
   Alimento* alm;
+  char b;
 
   alm=telaAcrescentaalimento();
   gravarAlimento(alm);
+  b = teladietaAgain();
+  while((b=='s') || (b=='S')){
+    alm=telaAcrescentaalimento();
+    gravarAlimento(alm);
+    b = teladietaAgain();
+   }
+
   free(alm);
 }
 

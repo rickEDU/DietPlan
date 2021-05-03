@@ -407,3 +407,30 @@ Alimento* telaAcrescentaalimento(void){
   getchar();
   return alm;
 }
+
+
+char teladietaAgain(void){
+  char b;
+  
+  system("clear");
+  printf("\n");
+  printf("*******************************************************************************\n");
+  printf("///                                                                         ///\n");
+  printf("///                           Ministério da Saúde                           ///\n");
+  printf("///                                                                         ///\n");
+  printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
+  printf("///                                                                         ///\n");
+  printf("*******************************************************************************\n");
+  printf("///                         &&&&&&&&&&&&&&&&&&&&&&&&&                       ///\n");
+  printf("///                     = = = = = Excluir Dieta = = = = =                   ///\n");
+  printf("///                         &&&&&&&&&&&&&&&&&&&&&&&&&                       ///\n");
+  printf("///                                                                         ///\n");
+  printf("///         #  Deseja acrescentar outro Alimento na lista? R:(s/n) ou (S/N): ");
+	scanf("%c", &b);
+  printf("///                                                                         ///\n");
+  printf("*******************************************************************************\n");
+  printf("\n");
+  printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
+  getchar();
+  return b;
+}

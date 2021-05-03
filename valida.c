@@ -21,6 +21,7 @@ int validanome(char nome[]){
       continue;
     } else if (nome[i] == ' ') {
       continue;
+
     } else {
       return 0;
     }

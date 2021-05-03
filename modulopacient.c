@@ -37,6 +37,7 @@ void cdtPaciente(void){
 
   pc=telapacienteCadastro();
   gravarPaciente(pc);
+  
   free(pc);
 }
 

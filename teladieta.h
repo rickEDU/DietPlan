@@ -9,6 +9,7 @@ char* teladietaPesquisa(void);
 char* teladietaAtualiza(void);
 char* teladietaExclui(void);
 void teladietaErro(void);
+char teladietaAgain(void);
 Alimento* telaAcrescentaalimento(void);
 void cdtAlimento(void);
 void gravarAlimento(Alimento*);
