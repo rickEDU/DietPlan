@@ -91,8 +91,6 @@ Refeicao* teladietaCadastro(void){
   scanf("%[^\n]", rfc->cpfDig);
   getchar();
   while(!validacpf(rfc->cpfDig)){
-    printf("CPF inválido !!\n");
-    printf("Informe o CPF novamente :");
     scanf("%[^\n]", rfc->cpfDig);
     getchar();
   }
@@ -240,8 +238,6 @@ char* teladietaPesquisa(void){
   scanf("%[^\n]", cpf);
   getchar();
   while(!validacpf(cpf)){
-    printf("CPF inválido !!\n");
-    printf("Informe o CPF novamente :");
     scanf("%[^\n]", cpf);
     getchar();
   }
@@ -276,8 +272,6 @@ char* teladietaAtualiza(void){
   scanf("%[^\n]", cpf);
   getchar();
   while(!validacpf (cpf)){
-    printf("CPF inválido !!\n");
-    printf("Informe o CPF novamente :");
     scanf("%[^\n]", cpf);
     getchar();
   }
@@ -314,8 +308,6 @@ char* teladietaExclui(void){
   scanf("%[^\n]", cpf);
   getchar();
   while(!validacpf (cpf)){
-    printf("CPF inválido !!\n");
-    printf("Informe o CPF novamente :");
     scanf("%[^\n]", cpf);
     getchar();
   }

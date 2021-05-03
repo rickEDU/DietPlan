@@ -40,11 +40,14 @@ char buscarPacienteAG(char* cpf) {
 	while(fread(pc, sizeof(Paciente), 1, fp)) {
 		if ((strcmp(pc->cpf, cpf) == 0)  && (pc->status == true)) {
       fclose(fp);
-      return true;
+      printf("///                                                                         /// \n");
+      printf("///  Esse CPF já está cadastrado no banco de dados                          /// \n");
+      printf("///  Informe o CPF novamente :");
+      return 0;
 		}
 	}
 	fclose(fp);
-	return false;
+	return 1;
 }
 
 
@@ -91,11 +94,7 @@ char telapaciente(void){
 
 Paciente* telapacienteCadastro(void){
   Paciente* pc;
-  char* a;
-  char b;
-
-
-  a = (char*)malloc(sizeof(char));
+  
   pc= (Paciente*)malloc(sizeof(Paciente));
 
   system("clear");
@@ -115,29 +114,9 @@ Paciente* telapacienteCadastro(void){
   printf("///       CPF: ");
   scanf("%[^\n]", pc->cpf);
   getchar();
-  while(!validacpf(pc->cpf)){
-    printf("CPF inválido !!\n");
-    printf("Informe o CPF novamente :");
+  while((!validacpf(pc->cpf)) || (!buscarPacienteAG(pc->cpf))){
     scanf("%[^\n]", pc->cpf);
     getchar();
-  }
-  a=pc->cpf;
-  b=buscarPacienteAG(a);
-  if(b==false){
-    printf("ok \n");
-  }else while(b!=false){
-    printf("///                *  CPF já existente no banco de dados  *                ///\n");
-    printf("///       Informe novamente o CPF: ");
-    scanf("%[^\n]", pc->cpf);
-    getchar();
-    while(!validacpf(pc->cpf)){
-    printf("CPF inválido !!\n");
-    printf("Informe o CPF novamente :");
-    scanf("%[^\n]", pc->cpf);
-    getchar();
-    }
-    a=pc->cpf;
-    b=buscarPacienteAG(a);
   }
   printf("///       Nome: ");
   scanf("%[^\n]", pc->nome);
@@ -190,7 +169,6 @@ Paciente* telapacienteCadastro(void){
   printf("\n");
   printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
   getchar();
-  free(a);
   return pc;
 }
 
@@ -221,8 +199,6 @@ char* telapacientePesquisa(void){
   scanf("%[^\n]", cpf);
   getchar();
   while(!validacpf(cpf)){
-    printf("CPF inválido !!\n");
-    printf("Informe o CPF novamente :");
     scanf("%[^\n]", cpf);
     getchar();
   }
@@ -260,8 +236,6 @@ char* telapacienteAtualiza(void){
   scanf("%[^\n]", cpf);
   getchar();
   while(!validacpf(cpf)){
-    printf("CPF inválido !!\n");
-    printf("Informe o CPF novamente :");
     scanf("%[^\n]", cpf);
     getchar();
   }
@@ -295,8 +269,6 @@ char* telapacienteExclui(void){
   scanf("%[^\n]", cpf);
   getchar();
   while(!validacpf(cpf)){
-    printf("CPF inválido !!\n");
-    printf("Informe o CPF novamente :");
     scanf("%[^\n]", cpf);
     getchar();
   }
@@ -308,7 +280,6 @@ char* telapacienteExclui(void){
 }
 
 void telapacienteErro(void){
-  char paciente[51];
   system("clear");
   printf("\n");
   printf("*******************************************************************************\n");
