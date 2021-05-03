@@ -1,26 +1,11 @@
 #include "teladieta.h"
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-
-
-
 
 
 //
 //// MODULO DE REGISTRO DE DIETA
 //
-void pesquisarDieta(void);
-Refeicao* buscarDieta(char*);
-void exibirDieta(Refeicao*);
-Alimento* buscarAlimento(int*);
-void exibirAL1(Alimento*);
-void exibirAL2(Alimento*);
-void atualizarDieta(void);
-void regravarDieta(Refeicao*);
-void excluirDieta(void);
+
 
 
 void modulo_dieta(void){

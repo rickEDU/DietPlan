@@ -1,11 +1,10 @@
 #include "telapacient.h"
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+
 //
 /// MODULO Paciente
 //
+
 
 void modulo_paciente(void){
   char opcao;
