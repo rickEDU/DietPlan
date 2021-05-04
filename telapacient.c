@@ -8,6 +8,19 @@
 //
 //// Menus do Paciente
 //
+typedef struct paciente Paciente;
+
+struct paciente{
+  char cpf[12];
+  char nome[51];
+  char peso[7];
+  char altura[5];
+  char email[31];
+  char tel[16];
+  char nivel[6];
+  int status;
+};
+
 
 char buscarPacienteAG(char* cpf) {
 	FILE* fp;
@@ -19,7 +32,7 @@ char buscarPacienteAG(char* cpf) {
 		printf("erro");
 	 }
 	while(fread(pc, sizeof(Paciente), 1, fp)) {
-		if ((strcmp(pc->cpf, cpf) == 0)  && (pc->status == true)) {
+		if ((strcmp(pc->cpf, cpf) == 0)  && (pc->status == 1)) {
       fclose(fp);
       printf("///                                                                         /// \n");
       printf("///  Esse CPF já está cadastrado no banco de dados                          /// \n");
