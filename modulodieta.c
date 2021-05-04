@@ -97,6 +97,7 @@ AL12=(int*)malloc(sizeof(int));
 
 cpf = teladietaPesquisa();
 rfc = buscarDieta(cpf);
+nomepacienteAtivo(cpf);
 if (rfc==NULL){
   printf("/// Dieta inexistente /// \n");
   getchar();
@@ -158,7 +159,28 @@ if (rfc==NULL){
 
 }
 
+void nomepacienteAtivo(char* cpf) {
+    FILE* fp;
+    Paciente* pct;
+    char nomePaciente[23];
+    int tam;
 
+    pct = (Paciente*) malloc(sizeof(Paciente));
+    fp = fopen("PACIENTE.dat", "rb");
+    while (fread(pct, sizeof(Paciente), 1, fp)) {
+        if (strcmp(pct->cpf, cpf) == 0) {
+            tam = strlen(pct->nome);
+            strncpy(nomePaciente, pct->nome, tam);
+             for (int i = tam; i < 22; i++) {
+                 nomePaciente[i] = ' ';
+             }
+             nomePaciente[22] = '\0';
+            printf("///  CPF: %-12s || Nome: %-24s || %-4s KGs ///\n\n", pct->cpf, nomePaciente,pct->peso);
+        }
+    }
+    fclose(fp);
+    free(pct);
+}
 
 
 

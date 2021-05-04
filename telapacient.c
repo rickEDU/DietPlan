@@ -1,32 +1,13 @@
+#include "structs.c"
 #include "valida.h"
 #include "valida.c"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define true 1
-#define false 0
+#include "funções.c"
 //
 //// Menus do Paciente
 //
-
-
-typedef struct paciente Paciente;
-
-struct paciente{
-  char cpf[12];
-  char nome[51];
-  char peso[8];
-  char altura[5];
-  char email[4];
-  char tel[16];
-  int status;
-};
-
-
-
-
-
-
 
 char buscarPacienteAG(char* cpf) {
 	FILE* fp;
@@ -49,7 +30,6 @@ char buscarPacienteAG(char* cpf) {
 	fclose(fp);
 	return 1;
 }
-
 
 
 
@@ -122,26 +102,24 @@ Paciente* telapacienteCadastro(void){
   scanf("%[^\n]", pc->nome);
   getchar();
   while(!validanome(pc->nome)){
-    printf("Nome inválido !!\n");
-    printf("Informe o Nome novamente :");
     scanf("%[^\n]", pc->nome);
     getchar();
   }
-  printf("///       Peso Atual: ");
+  printf("///       Peso Atual(Exp:00.00): ");
   scanf("%[^\n]", pc->peso);
   getchar();
   while(!validanumber(pc->peso)){
     printf("Peso inválido !!\n");
-    printf("Informe o Peso novamente :");
+    printf("Informe o Peso novamente(Exp:00.00):");
     scanf("%[^\n]", pc->peso);
     getchar();
   }
-  printf("///       Altura: ");
+  printf("///       Altura(Exp:0.00): ");
   scanf("%[^\n]", pc->altura);
   getchar();
   while(!validanumber(pc->altura)){
     printf("Altura inválida !!\n");
-    printf("Informe a altura novamente :");
+    printf("Informe a altura novamente(Exp:0.00):");
     scanf("%[^\n]", pc->altura);
     getchar();
   }
@@ -149,8 +127,6 @@ Paciente* telapacienteCadastro(void){
   scanf("%[^\n]", pc->email);
   getchar();
   while(!validaemail(pc->email)){
-    printf("E-mail inválido !!\n");
-    printf("Informe o E-mail novamente :");
     scanf("%[^\n]", pc->email);
     getchar();
   }
@@ -158,12 +134,17 @@ Paciente* telapacienteCadastro(void){
   scanf("%[^\n]", pc->tel);
   getchar();
   while(!validatel(pc->tel)){
-    printf("Telefone inválido !!\n");
-    printf("Informe o Telefone novamente :");
     scanf("%[^\n]", pc->tel);
     getchar();
   }
-  pc->status=true;
+   printf("///Nível de atividade física do Paciente(alto, media ou baixo, somente letras minusculas): ");
+  scanf("%[^\n]", pc->nivel);
+  getchar();
+  while(!validaAtividade(pc->nivel)){
+    scanf("%[^\n]", pc->nivel);
+    getchar();
+  }
+  pc->status=1;
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
   printf("\n");

@@ -82,7 +82,7 @@ Paciente* buscarPaciente(char* cpf) {
 		telapacienteErro();
 	}
 	while(fread(pc, sizeof(Paciente), 1, fp)) {
-		if ((strcmp(pc->cpf, cpf) == 0)  && (pc->status == true)) {
+		if ((strcmp(pc->cpf, cpf) == 0)  && (pc->status == 1)) {
       fclose(fp);
       return pc;
 		}
@@ -141,10 +141,10 @@ void regravarPaciente(Paciente* pc) {
 	if (fp == NULL) {
 		telapacienteErro();
 	}
-  achou = false;
+  achou = 0;
 	while(fread(pcLido, sizeof(Paciente), 1, fp) && !achou) {
 		if (strcmp(pcLido->cpf, pc->cpf) == 0) {
-      achou = true;
+      achou = 1;
 			fseek(fp, -1*sizeof(Paciente), SEEK_CUR);
         	fwrite(pc, sizeof(Paciente), 1, fp);
 		}
@@ -168,7 +168,7 @@ void excluirPaciente(void) {
 	if (cpf == NULL) {
     	printf("\n\nPaciente não encontrado!\n\n");
   	} else {
-		  pc->status = false;
+		  pc->status = 0;
 		  regravarPaciente(pc);
 		  free(cpf);
 	}

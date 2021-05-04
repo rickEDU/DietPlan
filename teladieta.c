@@ -31,6 +31,28 @@ struct refeicao{
 };
 
 
+char buscarPacienteDNV(char* cpf) {
+	FILE* fp;
+	Paciente* pc;
+
+	pc = (Paciente*) malloc(sizeof(Paciente));
+	fp = fopen("PACIENTE.dat", "rb");
+	if (fp == NULL) {
+		printf("erro");
+	 }
+	while(fread(pc, sizeof(Paciente), 1, fp)) {
+		if ((strcmp(pc->cpf, cpf) == 0)  && (pc->status == 1)) {
+      fclose(fp);
+
+      return 1;
+		}
+	}
+	fclose(fp);
+  printf("///  Paciente não encontrado !!!!                                           /// \n");
+  printf("///  Informe o CPF novamente :");
+	return 0;
+}
+
 // na tela do cadastro de  dieta eu coloco todas as refeições, vou ter q mudar a struct e talvez diminuir a quantidade de refeições no dia, assim eu cadastro todas as refeições de uma vez.
 
 char teladieta(void){
@@ -70,6 +92,7 @@ char teladieta(void){
 Refeicao* teladietaCadastro(void){
   Refeicao* rfc;
 
+
   rfc = (Refeicao*)malloc(sizeof(Refeicao));
 
   system("clear");
@@ -90,11 +113,11 @@ Refeicao* teladietaCadastro(void){
   printf("///       Digite o CPF do paciente que deseja cadastrar essa dieta: ");
   scanf("%[^\n]", rfc->cpfDig);
   getchar();
-  while(!validacpf(rfc->cpfDig)){
+  while((!validacpf(rfc->cpfDig)) || (!buscarPacienteDNV(rfc->cpfDig))){
     scanf("%[^\n]", rfc->cpfDig);
     getchar();
   }
-  printf("///       Digite dos alimentos do Café da manhã. \n");
+  printf("///       Digite os alimentos do Café da manhã. \n");
   printf("///       Digite o código do alimento 1(Café da manhã) : ");
   scanf("%[^\n]", rfc->alim1);
   getchar();
@@ -131,7 +154,7 @@ Refeicao* teladietaCadastro(void){
     scanf("%[^\n]", rfc->alim4);
     getchar();
   }
-  printf("///       Digite dos alimentos do Almoço. \n");
+  printf("///       Digite os alimentos do Almoço. \n");
   printf("///       Digite o código do alimento 1(Almoço) : ");
   scanf("%[^\n]", rfc->alim5);
   getchar();
@@ -168,7 +191,7 @@ Refeicao* teladietaCadastro(void){
     scanf("%[^\n]", rfc->alim8);
     getchar();
   }
-  printf("///       Digite dos alimentos do Jantar.\n");
+  printf("///       Digite os alimentos do Jantar.\n");
   printf("///       Digite o código do alimento 1(Jantar) : ");
   scanf("%[^\n]", rfc->alim9);
   getchar();

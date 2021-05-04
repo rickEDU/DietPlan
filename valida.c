@@ -12,7 +12,9 @@ int validanome(char nome[]){
   int tam;
   tam = strlen(nome);
   if(tam == 0){
-     return 0;
+    printf("Nome inválido !!\n");
+    printf("Informe o Nome novamente :");
+    return 0;
   }
   for (int i = 0; i < tam; i++) {
     if (nome[i] >= 'A' && nome[i] <= 'Z') {
@@ -23,6 +25,8 @@ int validanome(char nome[]){
       continue;
 
     } else {
+      printf("Nome inválido !!\n");
+      printf("Informe o Nome novamente :");
       return 0;
     }
   }
@@ -74,6 +78,8 @@ int validaemail(char email[]){
   int tam;
   tam = strlen(email);
   if(tam == 0){
+    printf("E-mail inválido !!\n");
+    printf("Informe o E-mail novamente :");
      return 0;
   }
   for (int i = 0; i < tam; i++) {
@@ -92,6 +98,8 @@ int validaemail(char email[]){
     } else if (email[i] == '.') {
       continue;
     } else {
+      printf("E-mail inválido !!\n");
+      printf("Informe o E-mail novamente :");
       return 0;
     }
   }
@@ -101,8 +109,10 @@ int validaemail(char email[]){
 int validatel(char tel[]){
   int tam;
   tam = strlen(tel);
-  if(tam == 0){
-     return 0;
+  if((tam == 0) || (tam<8) ||(tam>14)){
+    printf("Telefone inválido !!\n");
+    printf("Informe o Telefone novamente :");
+    return 0;
   }
   for (int i = 0; i < tam; i++) {
     if (tel[i] >= '0' && tel[i] <= '9') {
@@ -110,6 +120,8 @@ int validatel(char tel[]){
     } else if (tel[i] == '-') {
       continue;
     } else {
+      printf("Telefone inválido !!\n");
+      printf("Informe o Telefone novamente :");
       return 0;
     }
   }
@@ -117,3 +129,22 @@ int validatel(char tel[]){
 }
 
 
+int validaAtividade(char nome[]){
+  int tam;
+  tam = strlen(nome);
+  if((tam == 0) || (tam<4) || (tam>5)){
+    printf("Nível de atividade inválido !!\n");
+    printf("Informe o Nível novamente :");
+     return 0;
+  }
+  for (int i = 0; i < tam; i++) {
+    if (nome[i] >= 'a' && nome[i] <= 'z') {
+      continue;
+    } else {
+      printf("Nível de atividade inválido !!\n");
+      printf("Informe o Nível novamente :");
+      return 0;
+    }
+  }
+  return 1;
+}

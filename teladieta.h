@@ -14,6 +14,8 @@ Alimento* telaAcrescentaalimento(void);
 void cdtAlimento(void);
 void gravarAlimento(Alimento*);
 
+void nomepacienteAtivo(char*);
+char buscarPacienteDNV(char*);
 void pesquisarDieta(void);
 Refeicao* buscarDieta(char*);
 void exibirDieta(Refeicao*);
