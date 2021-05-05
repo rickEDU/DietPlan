@@ -1,35 +1,25 @@
-
-#include "valida.h"
-#include "valida.c"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "telapacient.h"
+#include "valida.h"
 
 //
 //// Menus do Paciente
 //
+
 typedef struct paciente Paciente;
 
-struct paciente{
-  char cpf[12];
-  char nome[51];
-  char peso[7];
-  char altura[5];
-  char email[31];
-  char tel[16];
-  char nivel[6];
-  int status;
-};
 
-
-char buscarPacienteAG(char* cpf) {
+int buscarPacienteAG(char* cpf) {
 	FILE* fp;
 	Paciente* pc;
 
 	pc = (Paciente*) malloc(sizeof(Paciente));
 	fp = fopen("PACIENTE.dat", "rb");
 	if (fp == NULL) {
-		printf("erro");
+	  fp = fopen("PACIENTE.dat", "wb");
+    return 1;
 	 }
 	while(fread(pc, sizeof(Paciente), 1, fp)) {
 		if ((strcmp(pc->cpf, cpf) == 0)  && (pc->status == 1)) {
@@ -299,3 +289,7 @@ void telapacienteErro(void){
   printf(">>> Tecle <ENTER> para voltar ao menu anterior...\n");
   getchar();
 }
+
+
+
+

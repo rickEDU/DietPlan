@@ -1,4 +1,6 @@
+#include "modulorelatorio.h"
 #include "telarelatorio.h"
+
 
 void modulo_relatorio(void){
   char opcao;
@@ -11,8 +13,8 @@ void modulo_relatorio(void){
         break;
       case '3' : relatorioDesistencia();
         break;
-      case '4' : main();
-        break;
+      // case '4' : main();
+      //   break;
     }
   }while (opcao != '0');
 }

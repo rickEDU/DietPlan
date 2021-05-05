@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "telarelatorio.h"
+#include "telapacient.h"
 #include "valida.h"
 
 
@@ -24,6 +26,7 @@ void listapacienteAtivo(char* nvl) {
         }
     }
     fclose(fp);
+    printf("///      Não existem pacientes cadastrados com esse néivel de atividade     ///\n");
     free(pct);
 }
 
@@ -36,7 +39,7 @@ void listapacienteNEG(void) {
     pct = (Paciente*) malloc(sizeof(Paciente));
     fp = fopen("PACIENTE.dat", "rb");
     while (fread(pct, sizeof(Paciente), 1, fp)) {
-        if ((pct->status == 0)) {
+        if (pct->status == 0) {
             tam = strlen(pct->nome);
             strncpy(nomePaciente, pct->nome, tam);
              for (int i = tam; i < 22; i++) {
@@ -102,7 +105,7 @@ void relatorioRegistro(void){
   printf("///          #####################################################          ///\n");
   printf("///                                                                         ///\n");
   printf("///  Digite o nível de atividade física que deseja pesquisar os pacientes . ///\n");
-  printf("///  Digite (alto),(medio)ou(baixo) para pesquisar(somente letras minusculas):");
+  printf("///  Digite (alto),(medio)ou(baixo)                                         ///\n///  para pesquisar(somente letras minúsculas):");
   scanf("%[^\n]", nvl);
   getchar();
   while(!validaAtividade(nvl)){
@@ -121,7 +124,7 @@ void relatorioRegistro(void){
 }
 
 void relatorioProgresso(void){
-  char nome[51];
+  //char nome[51];
   system("clear");
   printf("\n");
   printf("*******************************************************************************\n");
@@ -137,8 +140,6 @@ void relatorioProgresso(void){
   printf("///                                                                         ///\n");
   printf("///              DIGITE O NOME DO PACIENTE QUE DESEJA VER O PROGRESSO       ///\n");
   printf("///       Nome do Paciente: ");
-
-
   printf("///                       Peso inicial do paciente: xxx kg                  ///\n");
   printf("///                       Peso atual do paciente: yyy kg                    ///\n");
   printf("///                                                                         ///\n");

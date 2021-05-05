@@ -1,3 +1,6 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 #include "telapacient.h"
 
 
@@ -19,8 +22,8 @@ void modulo_paciente(void){
         break;
       case '4' : excluirPaciente();
         break;
-      case '5' : main();
-        break;
+      // case '5' : main();
+      //   break;
     }
   }while (opcao != '0');
 }

@@ -1,4 +1,8 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 #include "teladieta.h"
+#include "telapacient.h"
 
 
 
@@ -23,8 +27,8 @@ void modulo_dieta(void){
         break;
       case '5' : cdtAlimento();
         break;
-      case '6' : main();
-        break;
+      // case '6' : main();
+      //   break;
     }
   }while (opcao != '0');
 }
@@ -54,110 +58,20 @@ void gravarDieta(Refeicao* al){
 /////////////////////////////////////////////////////////////////
 
 void pesquisarDieta(void) {
-Refeicao* rfc;
-Alimento* almt1;
-Alimento* almt2;
-Alimento* almt3;
-Alimento* almt4;
-Alimento* almt5;
-Alimento* almt6;
-Alimento* almt7;
-Alimento* almt8;
-Alimento* almt9;
-Alimento* almt10;
-Alimento* almt11;
-Alimento* almt12;
 char* cpf;
-int* AL1;
-int* AL2;
-int* AL3;
-int* AL4;
-int* AL5;
-int* AL6;
-int* AL7;
-int* AL8;
-int* AL9;
-int* AL10;
-int* AL11;
-int* AL12;
-AL1=(int*)malloc(sizeof(int));
-AL2=(int*)malloc(sizeof(int));
-AL3=(int*)malloc(sizeof(int));
-AL4=(int*)malloc(sizeof(int));
-AL5=(int*)malloc(sizeof(int));
-AL6=(int*)malloc(sizeof(int));
-AL7=(int*)malloc(sizeof(int));
-AL8=(int*)malloc(sizeof(int));
-AL9=(int*)malloc(sizeof(int));
-AL10=(int*)malloc(sizeof(int));
-AL11=(int*)malloc(sizeof(int));
-AL12=(int*)malloc(sizeof(int));
+Refeicao* rfc;
 
-//Deus que me perdoe por esse código seboso
+rfc = (Refeicao*)malloc(sizeof(Refeicao));
 
 cpf = teladietaPesquisa();
 rfc = buscarDieta(cpf);
 nomepacienteAtivo(cpf);
-if (rfc==NULL){
-  printf("/// Dieta inexistente /// \n");
-  getchar();
-  } else{
-      AL1 = rfc->alim1;
-      AL2 = rfc->alim2;
-      AL3 = rfc->alim3;
-      AL4 = rfc->alim4;
-      AL5 = rfc->alim5;
-      AL6 = rfc->alim6;
-      AL7 = rfc->alim7;
-      AL8 = rfc->alim8;
-      AL9 = rfc->alim9;
-      AL10 = rfc->alim10;
-      AL11 = rfc->alim11;
-      AL12 = rfc->alim12;
-      almt1 = buscarAlimento(AL1);
-      almt2 = buscarAlimento(AL2);
-      almt3 = buscarAlimento(AL3);
-      almt4 = buscarAlimento(AL4);
-      almt5 = buscarAlimento(AL5);
-      almt6 = buscarAlimento(AL6);
-      almt7 = buscarAlimento(AL7);
-      almt8 = buscarAlimento(AL8);
-      almt9 = buscarAlimento(AL9);
-      almt10 = buscarAlimento(AL10);
-      almt11 = buscarAlimento(AL11);
-      almt12 = buscarAlimento(AL12);
-      printf("Café da manhã: \n");
-      exibirAL1(almt1);
-      exibirAL1(almt2);
-      exibirAL1(almt3);
-      exibirAL1(almt4);
-      printf("Almoço: \n");
-      exibirAL1(almt5);
-      exibirAL1(almt6);
-      exibirAL1(almt7);
-      exibirAL1(almt8);
-      printf("Jantar: \n");
-      exibirAL1(almt9);
-      exibirAL1(almt10);
-      exibirAL1(almt11);
-      exibirAL2(almt12);
-      free(cpf);
-      free(rfc);
-      free(almt1);
-      free(almt2);
-      free(almt3);
-      free(almt4);
-      free(almt5);
-      free(almt6);
-      free(almt7);
-      free(almt8);
-      free(almt9);
-      free(almt10);
-      free(almt11);
-      free(almt12);
-  }
+exibeAlimento(rfc);
 
+getchar();
+free(cpf);
 }
+
 
 void nomepacienteAtivo(char* cpf) {
     FILE* fp;
@@ -194,7 +108,7 @@ Refeicao* buscarDieta(char* cpf) {
 		teladietaErro();
 	}
 	while(fread(rfc, sizeof(Refeicao), 1, fp)) {
-		if ((strcmp(rfc->cpfDig, cpf) == 0)  && (rfc->status == true)) {
+		if ((strcmp(rfc->cpfDig, cpf) == 0)  && (rfc->status == 1)) {
       fclose(fp);
       return rfc;
 		}
@@ -203,51 +117,33 @@ Refeicao* buscarDieta(char* cpf) {
 	return NULL;
 }
 
+void exibeAlimento(Refeicao* a){
+for (int i =0; i<4; i++){
+    printf("Item %d:", i+1);
+    buscarAlimento(a->cafe[i]);
+  }
+}
 
-
-Alimento* buscarAlimento(int* AL) {
+void buscarAlimento(char* a) {
 	FILE* fp;
 	Alimento* almt;
 
 	almt = (Alimento*) malloc(sizeof(Alimento));
 	fp = fopen("ALIMENTOS.dat", "rb");
+
 	if (fp == NULL) {
-		telapacienteErro();
+		teladietaErro();
 	}
 	while(fread(almt, sizeof(Alimento), 1, fp)) {
-		if (strcmp(almt->codAlimento, AL) == 0) {
+		if (strcmp(almt->codAlimento, a)==0) {
       fclose(fp);
-      return almt;
+      printf("%s\n", almt->nomeAlimento);
 		}
 	}
-  free(AL);
 	fclose(fp);
-	return NULL;
 }
 
 
-void exibirAL1(Alimento* AL) {
-
-	if (AL == NULL) {
-		printf("\n= = = Dieta Inexistente = = =\n");
-	} else {
-		printf("Alimento : %s\n", AL->nomeAlimento);
-		printf("Calorias : %s\n", AL->calorias);
-	}
-}
-
-
-void exibirAL2(Alimento* AL) {
-
-	if (AL == NULL) {
-		printf("\n= = = Dieta Inexistente = = =\n");
-	} else {
-		printf("Alimento : %s\n", AL->nomeAlimento);
-		printf("Calorias : %s\n", AL->calorias);
-	}
-  printf("\n\nTecle ENTER para continuar!\n\n");
- 	getchar();
-}
 
 
 /////////////////////////////////////////////////////////////////
@@ -279,10 +175,10 @@ void regravarDieta(Refeicao* pc) {
 	if (fp == NULL) {
 		teladietaErro();
 	}
-  achou = false;
+  achou = 0;
 	while(fread(pcLido, sizeof(Refeicao), 1, fp) && !achou) {
 		if (strcmp(pcLido->cpfDig, pc->cpfDig) == 0) {
-      achou = true;
+      achou = 1;
 			fseek(fp, -1*sizeof(Refeicao), SEEK_CUR);
         	fwrite(pc, sizeof(Refeicao), 1, fp);
 		}
@@ -303,7 +199,7 @@ void excluirDieta(void) {
 	if (cpf == NULL) {
     	printf("\n\nDieta não encontrada!\n\n");
   	} else {
-		  pc->status = false;
+		  pc->status = 0;
 		  regravarDieta(pc);
 		  free(cpf);
 	}
@@ -323,7 +219,7 @@ void cdtAlimento(void){
     alm=telaAcrescentaalimento();
     gravarAlimento(alm);
     b = teladietaAgain();
-   }
+  }
 
   free(alm);
 }

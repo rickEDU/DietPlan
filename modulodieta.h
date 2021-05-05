@@ -1,4 +1,3 @@
-#include "modulodieta.c"
 //
 //// ASSINATURAS DO SUBMENU DIETA E SEUS SUBMENUS
 //

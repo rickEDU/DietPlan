@@ -1,4 +1,3 @@
-#include "telaprincipal.c"
 //
 //// TELAS PRINCIPAIS
 //
