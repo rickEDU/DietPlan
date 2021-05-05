@@ -8,3 +8,4 @@ void relatorioRegistro(void);
 void relatorioProgresso(void);
 void relatorioDesistencia(void);
 void listapacienteAtivo(char*);
+void listapacienteNEG(void);

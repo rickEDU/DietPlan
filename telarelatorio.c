@@ -13,7 +13,7 @@ void listapacienteAtivo(char* nvl) {
     pct = (Paciente*) malloc(sizeof(Paciente));
     fp = fopen("PACIENTE.dat", "rb");
     while (fread(pct, sizeof(Paciente), 1, fp)) {
-        if (strcmp(pct->nivel, nvl) == 0) {
+        if ((strcmp(pct->nivel, nvl) == 0) && (pct->status !=0)) {
             tam = strlen(pct->nome);
             strncpy(nomePaciente, pct->nome, tam);
              for (int i = tam; i < 22; i++) {
@@ -27,6 +27,28 @@ void listapacienteAtivo(char* nvl) {
     free(pct);
 }
 
+void listapacienteNEG(void) {
+    FILE* fp;
+    Paciente* pct;
+    char nomePaciente[23];
+    int tam;
+
+    pct = (Paciente*) malloc(sizeof(Paciente));
+    fp = fopen("PACIENTE.dat", "rb");
+    while (fread(pct, sizeof(Paciente), 1, fp)) {
+        if ((pct->status == 0)) {
+            tam = strlen(pct->nome);
+            strncpy(nomePaciente, pct->nome, tam);
+             for (int i = tam; i < 22; i++) {
+                 nomePaciente[i] = ' ';
+             }
+             nomePaciente[22] = '\0';
+            printf("///  || CPF: %-12s || Nome: %-24s || %-4s KGs|| ///\n", pct->cpf, nomePaciente,pct->peso);
+        }
+    }
+    fclose(fp);
+    free(pct);
+}
 
 
 char relatorio(void){
@@ -116,6 +138,7 @@ void relatorioProgresso(void){
   printf("///              DIGITE O NOME DO PACIENTE QUE DESEJA VER O PROGRESSO       ///\n");
   printf("///       Nome do Paciente: ");
 
+
   printf("///                       Peso inicial do paciente: xxx kg                  ///\n");
   printf("///                       Peso atual do paciente: yyy kg                    ///\n");
   printf("///                                                                         ///\n");
@@ -141,7 +164,7 @@ void relatorioDesistencia(void){
   printf("///        = = = = = Relatório dos pacientes desistêntes = = = = =          ///\n");
   printf("///                  ###################################                    ///\n");
   printf("///                                                                         ///\n");
-  printf("///                   Paciente x: NOME DO PACIENTE X                        ///\n");
+  listapacienteNEG();
   printf("///                                                                         ///\n");
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");

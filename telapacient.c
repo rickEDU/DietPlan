@@ -1,10 +1,10 @@
-#include "structs.c"
+
 #include "valida.h"
 #include "valida.c"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "funções.c"
+
 //
 //// Menus do Paciente
 //
