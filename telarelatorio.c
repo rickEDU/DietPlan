@@ -37,7 +37,8 @@ void listapacienteAtivo(char* nvl) {
     printf("fim da listapacienteAtivo()\n");
 }
 
-void listapacienteNEG(void) {
+
+void listapacienteATV(void) {
     FILE* fp;
     Paciente* pct;
     char nomePaciente[31];
@@ -46,6 +47,38 @@ void listapacienteNEG(void) {
     pct = (Paciente*) malloc(sizeof(Paciente));
     fp = fopen("PACIENTE.dat", "rb");
     achou=0;
+    printf("\n                          Paciente(s) :\n");
+    while (fread(pct, sizeof(Paciente), 1, fp)) {
+        if (pct->status == 1) {
+          
+        achou =1;
+          tam = strlen(pct->nome);
+          strncpy(nomePaciente, pct->nome, tam);
+           for (int i = tam; i < 22; i++) {
+               nomePaciente[i] = ' ';
+           }
+           nomePaciente[22] = '\0';
+          printf("///  || CPF: %-12s || Nome: %-24s || %-4s KGs|| ///\n", pct->cpf, nomePaciente,pct->peso);
+        }
+    }
+    if (!achou) {
+      printf("///         Não que desistiram pacientes até o momento do DeitPlan           ///\n");
+    }
+    fclose(fp);
+    free(pct);
+}
+
+
+void listapacienteNEG(void) {
+    FILE* fp;
+    Paciente* pct;
+    char nomePaciente[31];
+    int tam, achou;
+
+    pct = (Paciente*) malloc(sizeof(Paciente));
+    fp = fopen("PACIENTE.dat", "rb");
+    achou=0;    
+    printf("\n                          Paciente(s) :\n");
     while (fread(pct, sizeof(Paciente), 1, fp)) {
         if (pct->status == 0) {
         achou =1;
@@ -84,7 +117,7 @@ char relatorio(void){
   printf("///    *  Das opções abaixo digite o número do menu que deseja acessar  *   ///\n");
   printf("///                                                                         ///\n");
   printf("///       1- Relat. dos pacientes por nível de atividade física.            ///\n");
-  printf("///       2- Relat. Progresso do Paciente.                                  ///\n");
+  printf("///       2- Relat. dos Pacientes que participam do DietPlan.               ///\n");
   printf("///       3- Relat. dos Pacientes que desistiram do programa de dietas      ///\n");
   printf("///       0- Voltar para o Menu Principal.                                  ///\n");
 	printf("///                        Escolha a opção desejada: ");
@@ -147,14 +180,11 @@ void relatorioProgresso(void){
   printf("///            Projeto DietPlan: Sistema de Planejamento de dietas          ///\n");
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
-  printf("///                  ##################################                     ///\n");
-  printf("///        = = = = = Relatório do Progresso do paciente = = = = =           ///\n");
-  printf("///                  ##################################                     ///\n");
+  printf("///                  ###################################                    ///\n");
+  printf("///       = = = = = Relatório dos pacientes Participantes = = = = =          ///\n");
+  printf("///                  ###################################                    ///\n");
   printf("///                                                                         ///\n");
-  printf("///              DIGITE O NOME DO PACIENTE QUE DESEJA VER O PROGRESSO       ///\n");
-  printf("///       Nome do Paciente: ");
-  printf("///                       Peso inicial do paciente: xxx kg                  ///\n");
-  printf("///                       Peso atual do paciente: yyy kg                    ///\n");
+  listapacienteATV();
   printf("///                                                                         ///\n");
   printf("///                                                                         ///\n");
   printf("///                                                                         ///\n");

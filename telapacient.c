@@ -97,7 +97,7 @@ Paciente* telapacienteCadastro(void){
   printf("///       CPF: ");
   scanf("%[^\n]", pc->cpf);
   getchar();
-  while((!validacpf(pc->cpf)) || (!buscarPacienteAG(pc->cpf))){
+  while(!validacpf(pc->cpf)){
     scanf("%[^\n]", pc->cpf);
     getchar();
   }
