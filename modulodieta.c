@@ -27,8 +27,6 @@ void modulo_dieta(void){
         break;
       case '5' : cdtAlimento();
         break;
-      // case '6' : main();
-      //   break;
     }
   }while (opcao != '0');
 }
@@ -118,13 +116,29 @@ Refeicao* buscarDieta(char* cpf) {
 }
 
 void exibeAlimento(Refeicao* a){
+Alimento*b;
+b = (Alimento*)malloc(sizeof(Alimento));
+printf("Café da manhã:\n");
 for (int i =0; i<4; i++){
-    printf("Item %d:", i+1);
-    buscarAlimento(a->cafe[i]);
+    printf("Item %d:", i+1);    
+    b = buscarAlimento(a->cafe[i]);
+    printf("%s\n", b->nomeAlimento);
+  }
+printf("Almoço:\n");
+for (int i =0; i<4; i++){
+    printf("Item %d:", i+1);    
+    b = buscarAlimento(a->almoco[i]);
+    printf("%s\n", b->nomeAlimento);
+  }
+printf("Jantar:\n");
+for (int i =0; i<4; i++){
+    printf("Item %d:", i+1);    
+    b = buscarAlimento(a->jantar[i]);
+    printf("%s\n", b->nomeAlimento);
   }
 }
 
-void buscarAlimento(char* a) {
+Alimento* buscarAlimento(char* a) {
 	FILE* fp;
 	Alimento* almt;
 
@@ -137,10 +151,11 @@ void buscarAlimento(char* a) {
 	while(fread(almt, sizeof(Alimento), 1, fp)) {
 		if (strcmp(almt->codAlimento, a)==0) {
       fclose(fp);
-      printf("%s\n", almt->nomeAlimento);
+      return almt;
 		}
 	}
 	fclose(fp);
+  return NULL;
 }
 
 

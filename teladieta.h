@@ -42,7 +42,7 @@ char buscarPacienteDNV(char*);
 void pesquisarDieta(void);
 Refeicao* buscarDieta(char*);
 void exibirDieta(Refeicao*);
-void buscarAlimento(char*);
+Alimento* buscarAlimento(char*);
 
 void atualizarDieta(void);
 void regravarDieta(Refeicao*);

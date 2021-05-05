@@ -9,45 +9,57 @@
 void listapacienteAtivo(char* nvl) {
     FILE* fp;
     Paciente* pct;
-    char nomePaciente[23];
-    int tam;
+    char nomePaciente[24];
+    int tam, achou;
 
     pct = (Paciente*) malloc(sizeof(Paciente));
     fp = fopen("PACIENTE.dat", "rb");
+    achou = 0;
     while (fread(pct, sizeof(Paciente), 1, fp)) {
-        if ((strcmp(pct->nivel, nvl) == 0) && (pct->status !=0)) {
-            tam = strlen(pct->nome);
-            strncpy(nomePaciente, pct->nome, tam);
-             for (int i = tam; i < 22; i++) {
-                 nomePaciente[i] = ' ';
-             }
-             nomePaciente[22] = '\0';
-            printf("///  || CPF: %-12s || Nome: %-24s || %-4s KGs|| ///\n", pct->cpf, nomePaciente,pct->peso);
-        }
+      if ((strcmp(pct->nivel, nvl) == 0) && (pct->status !=0)) {
+        achou = 1;
+        tam = strlen(pct->nome); 
+        if (tam>23) // Limitação de tamanho da var nomePaciente
+          tam = 23;
+        strncpy(nomePaciente, pct->nome, tam);     
+          for (int i = tam; i < 22; i++) {
+              nomePaciente[i] = ' ';
+          }            
+          nomePaciente[23] = '\0';
+        printf("///  || CPF: %-12s || Nome: %-24s || %-4s KGs|| ///\n", pct->cpf, nomePaciente,pct->peso);
+      }
+    }
+    if (!achou) {
+      printf("///      Não existem pacientes cadastrados com esse néivel de atividade     ///\n");
     }
     fclose(fp);
-    printf("///      Não existem pacientes cadastrados com esse néivel de atividade     ///\n");
     free(pct);
+    printf("fim da listapacienteAtivo()\n");
 }
 
 void listapacienteNEG(void) {
     FILE* fp;
     Paciente* pct;
-    char nomePaciente[23];
-    int tam;
+    char nomePaciente[31];
+    int tam, achou;
 
     pct = (Paciente*) malloc(sizeof(Paciente));
     fp = fopen("PACIENTE.dat", "rb");
+    achou=0;
     while (fread(pct, sizeof(Paciente), 1, fp)) {
         if (pct->status == 0) {
-            tam = strlen(pct->nome);
-            strncpy(nomePaciente, pct->nome, tam);
-             for (int i = tam; i < 22; i++) {
-                 nomePaciente[i] = ' ';
-             }
-             nomePaciente[22] = '\0';
-            printf("///  || CPF: %-12s || Nome: %-24s || %-4s KGs|| ///\n", pct->cpf, nomePaciente,pct->peso);
+        achou =1;
+          tam = strlen(pct->nome);
+          strncpy(nomePaciente, pct->nome, tam);
+           for (int i = tam; i < 22; i++) {
+               nomePaciente[i] = ' ';
+           }
+           nomePaciente[22] = '\0';
+          printf("///  || CPF: %-12s || Nome: %-24s || %-4s KGs|| ///\n", pct->cpf, nomePaciente,pct->peso);
         }
+    }
+    if (!achou) {
+      printf("///           Não desistiram pacientes até o momento do DeitPlan            ///\n");
     }
     fclose(fp);
     free(pct);
@@ -113,6 +125,7 @@ void relatorioRegistro(void){
     getchar();
   }
   listapacienteAtivo(nvl);
+  printf("voltou da listapacienteAtivo \n");
   printf("///                                                                         ///\n");
   printf("///                                                                         ///\n");
   printf("///                                                                         ///\n");

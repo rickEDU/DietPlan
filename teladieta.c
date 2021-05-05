@@ -39,6 +39,9 @@ void listaAlimento(void) {
     char nomeAlimt[12];
     int tam;
 
+    if (NULL) {
+	     fp = fopen("ALIMENTOS.dat", "wb");
+    }
     pct = (Alimento*) malloc(sizeof(Alimento));
     fp = fopen("ALIMENTOS.dat", "rb");
     printf("///                  Lista de Alimentos já cadastrados:                     ///\n");
@@ -300,17 +303,17 @@ Alimento* telaAcrescentaalimento(void){
   printf("///                                                                         ///\n");
   printf("///     *  Preencha as informações do alimento que deseja acrescentar  *    ///\n");
   printf("///                                                                         ///\n");
-  //listaAlimento();
+  listaAlimento();
   printf("///                                                                         ///\n");
   printf("///       Digite o código do alimento para fins de indentificão(xxx): ");
   scanf("%s", alm->codAlimento);
-  // getchar();
-  // while(!validanumber(alm->codAlimento)){
-  //   printf("Código do Alimento inválido !!\n");
-  //   printf("Informe o Código do Alimento novamente :");
-  //   scanf("%d", &alm->codAlimento);
-  //   getchar();
-  // }
+  getchar();
+  while(!validanumber(alm->codAlimento)){
+    printf("Código do Alimento inválido !!\n");
+    printf("Informe o Código do Alimento novamente :");
+    scanf("%s", alm->codAlimento);
+    getchar();
+  }
   printf("///       Digite o Nome do alimento: ");
   scanf("%[^\n]", alm->nomeAlimento);
   getchar();
@@ -323,12 +326,12 @@ Alimento* telaAcrescentaalimento(void){
   printf("///       Digite a quantidade de Calorias do alimento: ");
   scanf("%s", alm->calorias);
   getchar();
-  // while(!validanumber(alm->calorias)){
-  //   printf("Calorias do Alimento inválido !!\n");
-  //   printf("Informe o Calorias do Alimento novamente :");
-  //   scanf("%d", &alm->calorias);
-  //   getchar();
-  // }
+  while(!validanumber(alm->calorias)){
+    printf("Calorias do Alimento inválido !!\n");
+    printf("Informe o Calorias do Alimento novamente :");
+    scanf("%s", alm->calorias);
+    getchar();
+  }
   alm->status=1;
   printf("///                                                                         ///\n");
   printf("*******************************************************************************\n");
