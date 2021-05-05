@@ -58,7 +58,7 @@ char telapaciente(void){
   printf("///                           2- Pesquisar Paciente.                        ///\n");
   printf("///                           3- Atualizar dados do Paciente.               ///\n");
   printf("///                           4. Excluir Paciente.                          ///\n");
-  printf("///                           5. Voltar ao Menu anterior.                   ///\n");
+  printf("///                           0. Voltar ao Menu anterior.                   ///\n");
 	printf("///                       Escolha a opção desejada: ");
 	scanf("%c", &a);
   printf("///                                                                         ///\n");

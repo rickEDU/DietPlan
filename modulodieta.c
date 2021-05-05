@@ -99,43 +99,57 @@ void nomepacienteAtivo(char* cpf) {
 Refeicao* buscarDieta(char* cpf) {
 	FILE* fp;
 	Refeicao* rfc;
+  int achou;
 
 	rfc = (Refeicao*) malloc(sizeof(Refeicao));
 	fp = fopen("CONSULTA.dat", "rb");
 	if (fp == NULL) {
 		teladietaErro();
 	}
+  achou=0;
 	while(fread(rfc, sizeof(Refeicao), 1, fp)) {
 		if ((strcmp(rfc->cpfDig, cpf) == 0)  && (rfc->status == 1)) {
+      achou =1;
       fclose(fp);
       return rfc;
 		}
 	}
+  if (!achou) {
+    
+  }
 	fclose(fp);
 	return NULL;
 }
 
 void exibeAlimento(Refeicao* a){
 Alimento*b;
+
 b = (Alimento*)malloc(sizeof(Alimento));
-printf("Café da manhã:\n");
+if (a==NULL){
+  printf("///      Não existem uma dieta cadastrada para esse paciente     ///\n");
+}else{
+  printf("Café da manhã:\n");
 for (int i =0; i<4; i++){
-    printf("Item %d:", i+1);    
+    printf("Alimento %d:", i+1);    
     b = buscarAlimento(a->cafe[i]);
     printf("%s\n", b->nomeAlimento);
   }
 printf("Almoço:\n");
 for (int i =0; i<4; i++){
-    printf("Item %d:", i+1);    
+    printf("Alimento %d:", i+1);    
     b = buscarAlimento(a->almoco[i]);
     printf("%s\n", b->nomeAlimento);
   }
 printf("Jantar:\n");
 for (int i =0; i<4; i++){
-    printf("Item %d:", i+1);    
+    printf("Alimento %d:", i+1);    
     b = buscarAlimento(a->jantar[i]);
     printf("%s\n", b->nomeAlimento);
   }
+free(b);
+}
+
+
 }
 
 Alimento* buscarAlimento(char* a) {

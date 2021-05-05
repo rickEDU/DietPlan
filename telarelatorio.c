@@ -86,7 +86,7 @@ char relatorio(void){
   printf("///       1- Relat. dos pacientes por nível de atividade física.            ///\n");
   printf("///       2- Relat. Progresso do Paciente.                                  ///\n");
   printf("///       3- Relat. dos Pacientes que desistiram do programa de dietas      ///\n");
-  printf("///       4- Voltar para o Menu Principal.                                  ///\n");
+  printf("///       0- Voltar para o Menu Principal.                                  ///\n");
 	printf("///                        Escolha a opção desejada: ");
 	scanf("%c", &a);
   printf("///                                                                         ///\n");

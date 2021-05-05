@@ -84,7 +84,7 @@ char teladieta(void){
   printf("///                           3- Atualizar dados da Deita.                  ///\n");
   printf("///                           4. Excluir Dieta.                             ///\n");
   printf("///                           5. Acrescentar Alimentos na lista.            ///\n");
-  printf("///                           6. Voltar ao Menu anterior.                   ///\n");
+  printf("///                           0. Voltar ao Menu anterior.                   ///\n");
 	printf("///                       Escolha a opção desejada: ");
 	scanf("%c", &a);
   printf("///                                                                         ///\n");
