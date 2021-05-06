@@ -158,7 +158,6 @@ void relatorioRegistro(void){
     getchar();
   }
   listapacienteAtivo(nvl);
-  printf("voltou da listapacienteAtivo \n");
   printf("///                                                                         ///\n");
   printf("///                                                                         ///\n");
   printf("///                                                                         ///\n");
@@ -170,7 +169,6 @@ void relatorioRegistro(void){
 }
 
 void relatorioProgresso(void){
-  //char nome[51];
   system("clear");
   printf("\n");
   printf("*******************************************************************************\n");

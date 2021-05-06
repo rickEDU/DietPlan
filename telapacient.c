@@ -140,7 +140,7 @@ Paciente* telapacienteCadastro(void){
     scanf("%[^\n]", pc->tel);
     getchar();
   }
-   printf("///Nível de atividade física do Paciente(alto, media ou baixo, somente letras minusculas): ");
+   printf("///Nível de atividade física do Paciente                                   ///\n///(alto, media ou baixo, somente letras minusculas): ");
   scanf("%[^\n]", pc->nivel);
   getchar();
   while(!validaAtividade(pc->nivel)){
