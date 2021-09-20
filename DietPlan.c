@@ -10,10 +10,10 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "telaprincipal.h"
-#include "modulopacient.h"
-#include "modulodieta.h"
-#include "modulorelatorio.h"
+#include "telaPrincipal.h"
+#include "moduloPacient.h"
+#include "moduloDieta.h"
+#include "moduloRelatorio.h"
 
 int main(void) {
   char opcao;
@@ -33,23 +33,3 @@ int main(void) {
   return 0;
 }
 
-
-
-// FLAVIUS GORGONIO21:56
-// int cafeManha[4];
-// int almoco[4];
-// int jantar[4];
-
-// FLAVIUS GORGONIO21:58
-// for (int i = 0; i < 4; i++) {
-//    printf("Informe o cod do alimento: ");
-//    scanf("%d", &cafeManha[i]);
-// }
-
-// FLAVIUS GORGONIO22:01
-// char* buscaAlimento(int cod);
-// FLAVIUS GORGONIO22:03
-// for (int i = 0; i < 4; i++) {
-//    printf("Item %d: ", i+1);
-//    printf("%s\n", buscaAlimento(cafeManha[i]));
-// }

@@ -1,5 +1,5 @@
-#include "modulorelatorio.h"
-#include "telarelatorio.h"
+#include "moduloRelatorio.h"
+#include "telaRelatorio.h"
 
 
 void modulo_relatorio(void){

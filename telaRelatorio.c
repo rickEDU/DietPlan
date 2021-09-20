@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "telarelatorio.h"
-#include "telapacient.h"
+#include "telaRelatorio.h"
+#include "telaPacient.h"
 #include "valida.h"
 
 

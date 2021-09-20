@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "telaprincipal.h"
+#include "telaPrincipal.h"
 //
 //// TELAS dos Menus e Submenus
 //

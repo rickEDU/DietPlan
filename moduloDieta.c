@@ -1,8 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include "teladieta.h"
-#include "telapacient.h"
+#include "telaDieta.h"
+#include "telaPacient.h"
 
 
 
